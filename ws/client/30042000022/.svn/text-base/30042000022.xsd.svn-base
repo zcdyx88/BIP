@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<x:schema xmlns:x="http://www.w3.org/2001/XMLSchema" xmlns:d="http://esb.dcitsbiz.com/metadata" xmlns:s="http://esb.dcitsbiz.com/services/30042000022" xmlns:EBANK="http://esb.dcitsbiz.com/EBANK" targetNamespace="http://esb.dcitsbiz.com/services/30042000022" elementFormDefault="qualified" attributeFormDefault="qualified">
+  <x:import namespace="http://esb.dcitsbiz.com/metadata" schemaLocation="SoapHeader.xsd"/>
+  <x:import namespace="http://esb.dcitsbiz.com/EBANK" schemaLocation="EBANK.xsd"/>
+  <x:complexType name="ReqAppHeadType">
+    <x:sequence>
+      <x:element name="BrId" type="x:string" minOccurs="0"/>
+      <x:element name="TlrNo" type="x:string" minOccurs="0"/>
+    </x:sequence>
+  </x:complexType>
+  <x:complexType name="RspAppHeadType">
+    <x:sequence>
+      <x:element name="BrId" type="x:string" minOccurs="0"/>
+      <x:element name="TlrNo" type="x:string" minOccurs="0"/>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3004200002201" type="s:Req3004200002201Type"/>
+  <x:complexType name="Req3004200002201Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="EBANK:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="accountNo" type="x:string" minOccurs="0"/>
+            <x:element name="zfbAccNo" type="x:string" minOccurs="0"/>
+            <x:element name="accountName" type="x:string" minOccurs="0"/>
+            <x:element name="gender" type="x:string" minOccurs="0"/>
+            <x:element name="certType" type="x:string" minOccurs="0"/>
+            <x:element name="certNo" type="x:string" minOccurs="0"/>
+            <x:element name="phoneNo" type="x:string" minOccurs="0"/>
+            <x:element name="mobileNo" type="x:string" minOccurs="0"/>
+            <x:element name="zip" type="x:string" minOccurs="0"/>
+            <x:element name="limitDayMax" type="x:string" minOccurs="0"/>
+            <x:element name="limitSingleMax" type="x:string" minOccurs="0"/>
+            <x:element name="address" type="x:string" minOccurs="0"/>
+            <x:element name="email" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3004200002201" type="s:Rsp3004200002201Type"/>
+  <x:complexType name="Rsp3004200002201Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="EBANK:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="hostCode" type="x:string" minOccurs="0"/>
+            <x:element name="accountName" type="x:string" minOccurs="0"/>
+            <x:element name="accountNo" type="x:string" minOccurs="0"/>
+            <x:element name="certType" type="x:string" minOccurs="0"/>
+            <x:element name="certNo" type="x:string" minOccurs="0"/>
+            <x:element name="zfbAccNo" type="x:string" minOccurs="0"/>
+            <x:element name="mobileNo" type="x:string" minOccurs="0"/>
+            <x:element name="email" type="x:string" minOccurs="0"/>
+            <x:element name="limitDayMax" type="x:string" minOccurs="0"/>
+            <x:element name="limitSingleMax" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3004200002202" type="s:Req3004200002202Type"/>
+  <x:complexType name="Req3004200002202Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="EBANK:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="protocolNo" type="x:string" minOccurs="0"/>
+            <x:element name="accountNo" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3004200002202" type="s:Rsp3004200002202Type"/>
+  <x:complexType name="Rsp3004200002202Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="EBANK:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="hostCode" type="x:string" minOccurs="0"/>
+            <x:element name="branchId" type="x:string" minOccurs="0"/>
+            <x:element name="signCertPem" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+</x:schema>

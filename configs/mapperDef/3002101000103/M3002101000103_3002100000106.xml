@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mapping id="M3002101000103_3002100000106">
+    <response>
+        <item src="Rsp3002100000106.Reply_Msg/Sys_Head/BRANCH_ID" dest="Rsp3002101000103.Reply_Msg/Sys_Head/BRANCH_ID"/>
+        <item src="Rsp3002100000106.Reply_Msg/Sys_Head/CONSUMER_ID" dest="Rsp3002101000103.Reply_Msg/Sys_Head/CONSUMER_ID"/>
+        <item src="Rsp3002100000106.Reply_Msg/Sys_Head/CUSTOMER_ID" dest="Rsp3002101000103.Reply_Msg/Sys_Head/CUSTOMER_ID"/>
+        <item src="Rsp3002100000106.Reply_Msg/Sys_Head/DEST_BRANCH_NO" dest="Rsp3002101000103.Reply_Msg/Sys_Head/DEST_BRANCH_NO"/>
+        <item src="Rsp3002100000106.Reply_Msg/Sys_Head/RET_STATUS" dest="Rsp3002101000103.Reply_Msg/Sys_Head/RET_STATUS"/>
+        <item src="Rsp3002100000106.Reply_Msg/Sys_Head/SEQ_NO" dest="Rsp3002101000103.Reply_Msg/Sys_Head/SEQ_NO"/>
+        <item src="Rsp3002100000106.Reply_Msg/Sys_Head/SERVER_ID" dest="Rsp3002101000103.Reply_Msg/Sys_Head/SERVER_ID"/>
+        <item src="Rsp3002100000106.Reply_Msg/Sys_Head/SERVICE_CODE" dest="Rsp3002101000103.Reply_Msg/Sys_Head/SERVICE_CODE"/>
+        <item src="Rsp3002100000106.Reply_Msg/Sys_Head/SOURCE_BRANCH_NO" dest="Rsp3002101000103.Reply_Msg/Sys_Head/SOURCE_BRANCH_NO"/>
+        <item src="Rsp3002100000106.Reply_Msg/Sys_Head/SOURCE_TYPE" dest="Rsp3002101000103.Reply_Msg/Sys_Head/SOURCE_TYPE"/>
+        <item src="Rsp3002100000106.Reply_Msg/Sys_Head/TRAN_CODE" dest="Rsp3002101000103.Reply_Msg/Sys_Head/TRAN_CODE"/>
+        <item src="Rsp3002100000106.Reply_Msg/Sys_Head/TRAN_DATE" dest="Rsp3002101000103.Reply_Msg/Sys_Head/TRAN_DATE"/>
+        <item src="Rsp3002100000106.Reply_Msg/Sys_Head/TRAN_MODE" dest="Rsp3002101000103.Reply_Msg/Sys_Head/TRAN_MODE"/>
+        <item src="Rsp3002100000106.Reply_Msg/Sys_Head/TRAN_TIMESTAMP" dest="Rsp3002101000103.Reply_Msg/Sys_Head/TRAN_TIMESTAMP"/>
+        <item src="Rsp3002100000106.Reply_Msg/Sys_Head/USER_ID" dest="Rsp3002101000103.Reply_Msg/Sys_Head/USER_ID"/>
+        <item src="Rsp3002100000106.Reply_Msg/Sys_Head/WS_ID" dest="Rsp3002101000103.Reply_Msg/Sys_Head/WS_ID"/>
+        <item src="Rsp3002100000106.Reply_Msg/Body/ADDRESS" dest="Rsp3002101000103.Reply_Msg/Body/ADDRESS"/>
+        <item src="Rsp3002100000106.Reply_Msg/Body/BILL_NO" dest="Rsp3002101000103.Reply_Msg/Body/BILL_NO"/>
+        <item src="Rsp3002100000106.Reply_Msg/Body/BREAK_PRO_AMT" dest="Rsp3002101000103.Reply_Msg/Body/BREAK_PRO_AMT"/>
+        <item src="Rsp3002100000106.Reply_Msg/Body/NOW_PEACE" dest="Rsp3002101000103.Reply_Msg/Body/NOW_PEACE"/>
+        <item src="Rsp3002100000106.Reply_Msg/Body/OFF_ADDRESS" dest="Rsp3002101000103.Reply_Msg/Body/OFF_ADDRESS"/>
+        <item src="Rsp3002100000106.Reply_Msg/Body/PAY_AMT" dest="Rsp3002101000103.Reply_Msg/Body/PAY_AMT"/>
+        <item src="Rsp3002100000106.Reply_Msg/Body/PAY_BZ" dest="Rsp3002101000103.Reply_Msg/Body/PAY_BZ"/>
+        <item src="Rsp3002100000106.Reply_Msg/Body/PAY_DATE" dest="Rsp3002101000103.Reply_Msg/Body/PAY_DATE"/>
+        <item src="Rsp3002100000106.Reply_Msg/Body/PAY_PROJ" dest="Rsp3002101000103.Reply_Msg/Body/PAY_PROJ"/>
+        <item src="Rsp3002100000106.Reply_Msg/Body/USER_CODE" dest="Rsp3002101000103.Reply_Msg/Body/USER_CODE"/>
+        <item src="Rsp3002100000106.Reply_Msg/Body/USER_NAME" dest="Rsp3002101000103.Reply_Msg/Body/USER_NAME"/>
+    </response>
+    <request>
+        <item src="constant.000001" dest="Req3002100000106.Message/Sys_Head/TRAN_CODE"/>
+        <item src="constant.11001051200011205" dest="Req3002100000106.Message/Body/ACCNO"/>
+        <item src="constant.2016" dest="Req3002100000106.Message/Body/BIZ_TYPE"/>
+        <item src="constant.000000115724" dest="Req3002100000106.Message/Body/INPUT_BAL_TYPE"/>
+        <item src="constant.201912310020112" dest="Req3002100000106.Message/Body/PASSWORD"/>
+        <item src="constant.Z" dest="Req3002100000106.Message/Body/TRAN_AMT"/>
+        <item src="constant.00000028041070" dest="Req3002100000106.Message/Body/TRANSFER_MODE"/>
+    </request>
+</mapping>

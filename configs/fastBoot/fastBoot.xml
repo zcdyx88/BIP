@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<fastBoot>
+    <bootItem type="process" id="P3002101000103"
+              implememtation="com.dcits.smartbip.runtime.impl.P3002101000103">
+    </bootItem>
+    <bootItem type="service" id="GeneralInit"
+              implememtation="com.dcits.smartbip.runtime.impl.GeneralInit">
+    </bootItem>
+    <bootItem type="mapper" id="M3002101000103_3002100000103"
+              implememtation="com.dcits.smartbip.runtime.impl.M3002101000103_3002100000103">
+    </bootItem>
+
+</fastBoot>

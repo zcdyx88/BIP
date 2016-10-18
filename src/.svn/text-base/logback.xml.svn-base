@@ -1,0 +1,66 @@
+<configuration scan="true" scanPeriod="10 seconds">
+
+	<appender name="bip" class="ch.qos.logback.core.rolling.RollingFileAppender">   
+		<file>${LOG_PATH}/bip.log</file>    
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/bip-%d{yyyyMMdd}_%i.log.zip</fileNamePattern>
+            <maxHistory>1</maxHistory>
+            <maxFileSize>50MB</maxFileSize>
+            <totalSizeCap>2GB</totalSizeCap>
+        </rollingPolicy>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36}:%L -%msg%n
+            </Pattern>
+        </layout>
+    </appender>
+    
+	<appender name="journal" class="ch.qos.logback.core.rolling.RollingFileAppender">   
+		<file>${LOG_PATH}/journal.log</file>    
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_PATH}/journal-%d{yyyyMMdd}_%i.log.zip</fileNamePattern>
+            <maxHistory>1</maxHistory>
+            <maxFileSize>50MB</maxFileSize>
+            <totalSizeCap>2GB</totalSizeCap>
+        </rollingPolicy>
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36}:%L -%msg%n
+            </Pattern>
+        </layout>
+    </appender>
+    
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36}:%L -%msg%n</Pattern>
+        </encoder>
+    </appender>
+    
+    <logger name="com.dcits.smartbip.utils" level="ERROR" additivity ="false">
+    	<appender-ref ref="bip"/>
+    </logger>
+     
+    <logger name="com.dcits.smartbip.parser.code" level="ERROR" additivity ="false">
+    	<appender-ref ref="bip"/>
+    </logger>
+
+    <logger name="com.dcits.smartbip.journal" level="INFO" additivity ="false">
+    	<appender-ref ref="journal"/>
+    </logger>
+   
+    <logger name="com.dcits.smartbip" level="INFO" additivity ="false">
+    	<appender-ref ref="bip" />     	 	
+    </logger>
+    
+   <logger name="com.dcits.smartbip.BIPBoot" level="INFO" additivity ="true">
+    	<appender-ref ref="STDOUT" />     	 	
+   </logger>
+    
+    <logger name="com.dcits.smartbip.JournalBoot" level="INFO" additivity ="true">
+    	<appender-ref ref="STDOUT" />     	 	
+    </logger>
+    
+    <root level="ERROR">
+    	<appender-ref ref="bip" /> 
+        <appender-ref ref="STDOUT" />
+    </root>
+       
+</configuration>

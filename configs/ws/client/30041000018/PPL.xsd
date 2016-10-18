@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<x:schema xmlns:x="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://esb.dcitsbiz.com/PPL" targetNamespace="http://esb.dcitsbiz.com/PPL" elementFormDefault="qualified" attributeFormDefault="qualified">
+  <x:complexType name="ReqLocalHeadType">
+    <x:sequence>
+      <x:element name="currpage" type="x:string" minOccurs="0"/>
+      <x:element name="pagenum" type="x:string" minOccurs="0"/>
+      <x:element name="MServicerNo" type="x:string" minOccurs="1"/>
+      <x:element name="MServiceCode" type="x:string" minOccurs="1"/>
+      <x:element name="pageflag" type="x:string" minOccurs="0"/>
+    </x:sequence>
+  </x:complexType>
+  <x:complexType name="RspLocalHeadType">
+    <x:sequence>
+      <x:element name="totalrownum" type="x:string" minOccurs="0"/>
+      <x:element name="totalpagenum" type="x:string" minOccurs="0"/>
+      <x:element name="nowpagenum" type="x:string" minOccurs="0"/>
+      <x:element name="pagerownum" type="x:string" minOccurs="0"/>
+    </x:sequence>
+  </x:complexType>
+</x:schema>

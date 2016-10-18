@@ -1,0 +1,193 @@
+package com.dcits.smartbip.utils;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.dom4j.Document;
+import org.dom4j.Element;
+import org.dom4j.Node;
+import org.dom4j.io.SAXReader;
+
+import com.dcits.smartbip.runtime.entity.ExcludeInfo;
+import com.dcits.smartbip.runtime.entity.Production;
+
+import java.io.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+/**
+ * Created by vincentfxz on 16/4/23.
+ */
+public class XMLUtils {
+
+    private static final Log log = LogFactory.getLog(XMLUtils.class);
+
+    public static Document getDocFromBytes(byte[] bytes) {
+        Document doc = null;
+        SAXReader saxReader = new SAXReader();
+        BufferedInputStream bufferedInputStream = null;
+        try {
+            bufferedInputStream = new BufferedInputStream(new ByteArrayInputStream(bytes));
+            doc = saxReader.read(bufferedInputStream);
+        } catch (Exception e) {
+            log.error(e, e);
+        } finally {
+            if (null != bufferedInputStream) {
+                try {
+                    bufferedInputStream.close();
+                } catch (IOException e) {
+                    log.error(e, e);
+                }
+            }
+        }
+        return doc;
+    }
+
+    public static Document getDocFromFile(File file) {
+        Document doc = null;
+        if (null != file) {
+            SAXReader reader = new SAXReader();
+            BufferedInputStream bufferedInputStream = null;
+            try {
+                bufferedInputStream = new BufferedInputStream(new FileInputStream(file));
+                doc = reader.read(bufferedInputStream);
+            } catch (Exception e) {
+                log.error(e, e);
+            } finally {
+                if (null != bufferedInputStream) {
+                    try {
+                        bufferedInputStream.close();
+                    } catch (IOException e) {
+                        log.error(e, e);
+                    }
+                }
+            }
+        }
+        return doc;
+    }
+
+    public static String getAttribute(Node node, String attrName){
+        String attr = null;
+        Node attrNode = node.selectSingleNode("@" + attrName);
+        if(null != attrNode){
+            attr = attrNode.getText();
+        }
+        return attr;
+    }
+
+    public static String getChildElementText(Element element, String tag){
+        String text = null;
+        Element childElement = element.element(tag);
+        text = childElement.getText();
+        return text;
+    }
+
+    public static Map<String, String> elementToMap(Element element){
+        Map<String, String> map = new HashMap<String, String>();
+        List<Element> childElements = element.elements();
+        for(Element childElement : childElements){
+            String key = childElement.getName();
+            String value = childElement.getText();
+            map.put(key, value);
+        }
+        return map;
+    }
+    
+    /**
+	 * 获取所有对私/对公签约产品信息
+	 * @param privyCorpFlg	:	个人对公标志：0-个人，1-对公
+	 * @return	对私/对公签约产品信息
+	 */
+    public static HashMap<String,Production> getSignCodeInfo(String privyCorpFlg){
+		File file = new File(System.getProperty("smartbip.install")+File.separator+"configs/xmlDef/productionCodeInfo.xml");
+		Document doc = XMLUtils.getDocFromFile(file);
+		Element root = doc.getRootElement();
+		HashMap<String,Production> productionMap = new HashMap<String,Production>();
+		List<Element> productions = root.elements();
+		Production production = null;
+		ArrayList<ExcludeInfo> excludeInfoLst = null;
+		ExcludeInfo excludeInfo = null;
+		ArrayList<String> tmpLst = null;
+		for(Element ment : productions){
+			if(privyCorpFlg != null && privyCorpFlg.equals(ment.elementText("PrivyCorpFlg"))){
+				production = new Production();
+				production.setSignVarCd(ment.elementText("SignVarCd"));//签约品种代码
+				production.setSignVarNm(ment.elementText("SignVarNm"));//签约品种名称
+				production.setPrivyCorpFlg(ment.elementText("PrivyCorpFlg"));//个人对公标志
+				production.setBlngSysId(ment.elementText("BlngSysId"));//所属系统
+				production.setBlngLglPrsnCd(ment.elementText("BlngLglPrsnCd"));//法人代码
+				production.setCstAcctSignFlg(ment.elementText("CstAcctSignFlg"));//客户账户签约标志
+				production.setInOutBankFlg(ment.elementText("InOutBankFlg"));//行内行外标志
+				production.setSignOffFlg(ment.elementText("SignOffFlg"));//是否允许解约
+				production.setCroRegSignOffFlg(ment.elementText("CroRegSignOffFlg"));//是否允许跨地区解约
+				production.setAvlMntnFlg(ment.elementText("AvlMntnFlg"));//是否允许维护
+				production.setQryListVisionFlg(ment.elementText("QryListVisionFlg"));//查询清单是否展现
+				production.setClsMstSignOffFlg(ment.elementText("ClsMstSignOffFlg"));//销户是否必解
+				production.setAvlTrsfrFlg(ment.elementText("AvlTrsfrFlg"));//可转移标志
+				production.setOneCdMulSignFlg(ment.elementText("OneCdMulSignFlg"));//是否允许一卡多签
+				production.setAvlSignChlFlg(ment.elementText("AvlSignChlFlg"));//是否控制签约渠道
+				production.setAvlSignOffChlFlg(ment.elementText("AvlSignOffChlFlg"));//是否控制解约渠道
+				production.setAvlSignExchgChlFlg(ment.elementText("AvlSignExchgChlFlg"));//是否控制换签渠道
+				
+				List<Element> excludeInfoList = ment.elements("ExcludeInfoList");//互斥信息列表
+				excludeInfoLst = new ArrayList<ExcludeInfo>();
+				for(Element ment2 : excludeInfoList){
+					excludeInfo = new ExcludeInfo();
+					excludeInfo.setExcludeVarCd(ment2.elementText("ExcludeVarCd"));//互斥品种代码
+					excludeInfo.setExcludeTpNo(ment2.elementText("ExcludeTpNo"));//互斥类型编号
+					excludeInfo.setExcludePdPri(ment2.elementText("ExcludePdPri"));//互斥产品优先级
+					excludeInfo.setExcludeTpNm(ment2.elementText("ExcludeTpNm"));//互斥类型名称
+					excludeInfoLst.add(excludeInfo);
+				}
+<<<<<<< .mine
+				production.setExcludeInfoList(excludeInfoLst);
+=======
+				production.setExcludeInfoList(excludeInfoLst);
+				
+>>>>>>> .r1661
+				List<Element> blngBrchBnkList = ment.elements("BlngBrchBnkList");//所属分行列表
+				tmpLst = new ArrayList<String>();
+				for(Element ment2 : blngBrchBnkList){
+					tmpLst.add(ment2.elementText("BlngBrchBnkNo"));
+				}
+<<<<<<< .mine
+				production.setBlngBrchBnkList(tmpLst);
+=======
+				production.setBlngBrchBnkList(tmpLst);
+				
+>>>>>>> .r1661
+				List<Element> avlSignChlList = ment.elements("AvlSignChlList");//可签约渠道列表
+				tmpLst = new ArrayList<String>();
+				for(Element ment2 : avlSignChlList){
+					tmpLst.add(ment2.elementText("ChlId"));
+				}
+<<<<<<< .mine
+				production.setAvlSignChlList(tmpLst);				
+=======
+				production.setAvlSignChlList(tmpLst);
+				
+>>>>>>> .r1661
+				List<Element> avlSignOffChlList = ment.elements("AvlSignOffChlList");//可解约渠道列表
+				tmpLst = new ArrayList<String>();
+				for(Element ment2 : avlSignOffChlList){
+					tmpLst.add(ment2.elementText("ChlId"));
+				}
+<<<<<<< .mine
+				production.setAvlSignOffChlList(tmpLst);
+=======
+				production.setAvlSignOffChlList(tmpLst);
+				
+>>>>>>> .r1661
+				List<Element> avlSignExchgChlList = ment.elements("AvlSignExchgChlList");//可换签渠道列表
+				tmpLst = new ArrayList<String>();
+				for(Element ment2 : avlSignExchgChlList){
+					tmpLst.add(ment2.elementText("ChlId"));
+				}
+				production.setAvlSignExchgChlList(tmpLst);
+				productionMap.put(production.getSignVarCd(),production);
+			}
+		}
+		return productionMap;
+	}
+}

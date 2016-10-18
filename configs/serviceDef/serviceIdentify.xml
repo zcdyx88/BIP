@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <identify id="TCPServerIdentify" path="Message/Sys_Head/TRAN_CODE">
+        <item value="01007031" serviceid="3002101000103"></item>
+    </identify>
+</root>

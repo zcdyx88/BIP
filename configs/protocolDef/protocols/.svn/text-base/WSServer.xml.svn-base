@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<protocol>
+    <id>WSServer</id>
+    <port>9090</port>
+    <contextPath>/ws</contextPath>
+    <minThreads>50</minThreads>
+    <maxThreads>100</maxThreads>
+    <acceptQueueSize>100</acceptQueueSize>
+    <acceptSize>2</acceptSize>
+</protocol>

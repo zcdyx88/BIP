@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://esb.dcitsbiz.com/services/30012000004/wsdl" xmlns:d="http://esb.dcitsbiz.com/services/30012000004/metadata" xmlns:s="http://esb.dcitsbiz.com/services/30012000004" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soapnc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://esb.dcitsbiz.com/services/30012000004/wsdl" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/">
+  <wsdl:types>
+        <xsd:schema targetNamespace="http://esb.dcitsbiz.com/services/30012000004/wsdl" elementFormDefault="qualified" attributeFormDefault="qualified">
+            <xsd:import namespace="http://esb.dcitsbiz.com/services/30012000004" schemaLocation="30012000004.xsd"/>
+        </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Rsp3001200000406">
+    <wsdl:part name="Rsp3001200000406" element="s:Rsp3001200000406">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Rsp3001200000424">
+    <wsdl:part name="Rsp3001200000424" element="s:Rsp3001200000424">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Rsp3001200000404">
+    <wsdl:part name="Rsp3001200000404" element="s:Rsp3001200000404">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Rsp3001200000422">
+    <wsdl:part name="Rsp3001200000422" element="s:Rsp3001200000422">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Rsp3001200000421">
+    <wsdl:part name="Rsp3001200000421" element="s:Rsp3001200000421">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Rsp3001200000428">
+    <wsdl:part name="Rsp3001200000428" element="s:Rsp3001200000428">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Rsp3001200000402">
+    <wsdl:part name="Rsp3001200000402" element="s:Rsp3001200000402">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Rsp3001200000427">
+    <wsdl:part name="Rsp3001200000427" element="s:Rsp3001200000427">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Rsp3001200000401">
+    <wsdl:part name="Rsp3001200000401" element="s:Rsp3001200000401">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Rsp3001200000426">
+    <wsdl:part name="Rsp3001200000426" element="s:Rsp3001200000426">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Rsp3001200000425">
+    <wsdl:part name="Rsp3001200000425" element="s:Rsp3001200000425">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Req3001200000427">
+    <wsdl:part name="Req3001200000427" element="s:Req3001200000427">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Req3001200000401">
+    <wsdl:part name="Req3001200000401" element="s:Req3001200000401">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Req3001200000426">
+    <wsdl:part name="Req3001200000426" element="s:Req3001200000426">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Req3001200000425">
+    <wsdl:part name="Req3001200000425" element="s:Req3001200000425">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Req3001200000424">
+    <wsdl:part name="Req3001200000424" element="s:Req3001200000424">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Rsp3001200000420">
+    <wsdl:part name="Rsp3001200000420" element="s:Rsp3001200000420">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Req3001200000404">
+    <wsdl:part name="Req3001200000404" element="s:Req3001200000404">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Req3001200000422">
+    <wsdl:part name="Req3001200000422" element="s:Req3001200000422">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Req3001200000421">
+    <wsdl:part name="Req3001200000421" element="s:Req3001200000421">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Req3001200000402">
+    <wsdl:part name="Req3001200000402" element="s:Req3001200000402">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Req3001200000420">
+    <wsdl:part name="Req3001200000420" element="s:Req3001200000420">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Req3001200000419">
+    <wsdl:part name="Req3001200000419" element="s:Req3001200000419">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Req3001200000418">
+    <wsdl:part name="Req3001200000418" element="s:Req3001200000418">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Rsp3001200000429">
+    <wsdl:part name="Rsp3001200000429" element="s:Rsp3001200000429">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Rsp3001200000415">
+    <wsdl:part name="Rsp3001200000415" element="s:Rsp3001200000415">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Req3001200000430">
+    <wsdl:part name="Req3001200000430" element="s:Req3001200000430">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Rsp3001200000430">
+    <wsdl:part name="Rsp3001200000430" element="s:Rsp3001200000430">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Req3001200000415">
+    <wsdl:part name="Req3001200000415" element="s:Req3001200000415">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Req3001200000406">
+    <wsdl:part name="Req3001200000406" element="s:Req3001200000406">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Req3001200000428">
+    <wsdl:part name="Req3001200000428" element="s:Req3001200000428">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Req3001200000429">
+    <wsdl:part name="Req3001200000429" element="s:Req3001200000429">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Rsp3001200000418">
+    <wsdl:part name="Rsp3001200000418" element="s:Rsp3001200000418">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Rsp3001200000419">
+    <wsdl:part name="Rsp3001200000419" element="s:Rsp3001200000419">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ESBServerPortType">
+    <wsdl:operation name="op01">
+      <wsdl:input message="tns:Req3001200000401">
+    </wsdl:input>
+      <wsdl:output message="tns:Rsp3001200000401">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op02">
+      <wsdl:input message="tns:Req3001200000402">
+    </wsdl:input>
+      <wsdl:output message="tns:Rsp3001200000402">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op04">
+      <wsdl:input message="tns:Req3001200000404">
+    </wsdl:input>
+      <wsdl:output message="tns:Rsp3001200000404">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op06">
+      <wsdl:input message="tns:Req3001200000406">
+    </wsdl:input>
+      <wsdl:output message="tns:Rsp3001200000406">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op15">
+      <wsdl:input message="tns:Req3001200000415">
+    </wsdl:input>
+      <wsdl:output message="tns:Rsp3001200000415">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op18">
+      <wsdl:input message="tns:Req3001200000418">
+    </wsdl:input>
+      <wsdl:output message="tns:Rsp3001200000418">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op19">
+      <wsdl:input message="tns:Req3001200000419">
+    </wsdl:input>
+      <wsdl:output message="tns:Rsp3001200000419">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op20">
+      <wsdl:input message="tns:Req3001200000420">
+    </wsdl:input>
+      <wsdl:output message="tns:Rsp3001200000420">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op21">
+      <wsdl:input message="tns:Req3001200000421">
+    </wsdl:input>
+      <wsdl:output message="tns:Rsp3001200000421">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op22">
+      <wsdl:input message="tns:Req3001200000422">
+    </wsdl:input>
+      <wsdl:output message="tns:Rsp3001200000422">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op24">
+      <wsdl:input message="tns:Req3001200000424">
+    </wsdl:input>
+      <wsdl:output message="tns:Rsp3001200000424">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op25">
+      <wsdl:input message="tns:Req3001200000425">
+    </wsdl:input>
+      <wsdl:output message="tns:Rsp3001200000425">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op26">
+      <wsdl:input message="tns:Req3001200000426">
+    </wsdl:input>
+      <wsdl:output message="tns:Rsp3001200000426">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op27">
+      <wsdl:input message="tns:Req3001200000427">
+    </wsdl:input>
+      <wsdl:output message="tns:Rsp3001200000427">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op28">
+      <wsdl:input message="tns:Req3001200000428">
+    </wsdl:input>
+      <wsdl:output message="tns:Rsp3001200000428">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op29">
+      <wsdl:input message="tns:Req3001200000429">
+    </wsdl:input>
+      <wsdl:output message="tns:Rsp3001200000429">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op30">
+      <wsdl:input message="tns:Req3001200000430">
+    </wsdl:input>
+      <wsdl:output message="tns:Rsp3001200000430">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ESBServerSoapBinding" type="tns:ESBServerPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="op01">
+      <soap:operation soapAction="urn:/op01"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op02">
+      <soap:operation soapAction="urn:/op02"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op04">
+      <soap:operation soapAction="urn:/op04"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op06">
+      <soap:operation soapAction="urn:/op06"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op15">
+      <soap:operation soapAction="urn:/op15"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op18">
+      <soap:operation soapAction="urn:/op18"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op19">
+      <soap:operation soapAction="urn:/op19"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op20">
+      <soap:operation soapAction="urn:/op20"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op21">
+      <soap:operation soapAction="urn:/op21"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op22">
+      <soap:operation soapAction="urn:/op22"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op24">
+      <soap:operation soapAction="urn:/op24"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op25">
+      <soap:operation soapAction="urn:/op25"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op26">
+      <soap:operation soapAction="urn:/op26"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op27">
+      <soap:operation soapAction="urn:/op27"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op28">
+      <soap:operation soapAction="urn:/op28"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op29">
+      <soap:operation soapAction="urn:/op29"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op30">
+      <soap:operation soapAction="urn:/op30"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="S30012000004">
+    <wsdl:port name="ESBServerSoapEndpoint" binding="tns:ESBServerSoapBinding">
+      <soap:address location="http://159.1.65.151:39001/EsbWebService/S30012000004"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

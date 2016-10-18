@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<x:schema xmlns:x="http://www.w3.org/2001/XMLSchema" xmlns:d="http://esb.dcitsbiz.com/metadata" xmlns:s="http://esb.dcitsbiz.com/services/30021010002" targetNamespace="http://esb.dcitsbiz.com/services/30021010002" elementFormDefault="qualified" attributeFormDefault="qualified">
+  <x:import namespace="http://esb.dcitsbiz.com/metadata" schemaLocation="SoapHeader.xsd"/>
+  <x:complexType name="ReqAppHeadType">
+    <x:sequence>
+      <x:element name="BrId" type="x:string" minOccurs="0"/>
+      <x:element name="TlrNo" type="x:string" minOccurs="0"/>
+    </x:sequence>
+  </x:complexType>
+  <x:complexType name="RspAppHeadType">
+    <x:sequence>
+      <x:element name="BrId" type="x:string" minOccurs="0"/>
+      <x:element name="TlrNo" type="x:string" minOccurs="0"/>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3002101000201" type="s:Req3002101000201Type"/>
+  <x:complexType name="Req3002101000201Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="dkjiejuh" type="x:string" minOccurs="0"/>
+            <x:element name="xuhaoooo" type="x:string" minOccurs="0"/>
+            <x:element name="djiebhao" type="x:string" minOccurs="0"/>
+            <x:element name="stzfjine" type="x:string" minOccurs="0"/>
+            <x:element name="zjlyzhao" type="x:string" minOccurs="0"/>
+            <x:element name="zjlyzzxh" type="x:string" minOccurs="0"/>
+            <x:element name="zjlyzhmc" type="x:string" minOccurs="0"/>
+            <x:element name="zjzrzhao" type="x:string" minOccurs="0"/>
+            <x:element name="zjzrzzxh" type="x:string" minOccurs="0"/>
+            <x:element name="zjzrzhmc" type="x:string" minOccurs="0"/>
+            <x:element name="dfzhhzhl" type="x:string" minOccurs="0"/>
+            <x:element name="dfzhhkhh" type="x:string" minOccurs="0"/>
+            <x:element name="dfzhkhhm" type="x:string" minOccurs="0"/>
+            <x:element name="dfzhangh" type="x:string" minOccurs="0"/>
+            <x:element name="dfzhhzxh" type="x:string" minOccurs="0"/>
+            <x:element name="dfzhhmch" type="x:string" minOccurs="0"/>
+            <x:element name="stzffshi" type="x:string" minOccurs="0"/>
+            <x:element name="stzfriqi" type="x:string" minOccurs="0"/>
+            <x:element name="stdjriqi" type="x:string" minOccurs="0"/>
+            <x:element name="stzfclzt" type="x:string" minOccurs="0"/>
+            <x:element name="beizhuxx" type="x:string" minOccurs="0"/>
+            <x:element name="E2E_Id" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTEBAT" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE_SEQ" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Addr" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Acc_Brname" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Cust_Type" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Addr" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY1" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY1NAME" type="x:string" minOccurs="0"/>
+            <x:element name="Memo" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3002101000201" type="s:Rsp3002101000201Type"/>
+  <x:complexType name="Rsp3002101000201Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="dkjiejuh" type="x:string" minOccurs="0"/>
+            <x:element name="stzfjine" type="x:string" minOccurs="0"/>
+            <x:element name="zjlyzhao" type="x:string" minOccurs="0"/>
+            <x:element name="zjlyzzxh" type="x:string" minOccurs="0"/>
+            <x:element name="zjlyzhmc" type="x:string" minOccurs="0"/>
+            <x:element name="zjzrzhao" type="x:string" minOccurs="0"/>
+            <x:element name="zjzrzzxh" type="x:string" minOccurs="0"/>
+            <x:element name="zjzrzhmc" type="x:string" minOccurs="0"/>
+            <x:element name="dfzhhzhl" type="x:string" minOccurs="0"/>
+            <x:element name="dfzhhkhh" type="x:string" minOccurs="0"/>
+            <x:element name="dfzhkhhm" type="x:string" minOccurs="0"/>
+            <x:element name="dfzhangh" type="x:string" minOccurs="0"/>
+            <x:element name="dfzhhzxh" type="x:string" minOccurs="0"/>
+            <x:element name="dfzhhmch" type="x:string" minOccurs="0"/>
+            <x:element name="jiaoyigy" type="x:string" minOccurs="0"/>
+            <x:element name="jiaoyirq" type="x:string" minOccurs="0"/>
+            <x:element name="jiaoyijg" type="x:string" minOccurs="0"/>
+            <x:element name="jiaoyils" type="x:string" minOccurs="0"/>
+            <x:element name="Cpg_Id" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+</x:schema>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<x:schema xmlns:x="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://esb.dcitsbiz.com/SMSP" targetNamespace="http://esb.dcitsbiz.com/SMSP" elementFormDefault="qualified" attributeFormDefault="qualified">
+  <x:complexType name="ReqLocalHeadType">
+    <x:sequence>
+      <x:element name="SYSMACSBNO" type="x:string" minOccurs="0"/>
+      <x:element name="SYSPINSEED" type="x:string" minOccurs="0"/>
+      <x:element name="SYSDADDR" type="x:string" minOccurs="0"/>
+      <x:element name="SYSEFLAG" type="x:string" minOccurs="0"/>
+      <x:element name="SYSSEQNUM" type="x:string" minOccurs="0"/>
+      <x:element name="SYSMACFLAG" type="x:string" minOccurs="0"/>
+      <x:element name="SYSMKEYVER" type="x:string" minOccurs="0"/>
+      <x:element name="默认写入对应交易码" minOccurs="0"/>
+      <x:element name="PDTRSD" type="x:string" minOccurs="0"/>
+      <x:element name="PDTRMD" type="x:string" minOccurs="0"/>
+      <x:element name="PDTRSQ" type="x:string" minOccurs="0"/>
+      <x:element name="FDCOMMLN" type="x:string" minOccurs="0"/>
+      <x:element name="PDOFF1" type="x:string" minOccurs="0"/>
+      <x:element name="PDOFF2" type="x:string" minOccurs="0"/>
+      <x:element name="PDAUUS" type="x:string" minOccurs="0"/>
+      <x:element name="PDAUPS" type="x:string" minOccurs="0"/>
+      <x:element name="PDAUCF" type="x:string" minOccurs="0"/>
+      <x:element name="PDAUCN" type="x:string" minOccurs="0"/>
+    </x:sequence>
+  </x:complexType>
+  <x:complexType name="RspLocalHeadType">
+    <x:sequence/>
+  </x:complexType>
+</x:schema>

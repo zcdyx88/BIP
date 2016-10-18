@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<x:schema xmlns:x="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://esb.dcitsbiz.com/NCBS" targetNamespace="http://esb.dcitsbiz.com/NCBS" elementFormDefault="qualified" attributeFormDefault="qualified">
+  <x:complexType name="ReqLocalHeadType">
+    <x:sequence>
+      <x:element name="qudaohao" type="x:string" minOccurs="0"/>
+      <x:element name="farendma" type="x:string" minOccurs="0"/>
+      <x:element name="jiaoyijg" type="x:string" minOccurs="0"/>
+      <x:element name="jiaoyigy" type="x:string" minOccurs="0"/>
+      <x:element name="jiaoyima" type="x:string" minOccurs="0"/>
+      <x:element name="waiblius" type="x:string" minOccurs="0"/>
+      <x:element name="waibriqi" type="x:string" minOccurs="0"/>
+      <x:element name="huihuaid" type="x:string" minOccurs="0"/>
+      <x:element name="jiaoyirq" type="x:string" minOccurs="0"/>
+      <x:element name="waibclma" type="x:string" minOccurs="0"/>
+      <x:element name="waibjymc" type="x:string" minOccurs="0"/>
+      <x:element name="jiaoyilx" type="x:string" minOccurs="0"/>
+      <x:element name="ipdizhii" type="x:string" minOccurs="0"/>
+      <x:element name="zhongdhm" type="x:string" minOccurs="0"/>
+      <x:element name="querenbz" type="x:string" minOccurs="0"/>
+      <x:element name="yanyinjg" type="x:string" minOccurs="0"/>
+      <x:element name="sfzhecjg" type="x:string" minOccurs="0"/>
+      <x:element name="ercdxinx" type="x:string" minOccurs="0"/>
+      <x:element name="sacdxinx" type="x:string" minOccurs="0"/>
+      <x:element name="f55yxinx" type="x:string" minOccurs="0"/>
+      <x:element name="f55yzrxx" type="x:string" minOccurs="0"/>
+      <x:element name="iccdsybs" type="x:string" minOccurs="0"/>
+      <x:element name="zhaiyodm" type="x:string" minOccurs="0"/>
+      <x:element name="zhaiyoms" type="x:string" minOccurs="0"/>
+      <x:element name="shoqlius" type="x:string" minOccurs="0"/>
+      <x:element name="shoqguiy" type="x:string" minOccurs="0"/>
+      <x:element name="shoqmima" type="x:string" minOccurs="0"/>
+      <x:element name="shoqjibe" type="x:string" minOccurs="0"/>
+      <x:element name="shoqfshi" type="x:string" minOccurs="0"/>
+      <x:element name="shoqjigo" type="x:string" minOccurs="0"/>
+      <x:element name="shoqjgjb" type="x:string" minOccurs="0"/>
+      <x:element name="shoqxinx" maxOccurs="unbounded">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="jgaoxinx" type="x:string" minOccurs="0"/>
+            <x:element name="shoqxinx" type="x:string" minOccurs="0"/>
+            <x:element name="tishxinx" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+      <x:element name="ycsqbzhi" type="x:string" minOccurs="0"/>
+      <x:element name="shoqbzhi" type="x:string" minOccurs="0"/>
+      <x:element name="hejijine" type="x:decimal" minOccurs="0"/>
+      <x:element name="zhidsfje" type="x:decimal" minOccurs="0"/>
+      <x:element name="cjsfsvrlst" maxOccurs="unbounded">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="changjdm" type="x:string" minOccurs="0"/>
+            <x:element name="changjms" type="x:string" minOccurs="0"/>
+            <x:element name="shoufdma" type="x:string" minOccurs="0"/>
+            <x:element name="shouflxm" type="x:string" minOccurs="0"/>
+            <x:element name="shisjine" type="x:decimal" minOccurs="0"/>
+            <x:element name="yingsfje" type="x:decimal" minOccurs="0"/>
+            <x:element name="zuizyhbl" type="x:decimal" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+      <x:element name="feiyqrbz" type="x:string" minOccurs="0"/>
+      <x:element name="guiyzwen" type="x:string" minOccurs="0"/>
+      <x:element name="jioyzwen" type="x:string" minOccurs="0"/>
+      <x:element name="guiyzwbs" type="x:string" minOccurs="0"/>
+      <x:element name="jioyzwbs" type="x:string" minOccurs="0"/>
+      <x:element name="jiamixxlst" maxOccurs="unbounded">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="jiamizdm" type="x:string" minOccurs="0"/>
+            <x:element name="jiamizdz" type="x:string" minOccurs="0"/>
+            <x:element name="mimazidm" type="x:string" minOccurs="0"/>
+            <x:element name="mimazidz" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+      <x:element name="zongbshu" type="x:decimal" minOccurs="0"/>
+      <x:element name="cplfyxinx" maxOccurs="unbounded">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="xianzhbz" type="x:string" minOccurs="0"/>
+            <x:element name="shoufbzh" type="x:string" minOccurs="0"/>
+            <x:element name="kehuzhao" type="x:string" minOccurs="0"/>
+            <x:element name="chaohubz" type="x:string" minOccurs="0"/>
+            <x:element name="shuxuhao" type="x:string" minOccurs="0"/>
+            <x:element name="xjinxmdm" type="x:string" minOccurs="0"/>
+            <x:element name="zhidsfje" type="x:decimal" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+      <x:element name="jiangjbz" type="x:string" minOccurs="0"/>
+      <x:element name="ldbiaozi" type="x:string" minOccurs="0"/>
+      <x:element name="kaxulieh" type="x:string" minOccurs="0"/>
+      <x:element name="sqqrenbz" type="x:string" minOccurs="0"/>
+      <x:element name="youwkabz" type="x:string" minOccurs="0"/>
+      <x:element name="shoqqrgy" type="x:string" minOccurs="0"/>
+      <x:element name="shoqqrmm" type="x:string" minOccurs="0"/>
+      <x:element name="bendsqcs" type="x:decimal" minOccurs="0"/>
+      <x:element name="shoqqrzw" type="x:string" minOccurs="0"/>
+      <x:element name="syspinsd" type="x:string" minOccurs="0"/>
+    </x:sequence>
+  </x:complexType>
+  <x:complexType name="RspLocalHeadType">
+    <x:sequence>
+      <x:element name="jiaoyirq" type="x:string" minOccurs="0"/>
+      <x:element name="jiaoyima" type="x:string" minOccurs="0"/>
+      <x:element name="waibclma" type="x:string" minOccurs="0"/>
+      <x:element name="kuaijirq" type="x:string" minOccurs="0"/>
+      <x:element name="jiaoyils" type="x:string" minOccurs="0"/>
+      <x:element name="jiaoyisj" type="x:decimal" minOccurs="0"/>
+      <x:element name="jiaoyigy" type="x:string" minOccurs="0"/>
+      <x:element name="jiaoyijg" type="x:string" minOccurs="0"/>
+      <x:element name="ercdxinx" type="x:string" minOccurs="0"/>
+      <x:element name="sacdxinx" type="x:string" minOccurs="0"/>
+      <x:element name="f55yxinx" type="x:string" minOccurs="0"/>
+      <x:element name="f55yzrxx" type="x:string" minOccurs="0"/>
+      <x:element name="shoqlius" type="x:string" minOccurs="0"/>
+      <x:element name="shoqguiy" type="x:string" minOccurs="0"/>
+      <x:element name="shoqmima" type="x:string" minOccurs="0"/>
+      <x:element name="shoqjibe" type="x:string" minOccurs="0"/>
+      <x:element name="shoqfshi" type="x:string" minOccurs="0"/>
+      <x:element name="shoqjigo" type="x:string" minOccurs="0"/>
+      <x:element name="shoqjgjb" type="x:string" minOccurs="0"/>
+      <x:element name="shoqxinx" maxOccurs="unbounded">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="jgaoxinx" type="x:string" minOccurs="0"/>
+            <x:element name="shoqxinx" type="x:string" minOccurs="0"/>
+            <x:element name="tishxinx" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+      <x:element name="shoqbzhi" type="x:string" minOccurs="0"/>
+      <x:element name="ycsqbzhi" type="x:string" minOccurs="0"/>
+      <x:element name="dyinxinx" type="x:string" minOccurs="0"/>
+      <x:element name="tishbzhi" type="x:string" minOccurs="0"/>
+      <x:element name="tishxinx" maxOccurs="unbounded">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="jgaoxinx" type="x:string" minOccurs="0"/>
+            <x:element name="shoqxinx" type="x:string" minOccurs="0"/>
+            <x:element name="tishxinx" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+      <x:element name="jgaobzhi" type="x:string" minOccurs="0"/>
+      <x:element name="jgaoxinx" maxOccurs="unbounded">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="jgaoxinx" type="x:string" minOccurs="0"/>
+            <x:element name="shoqxinx" type="x:string" minOccurs="0"/>
+            <x:element name="tishxinx" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+      <x:element name="cjsfsvrlst" maxOccurs="unbounded">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="changjdm" type="x:string" minOccurs="0"/>
+            <x:element name="changjms" type="x:string" minOccurs="0"/>
+            <x:element name="shoufdma" type="x:string" minOccurs="0"/>
+            <x:element name="shouflxm" type="x:string" minOccurs="0"/>
+            <x:element name="shisjine" type="x:decimal" minOccurs="0"/>
+            <x:element name="yingsfje" type="x:decimal" minOccurs="0"/>
+            <x:element name="zuizyhbl" type="x:decimal" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+      <x:element name="feiyqrbz" type="x:string" minOccurs="0"/>
+      <x:element name="bblujing" type="x:string" minOccurs="0"/>
+      <x:element name="zongbshu" type="x:decimal" minOccurs="0"/>
+      <x:element name="arpcxinx" type="x:string" minOccurs="0"/>
+      <x:element name="f55yfhxx" type="x:string" minOccurs="0"/>
+      <x:element name="shoqqrgy" type="x:string" minOccurs="0"/>
+      <x:element name="shoqqrmm" type="x:string" minOccurs="0"/>
+      <x:element name="bendsqcs" type="x:decimal" minOccurs="0"/>
+      <x:element name="shoqqrzw" type="x:string" minOccurs="0"/>
+    </x:sequence>
+  </x:complexType>
+</x:schema>

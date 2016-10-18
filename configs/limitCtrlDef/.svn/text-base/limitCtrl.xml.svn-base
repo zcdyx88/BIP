@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	渠道限额列表
+	1.该配置文件配置相关需要限额的渠道或者机构
+	2.配置相关叶子节点进行既就是对该节点进行限额处理，限额白名单
+	限额占用标志 0-不占用;1-占用但忽略应答;2-占用且允许通讯故障;3-占用且必须成功 
+ -->
+<limits>
+	<channel channelid="All">
+		<org name="All" limitflag="3"/>
+	</channel>
+	<channel channelid="1131001">
+		<org name="All" limitflag="3"/>
+	</channel>
+	<channel channelid="1131002">
+		<org name="All" limitflag="3"/>
+	</channel>
+	<channel channelid="1131003">
+		<org name="All" limitflag="3"/>
+	</channel>
+	<channel channelid="1131004">
+		<org name="All" limitflag="3"/>
+	</channel>
+	<channel channelid="1131009">
+		<org name="All" limitflag="3"/>
+	</channel>
+</limits>

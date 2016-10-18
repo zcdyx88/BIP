@@ -1,0 +1,218 @@
+package com.dcits.smartbip.runtime.model.impl;
+
+import com.dcits.smartbip.engine.impl.MapperRepository;
+import com.dcits.smartbip.engine.impl.ServiceRepository;
+import com.dcits.smartbip.exception.InvokeException;
+import com.dcits.smartbip.parser.model.ProcessDefinitionConstants;
+import com.dcits.smartbip.parser.model.ServiceDefinitionConstants;
+import com.dcits.smartbip.runtime.model.*;
+import com.dcits.smartbip.utils.CompositeDataUtils;
+
+import org.apache.commons.beanutils.BeanUtils;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Stack;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+/**
+ * Created by vincentfxz on 16/4/26. 异步流程的抽象类,即成异步流程接口.实现:
+ * 1.实现Runnable接口中的run方法. 2.定义resultHook接口,resultHook为该抽象类的实现类留下结果集处理的钩子
+ */
+public abstract class AbstractAsyncProcessInstance implements
+		IAsyncProcessInstance {
+
+	private final Log log = LogFactory
+			.getLog(AbstractAsyncProcessInstance.class);
+	protected final Map<String, String> serviceMappings = new ConcurrentHashMap<String, String>();
+
+	private String id;
+	private IContext sessionContext = null;
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	@Override
+	public void init() {
+		Stack<IService> stack = new Stack<IService>();
+		getContext().setValue(ProcessDefinitionConstants.SERVICE_STACK, stack);
+	}
+
+	@Override
+	public void run() {
+		execute();
+		resultHook();
+	}
+
+	protected void resultHook() {
+
+	}
+
+	@Override
+	public ExecutorService getThreadPool() {
+		return Executors.newFixedThreadPool(10);
+	}
+
+	protected void callReversal() {
+		// 获取服务调用栈
+		Stack<IService> stack = (Stack<IService>) getContext().getValue(
+				ProcessDefinitionConstants.SERVICE_STACK);
+		try {
+			stack.pop(); // add 0721 在调用冲正前，弹出当前服务，到上一个服务
+			while (!stack.isEmpty()) {
+				IService service = stack.pop();
+				String reversalServiceId = service.getReversalServiceId();
+				// 如果存在不存在reverseservcie继续弹出到上一个需要冲正的服务，同步只冲正该执行的原子服务的上一个服务，如果没有，继续弹栈，直到找到冲正服务码
+				if (reversalServiceId != null
+						&& reversalServiceId.trim().length() > 0) {
+					IService reversalService = ServiceRepository
+							.getRepository().get(reversalServiceId);
+					// Object reversalReq =
+					// reversalService.getReqClazz().newInstance();
+					// 生成请求对象
+					ICompositeData reversalReq = new SoapCompositeData();
+					String id = "Req" + reversalServiceId;
+					reversalReq.setId(id);
+					reversalReq.setxPath("/" + id);
+					getContext().setValue("Req" + reversalServiceId,
+							reversalReq);
+					IMapper mapper = MapperRepository.getRepository().get(
+							getServiceMapping(reversalServiceId));
+					mapper.mapReq();
+					Object rspObj = reversalService.execute(getContext()
+							.getValue("Req" + reversalServiceId));
+					getContext().setValue("Rsp" + reversalServiceId, rspObj);
+					mapper.mapRsp();
+				}
+			}
+		} catch (Exception e) {
+			// TODO 调用异步冲正
+			log.error("冲正失败,调用异步冲正", e);
+		}
+	}
+
+	protected void callService(String serviceId, boolean persist)
+			throws InvokeException {
+		try {
+			IContext context = SessionContext.getContext();
+			IService service = ServiceRepository.getRepository().get(serviceId);
+			// 如果是业务服务需要构造请求返回,和冲正处理
+			if (ServiceDefinitionConstants.BUZZ_SERVICE_TYPE
+					.equalsIgnoreCase(service.getType())) {
+				if (log.isInfoEnabled()) {
+					log.info("开始调用业务服务[" + serviceId + "]");
+				}
+				String id = "Req" + serviceId;
+				ICompositeData reqObj = (SoapCompositeData) context
+						.getValue(id);
+				if (null == reqObj) {
+					// 生成请求对象
+					reqObj = new SoapCompositeData();
+					reqObj.setId(id);
+					reqObj.setxPath("/" + id);
+					// 请求对象放入上下文
+					context.setValue("Req" + serviceId, reqObj);
+				}
+				// 获取映射对象
+				// 进行请求的数据映射
+				IMapper mapper = MapperRepository.getRepository().get(
+						getServiceMapping(serviceId));
+				if (null != mapper) {
+					mapper.mapReq();
+				}
+				// 调用服务获得返回
+				if (log.isDebugEnabled()) {
+					log.debug("输入为[" + reqObj + "]");
+				}
+//				time3 = System.currentTimeMillis();
+				Object rspObj = service.execute(reqObj);
+//				time4 = System.currentTimeMillis();
+				context.setValue("Rsp" + serviceId, rspObj);
+				String faultCode = CompositeDataUtils.getValue(
+						(SoapCompositeData) rspObj, "Fault/faultcode");
+				if (null != faultCode) {
+					CompositeDataUtils.copy((ICompositeData) rspObj,
+							(ICompositeData) rspObj, "Fault/faultcode",
+							"RspSysHead/RetCode");
+					CompositeDataUtils.copy((ICompositeData) rspObj,
+							(ICompositeData) rspObj, "Fault/faultstring",
+							"RspSysHead/RetMsg");
+				}
+				if (null != mapper) {
+					mapper.mapRsp();
+				}
+				// 如果是需要持久化或者冲正的服务,需要记录服务信息,且服务需要入栈
+				if (persist) {
+					Stack<IService> serviceStack = (Stack<IService>) getContext()
+							.getValue(ProcessDefinitionConstants.SERVICE_STACK);
+					serviceStack.push(service);
+				}
+				if (log.isInfoEnabled()) {
+					log.info("结束调用业务服务[" + serviceId + "]");
+				}
+			}
+			// 如果是基础服务,直接运行基础服务获得返回
+			else if (ServiceDefinitionConstants.BASE_SERVICE_TYPE
+					.equalsIgnoreCase(service.getType())) {
+				service.execute(null);
+			}
+		} catch (Exception e) {
+			log.error("调用服务失败!", e);
+			throw new InvokeException("服务[" + serviceId + "]调用失败!");
+		}
+//		long time2 = System.currentTimeMillis();
+//		if (log.isErrorEnabled()) {
+//			log.error(">>>>>>流程调用前[" + serviceId + "]耗时[" + (time3 - time1)
+//					+ "]");
+//			log.error(">>>>>>流程调用中[" + serviceId + "]耗时[" + (time4 - time3)
+//					+ "]");
+//			log.error(">>>>>>流程调用后[" + serviceId + "]耗时[" + (time2 - time4)
+//					+ "]");
+//			log.error(">>>>>>流程调用服务[" + serviceId + "]耗时[" + (time2 - time1)
+//					+ "]");
+//		}
+	}
+
+	protected boolean checkReversal(String serviceId, String retCode,
+			List<String> retCodeValues) {
+		boolean needReversal = false;
+		// 获取服务的返回
+		try {
+			// Object rspObj = getContext().getValue("Rsp" + serviceId);
+			// String retCodeValue = BeanUtils.getProperty(rspObj, retCode);
+			ICompositeData rspObj = (ICompositeData) getContext().getValue(
+					"Rsp" + serviceId);
+			String retCodeValue = CompositeDataUtils.getValue(rspObj, retCode);
+
+			if (retCodeValues.contains(retCodeValue)) {
+				needReversal = true;
+			}
+		} catch (Exception e) {
+			log.error("冲正检查失败!");
+		}
+		return needReversal;
+	}
+
+	@Override
+	public IContext getContext() {
+		return SessionContext.getContext();
+	}
+
+	@Override
+	public void setContext(IContext context) {
+		sessionContext = context;
+	}
+
+	private String getServiceMapping(String serviceId) {
+		return this.serviceMappings.get(serviceId);
+	}
+}

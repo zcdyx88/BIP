@@ -1,0 +1,9 @@
+journal.enabled=true
+journal.msg.enabled=true
+journal.pool.ip=127.0.0.1
+journal.pool.port=6379
+journal.pool.maxActive=100
+journal.pool.maxIdle=10000
+journal.pool.maxWait=10000
+journal.pool.capacity=100
+journal.pool.keyExpire=30

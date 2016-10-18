@@ -1,0 +1,67 @@
+10
+
+dir
+2289
+svn://159.1.39.129/repos_esb/SmartBIP/configs
+svn://159.1.39.129/repos_esb
+
+
+
+2016-08-29T08:54:44.297130Z
+2284
+pengj
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+fb6c5ca2-22e3-11e6-bf74-4980186264d4
+
+globalDef
+dir
+
+serviceDef
+dir
+
+xmlDef
+dir
+
+protocolDef
+dir
+
+fastBoot
+dir
+
+container
+dir
+
+limitCtrlDef
+dir
+
+mapperDef
+dir
+
+ws
+dir
+
+journal
+dir
+
+properties
+dir
+
+processDef
+dir
+
+loggerDef
+dir
+

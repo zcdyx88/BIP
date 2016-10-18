@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<x:schema xmlns:x="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://esb.dcitsbiz.com/IPP" targetNamespace="http://esb.dcitsbiz.com/IPP" elementFormDefault="qualified" attributeFormDefault="qualified">
+  <x:complexType name="ReqLocalHead3Type">
+    <x:sequence>
+      <x:element name="Pkg_No" type="x:string" minOccurs="0"/>
+      <x:element name="Channel" type="x:string" minOccurs="0"/>
+      <x:element name="Txno" type="x:string" minOccurs="0"/>
+    </x:sequence>
+  </x:complexType>
+  <x:complexType name="RspLocalHead3Type">
+    <x:sequence>
+      <x:element name="Pkg_No" type="x:string" minOccurs="0"/>
+      <x:element name="Channel" type="x:string" minOccurs="0"/>
+      <x:element name="Tlsno" type="x:string" minOccurs="0"/>
+      <x:element name="Rsp_Rsv1" type="x:string" minOccurs="0"/>
+      <x:element name="Rsp_Rsv2" type="x:string" minOccurs="0"/>
+    </x:sequence>
+  </x:complexType>
+  <x:complexType name="ReqLocalHeadType">
+    <x:sequence>
+      <x:element name="TPU_StepTrcd" type="x:string" minOccurs="0"/>
+      <x:element name="PDTRSD" type="x:string" minOccurs="0"/>
+      <x:element name="PDTRMD" type="x:string" minOccurs="0"/>
+      <x:element name="PDTRSQ" type="x:string" minOccurs="0"/>
+      <x:element name="FDCOMMLN" type="x:string" minOccurs="0"/>
+      <x:element name="PDOFF1" type="x:string" minOccurs="0"/>
+      <x:element name="PDOFF2" type="x:string" minOccurs="0"/>
+      <x:element name="PDAUUS" type="x:string" minOccurs="0"/>
+      <x:element name="PDAUPS" type="x:string" minOccurs="0"/>
+      <x:element name="PDAUCF" type="x:string" minOccurs="0"/>
+      <x:element name="PDAUCN" type="x:string" minOccurs="0"/>
+      <x:element name="SYSMACFLAG" type="x:string" minOccurs="0"/>
+      <x:element name="SYSMKEYVER" type="x:string" minOccurs="0"/>
+      <x:element name="PDCTNO" type="x:string" minOccurs="0"/>
+      <x:element name="SYSMACSBNO" type="x:string" minOccurs="0"/>
+      <x:element name="SYSPINSEED" type="x:string" minOccurs="0"/>
+      <x:element name="SYSDADDR" type="x:string" minOccurs="0"/>
+      <x:element name="SYSEFLAG" type="x:string" minOccurs="0"/>
+      <x:element name="SYSSEQNUM" type="x:string" minOccurs="0"/>
+    </x:sequence>
+  </x:complexType>
+  <x:complexType name="RspLocalHeadType">
+    <x:sequence>
+      <x:element name="SYSMACSBNO" type="x:string" minOccurs="0"/>
+      <x:element name="SYSPINSEED" type="x:string" minOccurs="0"/>
+      <x:element name="SYSDADDR" type="x:string" minOccurs="0"/>
+      <x:element name="SYSEFLAG" type="x:string" minOccurs="0"/>
+      <x:element name="SYSSEQNUM" type="x:string" minOccurs="0"/>
+      <x:element name="SYSMACFLAG" type="x:string" minOccurs="0"/>
+      <x:element name="SYSMKEYVER" type="x:string" minOccurs="0"/>
+      <x:element name="TPU_StepTrcd" type="x:string" minOccurs="0"/>
+      <x:element name="PDLDTC" type="x:string" minOccurs="0"/>
+      <x:element name="PDTLSQ" type="x:string" minOccurs="0"/>
+      <x:element name="PDERTR" type="x:string" minOccurs="0"/>
+    </x:sequence>
+  </x:complexType>
+  <x:complexType name="ReqLocalHead1Type">
+    <x:sequence>
+      <x:element name="syspinsd" type="x:string" minOccurs="0"/>
+      <x:element name="jiaoyima" type="x:string" minOccurs="0"/>
+      <x:element name="shoqguiy" type="x:string" minOccurs="0"/>
+      <x:element name="shoqmima" type="x:string" minOccurs="0"/>
+      <x:element name="qudaohao" type="x:string" minOccurs="0"/>
+      <x:element name="farendma" type="x:string" minOccurs="0"/>
+      <x:element name="f55yxinx" type="x:string" minOccurs="0"/>
+      <x:element name="jiaoyijg" type="x:string" minOccurs="0"/>
+      <x:element name="jiaoyigy" type="x:string" minOccurs="0"/>
+      <x:element name="waiblius" type="x:string" minOccurs="0"/>
+      <x:element name="waibriqi" type="x:string" minOccurs="0"/>
+    </x:sequence>
+  </x:complexType>
+  <x:complexType name="RspLocalHead1Type">
+    <x:sequence>
+      <x:element name="jiaoyima" type="x:string" minOccurs="0"/>
+    </x:sequence>
+  </x:complexType>
+  <x:complexType name="ReqLocalHead2Type">
+    <x:sequence>
+      <x:element name="Txno" type="x:string" minOccurs="0"/>
+      <x:element name="SEQ_NO" type="x:string" minOccurs="0"/>
+      <x:element name="CHANNEL_ID" type="x:string" minOccurs="0"/>
+      <x:element name="USER_ID" type="x:string" minOccurs="0"/>
+      <x:element name="AUTH_ID" type="x:string" minOccurs="0"/>
+      <x:element name="TRAN_DATE" type="x:string" minOccurs="0"/>
+      <x:element name="TRAN_TIME" type="x:string" minOccurs="0"/>
+      <x:element name="AUTH_CONTEXT" type="x:string" minOccurs="0"/>
+      <x:element name="AUTH_PWD" type="x:string" minOccurs="0"/>
+    </x:sequence>
+  </x:complexType>
+  <x:complexType name="RspLocalHead2Type">
+    <x:sequence>
+      <x:element name="Tlsno" type="x:string" minOccurs="0"/>
+    </x:sequence>
+  </x:complexType>
+</x:schema>

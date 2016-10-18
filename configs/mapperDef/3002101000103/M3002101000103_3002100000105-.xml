@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping id="M3002101000103_3002100000105" remark="上送给核心">
+	<request>
+	    <item src="constant.010103" dest="Req3002100000105.Message/Sys_Head/TRAN_CODE"></item>
+		<item src="Req3002101000103.Sys_Head/TRAN_TIMESTAMP" dest="Req3002100000105.Message/Sys_Head/TRAN_TIMESTAMP"></item>
+		<item src="Req3002101000103.Sys_Head/USER_ID" dest="Req3002100000105.Message/Sys_Head/USER_ID"></item>
+		<item src="Req3002101000103.Sys_Head/SOURCE_BRANCH_NO" dest="Req3002100000105.Message/Sys_Head/SOURCE_BRANCH_NO"></item>
+		<item src="Req3002101000103.Sys_Head/BRANCH_ID" dest="Req3002100000105.Message/Sys_Head/BRANCH_ID"></item>
+		<item src="Req3002101000103.Sys_Head/CUSTOMER_ID" dest="Req3002100000105.Message/Sys_Head/CUSTOMER_ID"></item>
+		<item src="Req3002101000103.Sys_Head/DEST_BRANCH_NO" dest="Req3002100000105.Message/Sys_Head/DEST_BRANCH_NO"></item>
+		<item src="Req3002101000103.Sys_Head/TRAN_DATE" dest="Req3002100000105.Message/Sys_Head/TRAN_DATE"></item>
+		<item src="Req3002101000103.Sys_Head/SEQ_NO" dest="Req3002100000105.Message/Sys_Head/SEQ_NO"></item>
+		<item src="Req3002101000103.Sys_Head/TRAN_MODE" dest="Req3002100000105.Message/Sys_Head/TRAN_MODE"></item>
+		<item src="Req3002101000103.Sys_Head/SOURCE_TYPE" dest="Req3002100000105.Message/Sys_Head/SOURCE_TYPE"></item>
+		<item src="Req3002101000103.Sys_Head/SOURCE_TYPE" dest="Req3002100000105.Message/Sys_Head/SOURCE_TYPE"></item>
+		<item src="Req3002101000103.Sys_Head/WS_ID" dest="Req3002100000105.Message/Sys_Head/WS_ID"></item>
+		<item src="Req3002101000103.Sys_Head/SERVER_ID" dest="Req3002100000105.Message/Sys_Head/SERVER_ID"></item>
+		<item src="Req3002101000103.Sys_Head/SERVICE_CODE" dest="Req3002100000105.Message/Sys_Head/SERVICE_CODE"></item>
+		<item src="Req3002101000103.Sys_Head/CONSUMER_ID" dest="Req3002100000105.Message/Sys_Head/CONSUMER_ID"></item>
+		
+		<item src="Req3002101000103.Body/BUSI_CODE" dest="Req3002100000105.Message/Body/BIZ_TYPE"></item>
+		<item src="Req3002101000103.Body/PAY_AMT" dest="Req3002100000105.Message/Body/TRAN_AMT"></item>
+		<item src="Req3002101000103.Body/APP_HEAD/OPER_CODE" dest="Req3002100000105.Message/Body/APP_HEAD/PROGRAM_ID"></item>
+		<item src="Req3002101000103.Body/APP_HEAD/PROGRAM_ID" dest="Req3002100000105.Message/Body/APP_HEAD/PROGRAM_ID"></item>
+		<item src="Req3002101000103.Body/APP_HEAD/AUTH_FLAG" dest="Req3002100000105.Message/Body/APP_HEAD/AUTH_FLAG"></item>
+		<item src="constant.0" dest="Req3002100000105.Message/Body/APP_HEAD/PGUP_OR_PGDN"></item>
+		<item src="constant.-1" dest="Req3002100000105.Message/Body/APP_HEAD/TOTAL_NUM"></item>
+		<item src="constant.0" dest="Req3002100000105.Message/Body/APP_HEAD/CURRENT_NUM"></item>
+		<item src="constant.0" dest="Req3002100000105.Message/Body/APP_HEAD/PAGE_START"></item>
+		<item src="constant.0" dest="Req3002100000105.Message/Body/APP_HEAD/PAGE_END"></item>
+		<item src="constant.N" dest="Req3002100000105.Message/Body/APP_HEAD/AUTH_FLAG"></item>
+		<item src="constant.RB" dest="Req3002100000105.Message/Body/APP_HEAD/MODULE_ID"></item>
+		<item src="constant.Z005" dest="Req3002100000105.Message/Body/APP_HEAD/TRAN_TYPE"></item>
+		<item src="constant.CHINESE" dest="Req3002100000105.Message/Body/APP_HEAD/USER_LANG"></item>
+		
+		<item src="constant.CA" dest="Req3002100000105.Message/Body/INPUT_BAL_TYPE"></item>
+		<item src="constant.W" dest="Req3002100000105.Message/Body/TRANSFER_MODE"></item>
+		
+		<item src="constant.6236600010089217" dest="Req3002100000105.Message/Body/BASE_ACCT_NO"></item>
+		<item src="constant.三门峡暖气" dest="Req3002100000105.Message/Body/NARRATIVE"></item>
+		<item src="constant.20191231" dest="Req3002100000105.Message/Body/BU_SETTLEMENT_DATE"></item>
+		<item src="constant.1" dest="Req3002100000105.Message/Body/CONTRAST_BAT_NO"></item>
+		<item src="constant.4112000070000002" dest="Req3002100000105.Message/Body/BIZ_TYPE"></item>
+		<item src="constant.411099010980000055" dest="Req3002100000105.Message/Body/TRAN_ARRAY/Row/BASE_ACCT_NO"> </item>
+		<item src="Req3002101000103.Body/PAY_AMT" dest="Req3002100000105.Message/Body/TRAN_ARRAY/Row/TRAN_AMT"> </item>
+		<item src="constant.Z003" dest="Req3002100000105.Message/Body/TRAN_ARRAY/Row/TRAN_TYPE"> </item>
+		<item src="Req3002101000103.Body/CCY" dest="Req3002100000105.Message/Body/TRAN_ARRAY/Row/CCY"> </item>
+		<item src="constant.三门峡暖气缴费" dest="Req3002100000105.Message/Body/TRAN_ARRAY/Row/NARRATIVE"> </item>
+		
+		<item src="Req3002101000103.Body/CCY" dest="Req3002100000105.Message/Body/CCY"></item>
+		<item src="Req3002101000103.Body/TURN_FLAG" dest="Req3002100000105.Message/Body/ACCNO"></item>
+		<item src="Req3002101000103.Body/PASSWORD" dest="Req3002100000105.Message/Body/PASSWORD"></item>
+	</request>
+	<response>
+	    <!--  
+		<item src="Rsp3002100000105.Body/OTH_ACCT_NAME" dest="Rsp3002101000103.Reply_Msg/Body/OTH_ACCT_NAME" />
+		<item src="Rsp3002100000105.Body/OTH_ALT_ACCT_NAME" dest="Rsp3002101000103.Reply_Msg/Body/OTH_ALT_ACCT_NAME" />
+		<item src="Rsp3002100000105.Body/OTH_AVAIL_BAL" dest="Rsp3002101000103.Reply_Msg/Body/OTH_AVAIL_BAL" />
+		<item src="Rsp3002100000105.Sys_Head/RET_ARRAY/Row" dest="Rsp3002101000103.Reply_Msg/Sys_Head/RET_ARRAY/Row">  
+					<item src="srcArray.RET_MSG" dest="destArray.RET_MSG"/>
+					<item src="srcArray.RET_CODE" dest="destArray.RET_CODE"/>
+        </item>
+        -->
+	</response>
+</mapping>

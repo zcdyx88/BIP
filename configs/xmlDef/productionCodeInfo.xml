@@ -1,0 +1,1608 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<production id="1" remark="网上银行_对私">
+		<SignVarCd remark="签约品种代码">000001</SignVarCd>
+		<SignVarNm remark="签约品种名称">网上银行</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">0</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码"></BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">0</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志">0</InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解">1</ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">0</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行"></BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="2" remark="手机银行_对私">
+		<SignVarCd remark="签约品种代码">000002</SignVarCd>
+		<SignVarNm remark="签约品种名称">手机银行</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">0</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码"></BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">0</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志">0</InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解">1</ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">0</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行"></BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="3" remark="短信银行_对私">
+		<SignVarCd remark="签约品种代码">000003</SignVarCd>
+		<SignVarNm remark="签约品种名称">短信银行</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">0</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码"></BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志">0</InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解">1</ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">0</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行"></BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码">110001</ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="4" remark="电话银行_对私">
+		<SignVarCd remark="签约品种代码">000004</SignVarCd>
+		<SignVarNm remark="签约品种名称">电话银行</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">0</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码"></BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">0</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志">0</InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解">1</ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">0</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行"></BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="5" remark="信用卡自动还款_对私">
+		<SignVarCd remark="签约品种代码">000005</SignVarCd>
+		<SignVarNm remark="签约品种名称">信用卡自动还款</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">0</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码"></BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志">0</InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解">1</ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">1</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行"></BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="6" remark="支付宝卡通_对私">
+		<SignVarCd remark="签约品种代码">000006</SignVarCd>
+		<SignVarNm remark="签约品种名称">支付宝卡通</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">0</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码"></BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志">0</InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解">1</ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">0</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行"></BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="7" remark="ATM跨行转账_对私">
+		<SignVarCd remark="签约品种代码">000007</SignVarCd>
+		<SignVarNm remark="签约品种名称">ATM跨行转账</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">0</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码"></BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志">0</InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解">1</ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">0</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行"></BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="8" remark="第三方存管_对私">
+		<SignVarCd remark="签约品种代码">000008</SignVarCd>
+		<SignVarNm remark="签约品种名称">第三方存管</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">0</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码"></BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志">0</InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">0</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解">1</ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">1</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行"></BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="9" remark="鑫元宝_对私">
+		<SignVarCd remark="签约品种代码">000009</SignVarCd>
+		<SignVarNm remark="签约品种名称">鑫元宝</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">0</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码"></BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志">0</InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解">1</ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">0</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码">000005</ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号">002</ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级">1</ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码">000024</ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号">002</ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级">1</ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码">000025</ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号">002</ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级">1</ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码">000026</ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号">002</ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级">1</ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行"></BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="10" remark="鑫钱宝_对私">
+		<SignVarCd remark="签约品种代码">000010</SignVarCd>
+		<SignVarNm remark="签约品种名称">鑫钱宝</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">0</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码"></BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志">0</InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解">1</ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">0</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码">000005</ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号">002</ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级">1</ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码">000024</ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号">002</ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级">1</ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码">000026</ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号">002</ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级">1</ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码">000025</ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号">002</ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级">1</ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行"></BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="11" remark="电费(南京)_对私">
+		<SignVarCd remark="签约品种代码">010011</SignVarCd>
+		<SignVarNm remark="签约品种名称">电费(南京)</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">0</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码"></BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志">0</InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解">1</ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">1</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行"></BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="12" remark="水费(南京)_对私">
+		<SignVarCd remark="签约品种代码">010012</SignVarCd>
+		<SignVarNm remark="签约品种名称">水费(南京)</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">0</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码"></BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志">0</InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解">1</ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">1</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行"></BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="13" remark="联通收费(南京)_对私">
+		<SignVarCd remark="签约品种代码">010013</SignVarCd>
+		<SignVarNm remark="签约品种名称">联通收费(南京)</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">0</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码"></BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志">0</InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解">1</ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">1</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行"></BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="14" remark="燃气收费(南京)_对私">
+		<SignVarCd remark="签约品种代码">010014</SignVarCd>
+		<SignVarNm remark="签约品种名称">燃气收费(南京)</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">0</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码"></BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志">0</InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解">1</ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">1</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行"></BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="15" remark="燃气收费(泰州)_对私">
+		<SignVarCd remark="签约品种代码">020014</SignVarCd>
+		<SignVarNm remark="签约品种名称">燃气收费(泰州)</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">0</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码"></BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志">0</InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解">1</ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">1</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行"></BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="16" remark="移动收费(南京)_对私">
+		<SignVarCd remark="签约品种代码">010015</SignVarCd>
+		<SignVarNm remark="签约品种名称">移动收费(南京)</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">0</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码"></BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志">0</InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解">1</ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">1</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行"></BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="17" remark="有线收费(南京)_对私">
+		<SignVarCd remark="签约品种代码">010016</SignVarCd>
+		<SignVarNm remark="签约品种名称">有线收费(南京)</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">0</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码"></BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志">0</InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解">1</ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">1</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行"></BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="18" remark="电信收费(南京)_对私">
+		<SignVarCd remark="签约品种代码">010017</SignVarCd>
+		<SignVarNm remark="签约品种名称">电信收费(南京)</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">0</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码"></BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志">0</InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解">1</ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">1</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行"></BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="19" remark="江宁燃气收费(南京)_对私">
+		<SignVarCd remark="签约品种代码">010018</SignVarCd>
+		<SignVarNm remark="签约品种名称">江宁燃气收费(南京)</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">0</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码"></BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志">0</InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解">1</ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">1</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行"></BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="21" remark="基金_对私">
+		<SignVarCd remark="签约品种代码">000020</SignVarCd>
+		<SignVarNm remark="签约品种名称">基金</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">0</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码"></BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志">0</InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解">1</ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">0</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行"></BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="22" remark="理财_对私">
+		<SignVarCd remark="签约品种代码">000021</SignVarCd>
+		<SignVarNm remark="签约品种名称">理财</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">0</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码"></BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志">0</InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解">1</ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">0</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行"></BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="23" remark="账户金_对私">
+		<SignVarCd remark="签约品种代码">000022</SignVarCd>
+		<SignVarNm remark="签约品种名称">账户金</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">0</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码"></BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志">0</InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解">1</ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">0</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行"></BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="24" remark="黄金T+D_对私">
+		<SignVarCd remark="签约品种代码">000023</SignVarCd>
+		<SignVarNm remark="签约品种名称">黄金T+D</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">0</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码"></BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志">0</InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解">1</ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">0</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行"></BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="25" remark="易得利_对私">
+		<SignVarCd remark="签约品种代码">000024</SignVarCd>
+		<SignVarNm remark="签约品种名称">易得利</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">0</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码"></BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志">0</InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解">1</ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">0</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码">000010</ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号">003</ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级">0</ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码">000026</ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号">003</ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级">0</ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码">000025</ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号">008</ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级">0</ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行"></BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="26" remark="易得利升级版_对私">
+		<SignVarCd remark="签约品种代码">000025</SignVarCd>
+		<SignVarNm remark="签约品种名称">易得利升级版</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">0</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码"></BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志">0</InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解">1</ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">0</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码">000009</ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号">006</ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级">1</ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码">000010</ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号">007</ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级">1</ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码">000024</ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号">008</ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级">0</ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行"></BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="27" remark="卡内活转定_对私">
+		<SignVarCd remark="签约品种代码">000026</SignVarCd>
+		<SignVarNm remark="签约品种名称">卡内活转定</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">0</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码"></BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志">0</InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解">1</ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">0</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码">000024</ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号">005</ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级">0</ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码">000009</ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号">008</ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级">1</ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码">000010</ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号">009</ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级">0</ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行"></BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="28" remark="社保扣款_对私">
+		<SignVarCd remark="签约品种代码">000027</SignVarCd>
+		<SignVarNm remark="签约品种名称">社保扣款</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">0</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码"></BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志">0</InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解">1</ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">0</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行"></BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="29" remark="养老金_对私">
+		<SignVarCd remark="签约品种代码">000028</SignVarCd>
+		<SignVarNm remark="签约品种名称">养老金</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">0</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码"></BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志">0</InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解">1</ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">0</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行"></BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="42" remark="失业金_对私">
+		<SignVarCd remark="签约品种代码">000029</SignVarCd>
+		<SignVarNm remark="签约品种名称">失业金</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">0</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码"></BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志">0</InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解">1</ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">0</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行"></BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="30" remark="短信_对公">
+		<SignVarCd remark="签约品种代码">000003</SignVarCd>
+		<SignVarNm remark="签约品种名称">短信</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">1</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码">9999</BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志"></InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解"></ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">0</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行">00</BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="31" remark="电话银行_对公">
+		<SignVarCd remark="签约品种代码">000004</SignVarCd>
+		<SignVarNm remark="签约品种名称">电话银行</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">1</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码">9999</BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">0</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志"></InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解"></ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">0</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">0</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行">00</BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="32" remark="第三方存管_对公">
+		<SignVarCd remark="签约品种代码">000008</SignVarCd>
+		<SignVarNm remark="签约品种名称">第三方存管</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">1</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码">9999</BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志"></InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">0</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解"></ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">1</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行">00</BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="33" remark="基金_对公">
+		<SignVarCd remark="签约品种代码">000020</SignVarCd>
+		<SignVarNm remark="签约品种名称">基金</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">1</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码">9999</BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志"></InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解"></ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">0</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行">00</BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="34" remark="理财_对公">
+		<SignVarCd remark="签约品种代码">000021</SignVarCd>
+		<SignVarNm remark="签约品种名称">理财</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">1</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码">9999</BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志"></InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解"></ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">1</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">0</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行">00</BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="35" remark="账户通_对公">
+		<SignVarCd remark="签约品种代码">000030</SignVarCd>
+		<SignVarNm remark="签约品种名称">账户通</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">1</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码">9999</BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志"></InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解"></ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">0</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">0</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码">000031</ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号">009</ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级">0</ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码">000032</ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号">009</ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级">0</ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行">00</BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="36" remark="天添利_对公">
+		<SignVarCd remark="签约品种代码">000031</SignVarCd>
+		<SignVarNm remark="签约品种名称">天添利</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">1</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码">9999</BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志"></InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解"></ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">0</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">0</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码">000030</ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号">009</ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级">0</ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码">000032</ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号">009</ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级">0</ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行">00</BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="37" remark="协定存款_对公">
+		<SignVarCd remark="签约品种代码">000032</SignVarCd>
+		<SignVarNm remark="签约品种名称">协定存款</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">1</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码">9999</BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志"></InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解"></ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">0</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">0</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码">000030</ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号">009</ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级">0</ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码">000031</ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号">009</ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级">0</ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行">00</BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="38" remark="企业网银（普通版）_对公">
+		<SignVarCd remark="签约品种代码">000034</SignVarCd>
+		<SignVarNm remark="签约品种名称">企业网银（普通版）</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">1</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码">9999</BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志"></InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解"></ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">0</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">0</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行">00</BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="39" remark="企业网银（专业版）_对公">
+		<SignVarCd remark="签约品种代码">000035</SignVarCd>
+		<SignVarNm remark="签约品种名称">企业网银（专业版）</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">1</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码">9999</BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">0</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志"></InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解"></ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">0</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">0</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行">00</BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="40" remark="代发代扣_对公">
+		<SignVarCd remark="签约品种代码">000036</SignVarCd>
+		<SignVarNm remark="签约品种名称">代发代扣</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">1</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码">9999</BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">0</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志"></InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解"></ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">0</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">0</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行">00</BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+	<production id="41" remark="电费(泰州)_对私">
+		<SignVarCd remark="签约品种代码">020011</SignVarCd>
+		<SignVarNm remark="签约品种名称">电费(泰州)</SignVarNm>
+		<PrivyCorpFlg remark="个人对公标志">0</PrivyCorpFlg>
+		<BlngSysId remark="所属系统"></BlngSysId>
+		<BlngLglPrsnCd remark="法人代码"></BlngLglPrsnCd>
+		<CstAcctSignFlg remark="客户账户签约标志">1</CstAcctSignFlg>
+		<InOutBankFlg remark="行内行外标志">0</InOutBankFlg>
+		<SignOffFlg remark="是否允许解约">1</SignOffFlg>
+		<CroRegSignOffFlg remark="是否允许跨地区解约">1</CroRegSignOffFlg>
+		<AvlMntnFlg remark="是否允许维护">1</AvlMntnFlg>
+		<QryListVisionFlg remark="查询清单是否展现">1</QryListVisionFlg>
+		<ClsMstSignOffFlg remark="销户是否必解">1</ClsMstSignOffFlg>
+		<AvlTrsfrFlg remark="可转移标志">0</AvlTrsfrFlg>
+		<OneCdMulSignFlg remark="是否允许一卡多签">0</OneCdMulSignFlg>
+		<AvlSignChlFlg remark="是否控制签约渠道">0</AvlSignChlFlg>
+		<AvlSignOffChlFlg remark="是否控制解约渠道">0</AvlSignOffChlFlg>
+		<AvlSignExchgChlFlg remark="是否控制换签渠道">0</AvlSignExchgChlFlg>
+		<ExcludeInfoList remark="互斥信息列表">
+			<ExcludeVarCd remark="互斥品种代码"></ExcludeVarCd>
+			<ExcludeTpNo remark="互斥类型编号"></ExcludeTpNo>
+			<ExcludePdPri remark="互斥产品优先级"></ExcludePdPri>
+			<ExcludeTpNm remark="互斥类型名称"></ExcludeTpNm>
+		</ExcludeInfoList>
+		<BlngBrchBnkList remark="所属分行列表">
+			<BlngBrchBnkNo remark="所属分行"></BlngBrchBnkNo>
+		</BlngBrchBnkList>
+		<AvlSignChlList remark="可签约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignChlList>
+		<AvlSignOffChlList remark="可解约渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignOffChlList>
+		<AvlSignExchgChlList remark="可换签渠道列表">
+			<ChlId remark="渠道代码"></ChlId>
+		</AvlSignExchgChlList>
+	</production>
+</root>

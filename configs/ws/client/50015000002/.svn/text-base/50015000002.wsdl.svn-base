@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://esb.dcitsbiz.com/services/50015000002/wsdl"
+                  xmlns:s="http://esb.dcitsbiz.com/services/50015000002" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+                  xmlns:tns="http://esb.dcitsbiz.com/services/50015000002/wsdl"
+                  xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/">
+    <wsdl:types>
+        <xsd:schema targetNamespace="http://esb.dcitsbiz.com/services/50015000002/wsdl" elementFormDefault="qualified"
+                    attributeFormDefault="qualified">
+            <xsd:import namespace="http://esb.dcitsbiz.com/services/50015000002" schemaLocation="50015000002.xsd"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="Req5001500000201">
+        <wsdl:part name="Req5001500000201" element="s:Req5001500000201">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="Rsp5001500000201">
+        <wsdl:part name="Rsp5001500000201" element="s:Rsp5001500000201">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:portType name="ESBServerPortType">
+        <wsdl:operation name="op01">
+            <wsdl:input message="tns:Req5001500000201">
+            </wsdl:input>
+            <wsdl:output message="tns:Rsp5001500000201">
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="ESBServerSoapBinding" type="tns:ESBServerPortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="op02">
+            <soap:operation soapAction="urn:/op02"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="op01">
+            <soap:operation soapAction="urn:/op01"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="S50015000002">
+        <wsdl:port name="ESBServerSoapEndpoint" binding="tns:ESBServerSoapBinding">
+            <soap:address location="http://159.1.65.151:39001/EsbWebService/S50015000002"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

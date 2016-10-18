@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<x:schema xmlns:x="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://esb.dcitsbiz.com/CNAPS2" targetNamespace="http://esb.dcitsbiz.com/CNAPS2" elementFormDefault="qualified" attributeFormDefault="qualified">
+  <x:complexType name="ReqLocalHeadType">
+    <x:sequence>
+      <x:element name="SEQ_NO" type="x:string" minOccurs="0"/>
+      <x:element name="CHANNEL_ID" type="x:string" minOccurs="0"/>
+      <x:element name="USER_ID" type="x:string" minOccurs="0"/>
+      <x:element name="AUTH_ID" type="x:string" minOccurs="0"/>
+      <x:element name="TRAN_DATE" type="x:string" minOccurs="0"/>
+      <x:element name="TRAN_TIME" type="x:string" minOccurs="0"/>
+      <x:element name="AUTH_CONTEXT" type="x:string" minOccurs="0"/>
+      <x:element name="Pkg_No" type="x:string" minOccurs="0"/>
+      <x:element name="Channel" type="x:string" minOccurs="0"/>
+      <x:element name="Txno" type="x:string" minOccurs="0"/>
+      <x:element name="AUTH_PWD" type="x:string" minOccurs="0"/>
+    </x:sequence>
+  </x:complexType>
+  <x:complexType name="RspLocalHeadType">
+    <x:sequence>
+      <x:element name="TRAN_DATE" type="x:string" minOccurs="0"/>
+      <x:element name="TRAN_TIME" type="x:string" minOccurs="0"/>
+      <x:element name="TRAN_STATUS" type="x:string" minOccurs="0"/>
+      <x:element name="ERROR_CODE" type="x:string" minOccurs="0"/>
+      <x:element name="ERROR_MSG" type="x:string" minOccurs="0"/>
+      <x:element name="RET_CODE" type="x:string" minOccurs="0"/>
+      <x:element name="RET_MSG" type="x:string" minOccurs="0"/>
+      <x:element name="Pkg_No" type="x:string" minOccurs="0"/>
+      <x:element name="Channel" type="x:string" minOccurs="0"/>
+      <x:element name="Tlsno" type="x:string" minOccurs="0"/>
+      <x:element name="Rsp_Rsv1" type="x:string" minOccurs="0"/>
+      <x:element name="Rsp_Rsv2" type="x:string" minOccurs="0"/>
+      <x:element name="SEQ_NO" type="x:string" minOccurs="0"/>
+    </x:sequence>
+  </x:complexType>
+</x:schema>

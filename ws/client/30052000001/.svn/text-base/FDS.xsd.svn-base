@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<x:schema xmlns:x="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://esb.dcitsbiz.com/FDS" targetNamespace="http://esb.dcitsbiz.com/FDS" elementFormDefault="qualified" attributeFormDefault="qualified">
+  <x:complexType name="ReqLocalHeadType">
+    <x:sequence>
+      <x:element name="BankNo" type="x:string" minOccurs="0"/>
+      <x:element name="AuthOper" type="x:string" minOccurs="0"/>
+      <x:element name="AuthPwd" type="x:string" minOccurs="0"/>
+      <x:element name="PrdType" type="x:string" minOccurs="0"/>
+      <x:element name="Reserve1" type="x:string" minOccurs="0"/>
+      <x:element name="Reserve2" type="x:string" minOccurs="0"/>
+    </x:sequence>
+  </x:complexType>
+  <x:complexType name="RspLocalHeadType">
+    <x:sequence/>
+  </x:complexType>
+</x:schema>

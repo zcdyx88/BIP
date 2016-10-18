@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://esb.dcitsbiz.com/services/30062000018/wsdl" xmlns:d="http://esb.dcitsbiz.com/services/30062000018/metadata" xmlns:s="http://esb.dcitsbiz.com/services/30062000018" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soapnc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://esb.dcitsbiz.com/services/30062000018/wsdl" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/">
+  <wsdl:types>
+        <xsd:schema targetNamespace="http://esb.dcitsbiz.com/services/30062000018/wsdl" elementFormDefault="qualified" attributeFormDefault="qualified">
+            <xsd:import namespace="http://esb.dcitsbiz.com/services/30062000018" schemaLocation="30062000018.xsd"/>
+        </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Rsp3006200001810">
+    <wsdl:part name="Rsp3006200001810" element="s:Rsp3006200001810">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Rsp3006200001811">
+    <wsdl:part name="Rsp3006200001811" element="s:Rsp3006200001811">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Req3006200001805">
+    <wsdl:part name="Req3006200001805" element="s:Req3006200001805">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Req3006200001811">
+    <wsdl:part name="Req3006200001811" element="s:Req3006200001811">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Req3006200001814">
+    <wsdl:part name="Req3006200001814" element="s:Req3006200001814">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Req3006200001801">
+    <wsdl:part name="Req3006200001801" element="s:Req3006200001801">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Rsp3006200001805">
+    <wsdl:part name="Rsp3006200001805" element="s:Rsp3006200001805">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Req3006200001810">
+    <wsdl:part name="Req3006200001810" element="s:Req3006200001810">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Rsp3006200001814">
+    <wsdl:part name="Rsp3006200001814" element="s:Rsp3006200001814">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Rsp3006200001801">
+    <wsdl:part name="Rsp3006200001801" element="s:Rsp3006200001801">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ESBServerPortType">
+    <wsdl:operation name="op01">
+      <wsdl:input message="tns:Req3006200001801">
+    </wsdl:input>
+      <wsdl:output message="tns:Rsp3006200001801">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op05">
+      <wsdl:input message="tns:Req3006200001805">
+    </wsdl:input>
+      <wsdl:output message="tns:Rsp3006200001805">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op10">
+      <wsdl:input message="tns:Req3006200001810">
+    </wsdl:input>
+      <wsdl:output message="tns:Rsp3006200001810">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op11">
+      <wsdl:input message="tns:Req3006200001811">
+    </wsdl:input>
+      <wsdl:output message="tns:Rsp3006200001811">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op14">
+      <wsdl:input message="tns:Req3006200001814">
+    </wsdl:input>
+      <wsdl:output message="tns:Rsp3006200001814">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ESBServerSoapBinding" type="tns:ESBServerPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="op01">
+      <soap:operation soapAction="urn:/op01"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op05">
+      <soap:operation soapAction="urn:/op05"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op10">
+      <soap:operation soapAction="urn:/op10"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op11">
+      <soap:operation soapAction="urn:/op11"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op14">
+      <soap:operation soapAction="urn:/op14"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="S30062000018">
+    <wsdl:port name="ESBServerSoapEndpoint" binding="tns:ESBServerSoapBinding">
+      <soap:address location="http://159.1.65.151:39001/EsbWebService/S30062000018"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

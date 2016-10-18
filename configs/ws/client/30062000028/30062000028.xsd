@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<x:schema xmlns:x="http://www.w3.org/2001/XMLSchema" xmlns:d="http://esb.dcitsbiz.com/metadata" xmlns:s="http://esb.dcitsbiz.com/services/30062000028" xmlns:TPDS="http://esb.dcitsbiz.com/TPDS" targetNamespace="http://esb.dcitsbiz.com/services/30062000028" elementFormDefault="qualified" attributeFormDefault="qualified">
+  <x:import namespace="http://esb.dcitsbiz.com/metadata" schemaLocation="SoapHeader.xsd"/>
+  <x:import namespace="http://esb.dcitsbiz.com/TPDS" schemaLocation="TPDS.xsd"/>
+  <x:complexType name="ReqAppHeadType">
+    <x:sequence>
+      <x:element name="BrId" type="x:string" minOccurs="0"/>
+      <x:element name="TlrNo" type="x:string" minOccurs="0"/>
+    </x:sequence>
+  </x:complexType>
+  <x:complexType name="RspAppHeadType">
+    <x:sequence>
+      <x:element name="BrId" type="x:string" minOccurs="0"/>
+      <x:element name="TlrNo" type="x:string" minOccurs="0"/>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3006200002801" type="s:Req3006200002801Type"/>
+  <x:complexType name="Req3006200002801Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="TPDS:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="bOrganId" type="x:string" minOccurs="0"/>
+            <x:element name="bAuthOperNo" type="x:string" minOccurs="0"/>
+            <x:element name="EntrustWay" type="x:string" minOccurs="0"/>
+            <x:element name="cForceOffLine" type="x:string" minOccurs="0"/>
+            <x:element name="bCustAcct" type="x:string" minOccurs="0"/>
+            <x:element name="bCustBranch" type="x:string" minOccurs="0"/>
+            <x:element name="sCustProperty" type="x:string" minOccurs="0"/>
+            <x:element name="CardType" type="x:string" minOccurs="0"/>
+            <x:element name="Card" type="x:string" minOccurs="0"/>
+            <x:element name="sCustPwd2" type="x:string" minOccurs="0"/>
+            <x:element name="bCustPwd" type="x:string" minOccurs="0"/>
+            <x:element name="sCustPwd" type="x:string" minOccurs="0"/>
+            <x:element name="Name" type="x:string" minOccurs="0"/>
+            <x:element name="BusinType" type="x:string" minOccurs="0"/>
+            <x:element name="MoneyType" type="x:string" minOccurs="0"/>
+            <x:element name="Quota" type="x:string" minOccurs="0"/>
+            <x:element name="sOrganId" type="x:string" minOccurs="0"/>
+            <x:element name="sCustAcct" type="x:string" minOccurs="0"/>
+            <x:element name="sBranchId" type="x:string" minOccurs="0"/>
+            <x:element name="ExchangeType" type="x:string" minOccurs="0"/>
+            <x:element name="StockAccount" type="x:string" minOccurs="0"/>
+            <x:element name="sCustRight" type="x:string" minOccurs="0"/>
+            <x:element name="MailType" type="x:string" minOccurs="0"/>
+            <x:element name="Nationality" type="x:string" minOccurs="0"/>
+            <x:element name="TelNo" type="x:string" minOccurs="0"/>
+            <x:element name="FaxNo" type="x:string" minOccurs="0"/>
+            <x:element name="MobiNo" type="x:string" minOccurs="0"/>
+            <x:element name="PostCode" type="x:string" minOccurs="0"/>
+            <x:element name="Address" type="x:string" minOccurs="0"/>
+            <x:element name="Email" type="x:string" minOccurs="0"/>
+            <x:element name="sAgentId" type="x:string" minOccurs="0"/>
+            <x:element name="sAgentFare" type="x:string" minOccurs="0"/>
+            <x:element name="sRoomCode" type="x:string" minOccurs="0"/>
+            <x:element name="sBrokeFlag" type="x:string" minOccurs="0"/>
+            <x:element name="sBrokeCardType" type="x:string" minOccurs="0"/>
+            <x:element name="sBrokeCard" type="x:string" minOccurs="0"/>
+            <x:element name="sBrokeName" type="x:string" minOccurs="0"/>
+            <x:element name="sBrokeNationalit" type="x:string" minOccurs="0"/>
+            <x:element name="sBrokeTelNo" type="x:string" minOccurs="0"/>
+            <x:element name="sBrokeFaxNo" type="x:string" minOccurs="0"/>
+            <x:element name="sBrokeMobiNo" type="x:string" minOccurs="0"/>
+            <x:element name="sBrokePostCode" type="x:string" minOccurs="0"/>
+            <x:element name="sBrokeAddress" type="x:string" minOccurs="0"/>
+            <x:element name="sBrokeEmail" type="x:string" minOccurs="0"/>
+            <x:element name="sBrokeEndDate" type="x:string" minOccurs="0"/>
+            <x:element name="sBrokeCustPermit" type="x:string" minOccurs="0"/>
+            <x:element name="Reserve1" type="x:string" minOccurs="0"/>
+            <x:element name="Reserve" type="x:string" minOccurs="0"/>
+            <x:element name="bHostAcct" type="x:string" minOccurs="0"/>
+            <x:element name="oMoneyType" type="x:string" minOccurs="0"/>
+            <x:element name="oCustAcct" type="x:string" minOccurs="0"/>
+            <x:element name="oName" type="x:string" minOccurs="0"/>
+            <x:element name="MailDate" type="x:string" minOccurs="0"/>
+            <x:element name="FareAcct" type="x:string" minOccurs="0"/>
+            <x:element name="FareAccName" type="x:string" minOccurs="0"/>
+            <x:element name="FareMoneyKind" type="x:string" minOccurs="0"/>
+            <x:element name="FarePostDate" type="x:string" minOccurs="0"/>
+            <x:element name="FarePostCyc" type="x:string" minOccurs="0"/>
+            <x:element name="FareEmail" type="x:string" minOccurs="0"/>
+            <x:element name="FareAddress" type="x:string" minOccurs="0"/>
+            <x:element name="FarePostCode" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3006200002801" type="s:Rsp3006200002801Type"/>
+  <x:complexType name="Rsp3006200002801Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="TPDS:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="Date" type="x:string" minOccurs="0"/>
+            <x:element name="bSerial" type="x:string" minOccurs="0"/>
+            <x:element name="sSerial" type="x:string" minOccurs="0"/>
+            <x:element name="CustAccount" type="x:string" minOccurs="0"/>
+            <x:element name="Name" type="x:string" minOccurs="0"/>
+            <x:element name="MoneyType" type="x:string" minOccurs="0"/>
+            <x:element name="OccurBala" type="x:string" minOccurs="0"/>
+            <x:element name="sOrganId" type="x:string" minOccurs="0"/>
+            <x:element name="sBranchId" type="x:string" minOccurs="0"/>
+            <x:element name="sBranchName" type="x:string" minOccurs="0"/>
+            <x:element name="sCustAcct" type="x:string" minOccurs="0"/>
+            <x:element name="ExchangeType" type="x:string" minOccurs="0"/>
+            <x:element name="StockAccount" type="x:string" minOccurs="0"/>
+            <x:element name="Reserve1" type="x:string" minOccurs="0"/>
+            <x:element name="Reserve" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3006200002802" type="s:Req3006200002802Type"/>
+  <x:complexType name="Req3006200002802Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="TPDS:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="bOrganId" type="x:string" minOccurs="0"/>
+            <x:element name="bAuthOperNo" type="x:string" minOccurs="0"/>
+            <x:element name="EntrustWay" type="x:string" minOccurs="0"/>
+            <x:element name="cForceOffLine" type="x:string" minOccurs="0"/>
+            <x:element name="bCustAcct" type="x:string" minOccurs="0"/>
+            <x:element name="bCustBranch" type="x:string" minOccurs="0"/>
+            <x:element name="CardType" type="x:string" minOccurs="0"/>
+            <x:element name="Card" type="x:string" minOccurs="0"/>
+            <x:element name="Name" type="x:string" minOccurs="0"/>
+            <x:element name="sCustPwd2" type="x:string" minOccurs="0"/>
+            <x:element name="bCustPwd" type="x:string" minOccurs="0"/>
+            <x:element name="sCustPwd" type="x:string" minOccurs="0"/>
+            <x:element name="sCustRight" type="x:string" minOccurs="0"/>
+            <x:element name="MailType" type="x:string" minOccurs="0"/>
+            <x:element name="sOrganId" type="x:string" minOccurs="0"/>
+            <x:element name="sBranchId" type="x:string" minOccurs="0"/>
+            <x:element name="sCustAcct" type="x:string" minOccurs="0"/>
+            <x:element name="BusinType" type="x:string" minOccurs="0"/>
+            <x:element name="MoneyType" type="x:string" minOccurs="0"/>
+            <x:element name="Quota" type="x:string" minOccurs="0"/>
+            <x:element name="Reserve1" type="x:string" minOccurs="0"/>
+            <x:element name="Reserve" type="x:string" minOccurs="0"/>
+            <x:element name="bHostAcct" type="x:string" minOccurs="0"/>
+            <x:element name="oMoneyType" type="x:string" minOccurs="0"/>
+            <x:element name="oCustAcct" type="x:string" minOccurs="0"/>
+            <x:element name="oName" type="x:string" minOccurs="0"/>
+            <x:element name="MailDate" type="x:string" minOccurs="0"/>
+            <x:element name="FareAcct" type="x:string" minOccurs="0"/>
+            <x:element name="FareAccName" type="x:string" minOccurs="0"/>
+            <x:element name="FareMoneyKind" type="x:string" minOccurs="0"/>
+            <x:element name="FarePostDate" type="x:string" minOccurs="0"/>
+            <x:element name="FarePostCyc" type="x:string" minOccurs="0"/>
+            <x:element name="FareEmail" type="x:string" minOccurs="0"/>
+            <x:element name="FareAddress" type="x:string" minOccurs="0"/>
+            <x:element name="FarePostCode" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3006200002802" type="s:Rsp3006200002802Type"/>
+  <x:complexType name="Rsp3006200002802Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="TPDS:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="Date" type="x:string" minOccurs="0"/>
+            <x:element name="bSerial" type="x:string" minOccurs="0"/>
+            <x:element name="sSerial" type="x:string" minOccurs="0"/>
+            <x:element name="CustAccount" type="x:string" minOccurs="0"/>
+            <x:element name="Name" type="x:string" minOccurs="0"/>
+            <x:element name="TelNo" type="x:string" minOccurs="0"/>
+            <x:element name="FaxNo" type="x:string" minOccurs="0"/>
+            <x:element name="MobiNo" type="x:string" minOccurs="0"/>
+            <x:element name="PostCode" type="x:string" minOccurs="0"/>
+            <x:element name="Address" type="x:string" minOccurs="0"/>
+            <x:element name="Email" type="x:string" minOccurs="0"/>
+            <x:element name="sCustRight" type="x:string" minOccurs="0"/>
+            <x:element name="MailType" type="x:string" minOccurs="0"/>
+            <x:element name="MoneyType" type="x:string" minOccurs="0"/>
+            <x:element name="sOrganId" type="x:string" minOccurs="0"/>
+            <x:element name="sBranchId" type="x:string" minOccurs="0"/>
+            <x:element name="sBranchName" type="x:string" minOccurs="0"/>
+            <x:element name="sCustAcct" type="x:string" minOccurs="0"/>
+            <x:element name="Reserve1" type="x:string" minOccurs="0"/>
+            <x:element name="Reserve" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3006200002803" type="s:Req3006200002803Type"/>
+  <x:complexType name="Req3006200002803Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="TPDS:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="bOrganId" type="x:string" minOccurs="0"/>
+            <x:element name="bAuthOperNo" type="x:string" minOccurs="0"/>
+            <x:element name="EntrustWay" type="x:string" minOccurs="0"/>
+            <x:element name="cForceOffLine" type="x:string" minOccurs="0"/>
+            <x:element name="bCustAcct" type="x:string" minOccurs="0"/>
+            <x:element name="sCustAcct" type="x:string" minOccurs="0"/>
+            <x:element name="CardType" type="x:string" minOccurs="0"/>
+            <x:element name="Card" type="x:string" minOccurs="0"/>
+            <x:element name="sCustPwd2" type="x:string" minOccurs="0"/>
+            <x:element name="bCustPwd" type="x:string" minOccurs="0"/>
+            <x:element name="sCustPwd" type="x:string" minOccurs="0"/>
+            <x:element name="sOrganId" type="x:string" minOccurs="0"/>
+            <x:element name="sBranchId" type="x:string" minOccurs="0"/>
+            <x:element name="bNewAcct" type="x:string" minOccurs="0"/>
+            <x:element name="bNewPwd" type="x:string" minOccurs="0"/>
+            <x:element name="MoneyType" type="x:string" minOccurs="0"/>
+            <x:element name="BusinType" type="x:string" minOccurs="0"/>
+            <x:element name="Reserve1" type="x:string" minOccurs="0"/>
+            <x:element name="Reserve" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3006200002803" type="s:Rsp3006200002803Type"/>
+  <x:complexType name="Rsp3006200002803Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="TPDS:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="Date" type="x:string" minOccurs="0"/>
+            <x:element name="bSerial" type="x:string" minOccurs="0"/>
+            <x:element name="sSerial" type="x:string" minOccurs="0"/>
+            <x:element name="CustAccount" type="x:string" minOccurs="0"/>
+            <x:element name="Name" type="x:string" minOccurs="0"/>
+            <x:element name="TelNo" type="x:string" minOccurs="0"/>
+            <x:element name="FaxNo" type="x:string" minOccurs="0"/>
+            <x:element name="Mobile" type="x:string" minOccurs="0"/>
+            <x:element name="PostCode" type="x:string" minOccurs="0"/>
+            <x:element name="Address" type="x:string" minOccurs="0"/>
+            <x:element name="Email" type="x:string" minOccurs="0"/>
+            <x:element name="sOrganId" type="x:string" minOccurs="0"/>
+            <x:element name="sBranchId" type="x:string" minOccurs="0"/>
+            <x:element name="sBranchName" type="x:string" minOccurs="0"/>
+            <x:element name="Reserve1" type="x:string" minOccurs="0"/>
+            <x:element name="Reserve" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+</x:schema>

@@ -1,0 +1,174 @@
+package com.dcits.smartbip.journal.impl;
+
+import com.dcits.smartbip.journal.JournalService;
+import com.dcits.smartbip.runtime.model.IContext;
+import com.dcits.smartbip.runtime.model.impl.SessionContext;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+import redis.clients.jedis.*;
+
+import java.text.SimpleDateFormat;
+import java.util.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadFactory;
+import java.util.concurrent.atomic.AtomicInteger;
+
+/**
+ * Created by vincentfxz on 16/8/4.
+ */
+public class RedisJournalService implements JournalService {
+
+    private static final Log log = LogFactory.getLog(RedisJournalService.class);
+
+    private volatile boolean journalEnabled;
+    private JedisPool pool;
+    private static RedisJournalService instance;
+    private ExecutorService threadpool;
+    private AtomicInteger count = new AtomicInteger(0);
+    private int keyExpire = 30;
+    private boolean journalMsgEnabled = true;
+
+    private RedisJournalService() {
+    }
+
+    public static RedisJournalService getInstance() {
+        if (null == instance) {
+            instance = new RedisJournalService();
+        }
+        return instance;
+    }
+
+
+    @Override
+    public void start() {
+        try {
+            JournalConfig journalConfig = JournalConfig.getInstance();
+            journalEnabled = "true".equalsIgnoreCase(journalConfig.getConfig(JournalConstants.JOURNAL_ENABLED));
+            String ip = journalConfig.getConfig(JournalConstants.QUEUE_IP);
+            String port = journalConfig.getConfig(JournalConstants.QUEUE_PORT);
+            JedisPoolConfig jedisPoolConfig = new JedisPoolConfig();
+            jedisPoolConfig.setMaxTotal(Integer.parseInt(journalConfig.getConfig(JournalConstants.MAX_ACTIVE)));
+            jedisPoolConfig.setMaxIdle(Integer.parseInt(journalConfig.getConfig(JournalConstants.MAX_IDLE)));
+            jedisPoolConfig.setMaxWaitMillis(Integer.parseInt(journalConfig.getConfig(JournalConstants.MAX_WAIT)));
+            String threadCount = journalConfig.getConfig(JournalConstants.JOURNAL_POOL_CAPACITY);
+            keyExpire = Integer.parseInt(journalConfig.getConfig(JournalConstants.KEY_EXPIRE));
+            journalMsgEnabled = "true".equalsIgnoreCase(journalConfig.getConfig(JournalConstants.JOURNAL_MSG_ENABLED));
+            threadpool = Executors.newFixedThreadPool(Integer.parseInt(threadCount), new ThreadFactory() {
+                @Override
+                public Thread newThread(Runnable r) {
+                    return new Thread(r, JournalConstants.JOURNAL_THREAD_NAME + count.incrementAndGet());
+                }
+            });
+            pool = new JedisPool(jedisPoolConfig, ip, Integer.parseInt(port),30000,"redis");
+        } catch (Exception e) {
+            log.error("流水启动失败!", e);
+        }
+
+    }
+
+    @Override
+    public void invoke(IContext context, String msg) {
+        if (journalEnabled) {
+            String uniqueFlowNo = (String) context.getValue(JournalConstants.UNIQUE_FLOW_NO);
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmssSSS");
+            String date = formatter.format(new Date());
+            Map<String, String> map = new HashMap<String, String>();
+            map.put(JournalConstants.UNIQUE_FLOW_NO, uniqueFlowNo);
+            map.put(JournalConstants.FLOW_TIME, date);
+            if(journalMsgEnabled)
+            {
+            	map.put(JournalConstants.FLOW_MSG, msg);
+            }
+            StringBuilder sb = new StringBuilder();
+            sb.append(JournalConstants.FLOW_INFO).append(":").append(uniqueFlowNo);
+            pool.getResource().hmset(sb.toString(), map);
+        }
+    }
+
+    class JournalRunnable implements Runnable {
+        private String processFLowNo;
+        private String serviceFlowNo;
+        private String compositeServiceId;
+        private String serviceId;
+        private String msg;
+        private String step;
+
+        public JournalRunnable(String processFlowNo, String serviceFlowNo, String compositeServiceId, String serviceId, String msg, String step) {
+            this.processFLowNo = processFlowNo;
+            this.serviceFlowNo = serviceFlowNo;
+            this.msg = msg;
+            this.step = step;
+            this.compositeServiceId = compositeServiceId;
+            this.serviceId = serviceId;
+        }
+
+        @Override
+        public void run() {
+            sendJournal(this.processFLowNo, this.serviceFlowNo, this.compositeServiceId, this.serviceId, this.msg, this.step);
+        }
+    }
+
+    /**
+     * 发送流水到redis
+     *
+     * @param processFlowNo
+     * @param serviceFlowNo
+     * @param compositeServiceId
+     * @param serviceId
+     * @param msg
+     * @param step
+     */
+    private void sendJournal(String processFlowNo, String serviceFlowNo, String compositeServiceId, String serviceId, String msg, String step) {
+        if (journalEnabled) {
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmssSSS");
+            Date dt = new Date();
+            String date = formatter.format(dt);
+            Map<String, String> map = new HashMap<String, String>();
+            SimpleDateFormat flatDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            String flatDate = flatDateFormat.format(dt);
+            map.put(JournalConstants.UNIQUE_FLOW_NO, processFlowNo);
+            map.put(JournalConstants.FLAT_DATE, flatDate);
+            map.put(JournalConstants.FLOW_TIME, date);
+            if(journalMsgEnabled)
+			{
+            	map.put(JournalConstants.FLOW_MSG, msg);
+			}
+            map.put(JournalConstants.FLOW_STEP, step);
+            map.put(JournalConstants.FLOW_COMPOSITE_SERVICE_ID, compositeServiceId);
+            map.put(JournalConstants.FLOW_SERVICE_ID, serviceId);
+            map.put(JournalConstants.ATOM_FLOW_NO, serviceFlowNo);
+            String retStatus = (String) SessionContext.getContext().getValue(JournalConstants.JOURNAL_RET_CODE);
+            retStatus = retStatus == null ? "" : retStatus;
+            map.put(JournalConstants.JOURNAL_RET_CODE, retStatus);
+            String key = (new StringBuilder(JournalConstants.FLOW_INFO).append(":BIP-").append(compositeServiceId)
+                    .append("-").append(serviceId).append("-").append(processFlowNo).append("-").append(step)).toString();
+            Jedis jedis = null;
+            try {
+                jedis = pool.getResource();
+                log.info("KEY|MAP:"+key +" | "+map);
+                jedis.hmset(key, map);
+                long expire = jedis.expire(key, keyExpire);
+                if (log.isInfoEnabled()){
+                	log.info("设置数据过期时间为["+keyExpire+"]秒，结果["+expire+"]  (1代表成功，0代表key不存在)");
+                }
+                //发送一个订阅发布的通知
+                jedis.publish(JournalConstants.JOURNAL_CHANNEL, key);
+            } catch (Exception e) {
+                log.error("发送流水失败!", e);
+            } finally {
+                if (null != pool && null != jedis)
+                    pool.returnResource(jedis);
+            }
+        }
+    }
+
+    @Override
+    public void invoke(String processFlowNo, String serviceFlowNo, String compositeServiceId, String serviceId, String msg, String step) {
+    	if (journalEnabled) {
+	    	JournalRunnable journalRunnable = new JournalRunnable(processFlowNo, serviceFlowNo, compositeServiceId, serviceId, msg, step);
+	        this.threadpool.execute(journalRunnable);
+    	}
+    }
+}

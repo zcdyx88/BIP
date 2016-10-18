@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<x:schema xmlns:x="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://esb.dcitsbiz.com/metadata" xmlns:d="http://esb.dcitsbiz.com/metadata" targetNamespace="http://esb.dcitsbiz.com/metadata" elementFormDefault="qualified" attributeFormDefault="qualified">
+  <x:complexType name="ReqSysHeadType">
+    <x:sequence>
+      <x:element name="PkgLength" type="x:string" minOccurs="0"/>
+      <x:element name="TmlCd" type="x:string" minOccurs="0"/>
+      <x:element name="ServiceID" type="x:string" minOccurs="1"/>
+      <x:element name="ChannelID" type="x:string" minOccurs="1"/>
+      <x:element name="LegOrgID" type="x:string" minOccurs="1"/>
+      <x:element name="ReqDate" type="x:string" minOccurs="1"/>
+      <x:element name="ReqTime" type="x:string" minOccurs="1"/>
+      <x:element name="MAC" type="x:string" minOccurs="0"/>
+      <x:element name="Version" type="x:string" minOccurs="1"/>
+      <x:element name="Priority" type="x:string" minOccurs="0"/>
+      <x:element name="ReqSysID" type="x:string" minOccurs="1"/>
+      <x:element name="DomainRef" type="x:string" minOccurs="1"/>
+      <x:element name="AcceptLang" type="x:string" minOccurs="1"/>
+      <x:element name="GlobalSeq" type="x:string" minOccurs="1"/>
+      <x:element name="OrgSysID" type="x:string" minOccurs="1"/>
+      <x:element name="RespSeq" type="x:string" minOccurs="0"/>
+      <x:element name="RespDate" type="x:string" minOccurs="0"/>
+      <x:element name="RespTime" type="x:string" minOccurs="0"/>
+      <x:element name="TransStatus" type="x:string" minOccurs="0"/>
+      <x:element name="RetCode" type="x:string" minOccurs="0"/>
+      <x:element name="RetMsg" type="x:string" minOccurs="0"/>
+      <x:element name="RespSysID" type="x:string" minOccurs="0"/>
+      <x:element name="TrackCode" type="x:string" minOccurs="0"/>
+      <x:element name="ReseFlg" type="x:string" minOccurs="0"/>
+      <x:element name="ReseFld" type="x:string" minOccurs="0"/>
+      <x:element name="SvcScn" type="x:string" minOccurs="1"/>
+      <x:element name="ReqSeq" type="x:string" minOccurs="1"/>
+    </x:sequence>
+  </x:complexType>
+  <x:complexType name="RspSysHeadType">
+    <x:sequence>
+      <x:element name="PkgLength" type="x:string" minOccurs="0"/>
+      <x:element name="GlobalSeq" type="x:string" minOccurs="1"/>
+      <x:element name="ServiceID" type="x:string" minOccurs="1"/>
+      <x:element name="ChannelID" type="x:string" minOccurs="1"/>
+      <x:element name="LegOrgID" type="x:string" minOccurs="1"/>
+      <x:element name="ReqDate" type="x:string" minOccurs="1"/>
+      <x:element name="ReqTime" type="x:string" minOccurs="1"/>
+      <x:element name="MAC" type="x:string" minOccurs="0"/>
+      <x:element name="Version" type="x:string" minOccurs="1"/>
+      <x:element name="Priority" type="x:string" minOccurs="0"/>
+      <x:element name="ReqSysID" type="x:string" minOccurs="1"/>
+      <x:element name="DomainRef" type="x:string" minOccurs="1"/>
+      <x:element name="OrgSysID" type="x:string" minOccurs="1"/>
+      <x:element name="RespSeq" type="x:string" minOccurs="1"/>
+      <x:element name="RespDate" type="x:string" minOccurs="1"/>
+      <x:element name="RespTime" type="x:string" minOccurs="1"/>
+      <x:element name="TransStatus" type="x:string" minOccurs="1"/>
+      <x:element name="RetCode" type="x:string" minOccurs="1"/>
+      <x:element name="RetMsg" type="x:string" minOccurs="1"/>
+      <x:element name="RespSysID" type="x:string" minOccurs="1"/>
+      <x:element name="TrackCode" type="x:string" minOccurs="0"/>
+      <x:element name="ReseFlg" type="x:string" minOccurs="0"/>
+      <x:element name="ReseFld" type="x:string" minOccurs="0"/>
+      <x:element name="SvcScn" type="x:string" minOccurs="1"/>
+      <x:element name="TmlCd" type="x:string" minOccurs="0"/>
+      <x:element name="AcceptLang" type="x:string" minOccurs="1"/>
+      <x:element name="ReqSeq" type="x:string" minOccurs="1"/>
+    </x:sequence>
+  </x:complexType>
+</x:schema>

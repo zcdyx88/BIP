@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<x:schema xmlns:x="http://www.w3.org/2001/XMLSchema" xmlns:d="http://esb.dcitsbiz.com/metadata" xmlns:s="http://esb.dcitsbiz.com/services/30062000018" xmlns:NCBS="http://esb.dcitsbiz.com/NCBS" xmlns:IPP="http://esb.dcitsbiz.com/IPP" targetNamespace="http://esb.dcitsbiz.com/services/30062000018" elementFormDefault="qualified" attributeFormDefault="qualified">
+  <x:import namespace="http://esb.dcitsbiz.com/metadata" schemaLocation="SoapHeader.xsd"/>
+  <x:import namespace="http://esb.dcitsbiz.com/NCBS" schemaLocation="NCBS.xsd"/>
+  <x:import namespace="http://esb.dcitsbiz.com/IPP" schemaLocation="IPP.xsd"/>
+  <x:complexType name="ReqAppHeadType">
+    <x:sequence>
+      <x:element name="BrId" type="x:string" minOccurs="0"/>
+      <x:element name="TlrNo" type="x:string" minOccurs="0"/>
+    </x:sequence>
+  </x:complexType>
+  <x:complexType name="RspAppHeadType">
+    <x:sequence>
+      <x:element name="BrId" type="x:string" minOccurs="0"/>
+      <x:element name="TlrNo" type="x:string" minOccurs="0"/>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3006200001801" type="s:Req3006200001801Type"/>
+  <x:complexType name="Req3006200001801Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="NCBS:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="qywhbzhi" type="x:string" minOccurs="0"/>
+            <x:element name="dlywhaoo" type="x:string" minOccurs="0"/>
+            <x:element name="kehuhaoo" type="x:string" minOccurs="0"/>
+            <x:element name="danweimc" type="x:string" minOccurs="0"/>
+            <x:element name="shoufubz" type="x:string" minOccurs="0"/>
+            <x:element name="ywzlbhao" type="x:string" minOccurs="0"/>
+            <x:element name="huobdaih" type="x:string" minOccurs="0"/>
+            <x:element name="chaohubz" type="x:string" minOccurs="0"/>
+            <x:element name="shhjszha" type="x:string" minOccurs="0"/>
+            <x:element name="dawezhha" type="x:string" minOccurs="0"/>
+            <x:element name="shxufebz" type="x:string" minOccurs="0"/>
+            <x:element name="shxuflzl" type="x:string" minOccurs="0"/>
+            <x:element name="kehujlhm" type="x:string" minOccurs="0"/>
+            <x:element name="kehujlxm" type="x:string" minOccurs="0"/>
+            <x:element name="shlxdhua" type="x:string" minOccurs="0"/>
+            <x:element name="shlxiren" type="x:string" minOccurs="0"/>
+            <x:element name="shifoubz" type="x:string" minOccurs="0"/>
+            <x:element name="qinsclbz" type="x:string" minOccurs="0"/>
+            <x:element name="yebzclfs" type="x:string" minOccurs="0"/>
+            <x:element name="xieyibho" type="x:string" minOccurs="0"/>
+            <x:element name="xieysxrq" type="x:string" minOccurs="0"/>
+            <x:element name="xieyzzrq" type="x:string" minOccurs="0"/>
+            <x:element name="jiamiibz" type="x:string" minOccurs="0"/>
+            <x:element name="qyueztai" type="x:string" minOccurs="0"/>
+            <x:element name="jbrmingc" type="x:string" minOccurs="0"/>
+            <x:element name="jbrzjlxi" type="x:string" minOccurs="0"/>
+            <x:element name="jbrzjhma" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3006200001801" type="s:Rsp3006200001801Type"/>
+  <x:complexType name="Rsp3006200001801Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="NCBS:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="listnm01" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="guiylius" type="x:string" minOccurs="0"/>
+                  <x:element name="dlywhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="dawezhha" type="x:string" minOccurs="0"/>
+                  <x:element name="shhjszha" type="x:string" minOccurs="0"/>
+                  <x:element name="shxufebz" type="x:string" minOccurs="0"/>
+                  <x:element name="shxuflzl" type="x:string" minOccurs="0"/>
+                  <x:element name="shoufubz" type="x:string" minOccurs="0"/>
+                  <x:element name="dwywbhao" type="x:string" minOccurs="0"/>
+                  <x:element name="kehujlhm" type="x:string" minOccurs="0"/>
+                  <x:element name="kehujlxm" type="x:string" minOccurs="0"/>
+                  <x:element name="shlxdhua" type="x:string" minOccurs="0"/>
+                  <x:element name="shlxiren" type="x:string" minOccurs="0"/>
+                  <x:element name="danweimc" type="x:string" minOccurs="0"/>
+                  <x:element name="ywzlbhao" type="x:string" minOccurs="0"/>
+                  <x:element name="qywhbzhi" type="x:string" minOccurs="0"/>
+                  <x:element name="qinsclbz" type="x:string" minOccurs="0"/>
+                  <x:element name="yebzclfs" type="x:string" minOccurs="0"/>
+                  <x:element name="xieyibho" type="x:string" minOccurs="0"/>
+                  <x:element name="xieysxrq" type="x:string" minOccurs="0"/>
+                  <x:element name="xieyzzrq" type="x:string" minOccurs="0"/>
+                  <x:element name="jiamiibz" type="x:string" minOccurs="0"/>
+                  <x:element name="qyueztai" type="x:string" minOccurs="0"/>
+                  <x:element name="jbrmingc" type="x:string" minOccurs="0"/>
+                  <x:element name="jbrzjlxi" type="x:string" minOccurs="0"/>
+                  <x:element name="jbrzjhma" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3006200001805" type="s:Req3006200001805Type"/>
+  <x:complexType name="Req3006200001805Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="IPP:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="YHTGNE" type="x:string" minOccurs="0"/>
+            <x:element name="SFSSBZ" type="x:string" minOccurs="0"/>
+            <x:element name="JSFDMA" type="x:string" minOccurs="0"/>
+            <x:element name="WTSQHA" type="x:string" minOccurs="0"/>
+            <x:element name="SFDWDM" type="x:string" minOccurs="0"/>
+            <x:element name="JLDXDM" type="x:string" minOccurs="0"/>
+            <x:element name="JLDXHM" type="x:string" minOccurs="0"/>
+            <x:element name="SFZLEI" type="x:string" minOccurs="0"/>
+            <x:element name="KHKHYH" type="x:string" minOccurs="0"/>
+            <x:element name="WTKKZH" type="x:string" minOccurs="0"/>
+            <x:element name="YHZHHM" type="x:string" minOccurs="0"/>
+            <x:element name="YHZHLX" type="x:string" minOccurs="0"/>
+            <x:element name="ZJHAMA" type="x:string" minOccurs="0"/>
+            <x:element name="TXDIZH" type="x:string" minOccurs="0"/>
+            <x:element name="YZBIMA" type="x:string" minOccurs="0"/>
+            <x:element name="ZFHHAO" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3006200001805" type="s:Rsp3006200001805Type"/>
+  <x:complexType name="Rsp3006200001805Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="IPP:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="JSFDMA" type="x:string" minOccurs="0"/>
+            <x:element name="WTSQHA" type="x:string" minOccurs="0"/>
+            <x:element name="SFDWDM" type="x:string" minOccurs="0"/>
+            <x:element name="JLDXDM" type="x:string" minOccurs="0"/>
+            <x:element name="JLDXHM" type="x:string" minOccurs="0"/>
+            <x:element name="SFZLEI" type="x:string" minOccurs="0"/>
+            <x:element name="KHKHYH" type="x:string" minOccurs="0"/>
+            <x:element name="WTKKZH" type="x:string" minOccurs="0"/>
+            <x:element name="YHZHHM" type="x:string" minOccurs="0"/>
+            <x:element name="YHZHLX" type="x:string" minOccurs="0"/>
+            <x:element name="ZJHAMA" type="x:string" minOccurs="0"/>
+            <x:element name="TXDIZH" type="x:string" minOccurs="0"/>
+            <x:element name="YZBIMA" type="x:string" minOccurs="0"/>
+            <x:element name="ZFHHAO" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3006200001810" type="s:Req3006200001810Type"/>
+  <x:complexType name="Req3006200001810Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="IPP:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="SHOFBZ" type="x:string" minOccurs="0"/>
+            <x:element name="HUOBDH" type="x:string" minOccurs="0"/>
+            <x:element name="CHUIBZ" type="x:string" minOccurs="0"/>
+            <x:element name="YWZLBH" type="x:string" minOccurs="0"/>
+            <x:element name="DANWBH" type="x:string" minOccurs="0"/>
+            <x:element name="DLIYWH" type="x:string" minOccurs="0"/>
+            <x:element name="SXIORQ" type="x:string" minOccurs="0"/>
+            <x:element name="ZYWXYH" type="x:string" minOccurs="0"/>
+            <x:element name="DSYHBH" type="x:string" minOccurs="0"/>
+            <x:element name="DISFMC" type="x:string" minOccurs="0"/>
+            <x:element name="DAILRM" type="x:string" minOccurs="0"/>
+            <x:element name="ZHJNZL" type="x:string" minOccurs="0"/>
+            <x:element name="ZHJHAO" type="x:string" minOccurs="0"/>
+            <x:element name="DSYHDZ" type="x:string" minOccurs="0"/>
+            <x:element name="DSYHYB" type="x:string" minOccurs="0"/>
+            <x:element name="DSYHDH" type="x:string" minOccurs="0"/>
+            <x:element name="GRZHLX" type="x:string" minOccurs="0"/>
+            <x:element name="GRZHAO" type="x:string" minOccurs="0"/>
+            <x:element name="JIOYMM" type="x:string" minOccurs="0"/>
+            <x:element name="QIYEDM" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3006200001810" type="s:Rsp3006200001810Type"/>
+  <x:complexType name="Rsp3006200001810Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="IPP:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="FOBJ1" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="DSYHBH" type="x:string" minOccurs="0"/>
+                  <x:element name="DISFMC" type="x:string" minOccurs="0"/>
+                  <x:element name="YWZLBH" type="x:string" minOccurs="0"/>
+                  <x:element name="DANWBH" type="x:string" minOccurs="0"/>
+                  <x:element name="DSYHDH" type="x:string" minOccurs="0"/>
+                  <x:element name="ZYWXYH" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+            <x:element name="FOBJ2" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="ZYWXYH" type="x:string" minOccurs="0"/>
+                  <x:element name="SHMGXX" type="x:string" minOccurs="0"/>
+                  <x:element name="DSYHBH" type="x:string" minOccurs="0"/>
+                  <x:element name="DISFMC" type="x:string" minOccurs="0"/>
+                  <x:element name="DAILRM" type="x:string" minOccurs="0"/>
+                  <x:element name="YWZLBH" type="x:string" minOccurs="0"/>
+                  <x:element name="DANWBH" type="x:string" minOccurs="0"/>
+                  <x:element name="SXIORQ" type="x:string" minOccurs="0"/>
+                  <x:element name="KEHUXM" type="x:string" minOccurs="0"/>
+                  <x:element name="ZHJNZL" type="x:string" minOccurs="0"/>
+                  <x:element name="ZHJHAO" type="x:string" minOccurs="0"/>
+                  <x:element name="DSYHDZ" type="x:string" minOccurs="0"/>
+                  <x:element name="DSYHYB" type="x:string" minOccurs="0"/>
+                  <x:element name="DSYHDH" type="x:string" minOccurs="0"/>
+                  <x:element name="GRZHLX" type="x:string" minOccurs="0"/>
+                  <x:element name="GRZHAO" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3006200001811" type="s:Req3006200001811Type"/>
+  <x:complexType name="Req3006200001811Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="IPP:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="DLIYWH" type="x:string" minOccurs="0"/>
+            <x:element name="ZYWXYH" type="x:string" minOccurs="0"/>
+            <x:element name="YWZLBH" type="x:string" minOccurs="0"/>
+            <x:element name="DANWBH" type="x:string" minOccurs="0"/>
+            <x:element name="DSYHBH" type="x:string" minOccurs="0"/>
+            <x:element name="DISFMC" type="x:string" minOccurs="0"/>
+            <x:element name="DAILRM" type="x:string" minOccurs="0"/>
+            <x:element name="ZHJNZL" type="x:string" minOccurs="0"/>
+            <x:element name="ZHJHAO" type="x:string" minOccurs="0"/>
+            <x:element name="DSYHDZ" type="x:string" minOccurs="0"/>
+            <x:element name="DSYHYB" type="x:string" minOccurs="0"/>
+            <x:element name="DSYHDH" type="x:string" minOccurs="0"/>
+            <x:element name="CAOZFS" type="x:string" minOccurs="0"/>
+            <x:element name="JIOYMM" type="x:string" minOccurs="0"/>
+            <x:element name="CID2XX" type="x:string" minOccurs="0"/>
+            <x:element name="GRZHLX" type="x:string" minOccurs="0"/>
+            <x:element name="GRZHAO" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3006200001811" type="s:Rsp3006200001811Type"/>
+  <x:complexType name="Rsp3006200001811Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="IPP:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="FOBJ1" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="DLIYWH" type="x:string" minOccurs="0"/>
+                  <x:element name="ZYWXYH" type="x:string" minOccurs="0"/>
+                  <x:element name="DSYHBH" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+            <x:element name="FOBJ2" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="ZYWXYH" type="x:string" minOccurs="0"/>
+                  <x:element name="SHMGXX" type="x:string" minOccurs="0"/>
+                  <x:element name="DSYHBH" type="x:string" minOccurs="0"/>
+                  <x:element name="DISFMC" type="x:string" minOccurs="0"/>
+                  <x:element name="DAILRM" type="x:string" minOccurs="0"/>
+                  <x:element name="YWZLBH" type="x:string" minOccurs="0"/>
+                  <x:element name="DANWBH" type="x:string" minOccurs="0"/>
+                  <x:element name="SXIORQ" type="x:string" minOccurs="0"/>
+                  <x:element name="KEHUXM" type="x:string" minOccurs="0"/>
+                  <x:element name="ZHJNZL" type="x:string" minOccurs="0"/>
+                  <x:element name="ZHJHAO" type="x:string" minOccurs="0"/>
+                  <x:element name="DSYHDZ" type="x:string" minOccurs="0"/>
+                  <x:element name="DSYHYB" type="x:string" minOccurs="0"/>
+                  <x:element name="DSYHDH" type="x:string" minOccurs="0"/>
+                  <x:element name="GRZHLX" type="x:string" minOccurs="0"/>
+                  <x:element name="GRZHAO" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3006200001814" type="s:Req3006200001814Type"/>
+  <x:complexType name="Req3006200001814Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="IPP:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="CAOZBZ" type="x:string" minOccurs="0"/>
+            <x:element name="SMSGMC" type="x:string" minOccurs="0"/>
+            <x:element name="KEHUZH" type="x:string" minOccurs="0"/>
+            <x:element name="KEHZWM" type="x:string" minOccurs="0"/>
+            <x:element name="YNGYJG" type="x:string" minOccurs="0"/>
+            <x:element name="QIYEDM" type="x:string" minOccurs="0"/>
+            <x:element name="XFDANH" type="x:string" minOccurs="0"/>
+            <x:element name="QISHHH" type="x:string" minOccurs="0"/>
+            <x:element name="REMARK" type="x:string" minOccurs="0"/>
+            <x:element name="FQHHAO" type="x:string" minOccurs="0"/>
+            <x:element name="ZJCYHH" type="x:string" minOccurs="0"/>
+            <x:element name="KHZHLX" type="x:string" minOccurs="0"/>
+            <x:element name="FUKRMC" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3006200001814" type="s:Rsp3006200001814Type"/>
+  <x:complexType name="Rsp3006200001814Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="IPP:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="SLBHAO" type="x:string" minOccurs="0"/>
+            <x:element name="GUIYLS" type="x:string" minOccurs="0"/>
+            <x:element name="SMSGMC" type="x:string" minOccurs="0"/>
+            <x:element name="KEHUZH" type="x:string" minOccurs="0"/>
+            <x:element name="KEHZWM" type="x:string" minOccurs="0"/>
+            <x:element name="YNGYJG" type="x:string" minOccurs="0"/>
+            <x:element name="QIYEDM" type="x:string" minOccurs="0"/>
+            <x:element name="XFDANH" type="x:string" minOccurs="0"/>
+            <x:element name="QISHHH" type="x:string" minOccurs="0"/>
+            <x:element name="REMARK" type="x:string" minOccurs="0"/>
+            <x:element name="JILUZT" type="x:string" minOccurs="0"/>
+            <x:element name="KHZHLX" type="x:string" minOccurs="0"/>
+            <x:element name="FUKRMC" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+</x:schema>

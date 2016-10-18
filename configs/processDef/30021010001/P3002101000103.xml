@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root main="P3002101000103">
+	<!-- 签约品种参数配置查询  -->
+	<processDefinition id="P3002101000103" isAsync="true" mapping="M3002101000103">
+	    <service id="3002100000105" type="buzzService" mapping="M3002101000103_3002100000105"/>
+	    <service id="3002100000106" type="buzzService" mapping="M3002101000103_3002100000106"/>
+	</processDefinition>
+</root>

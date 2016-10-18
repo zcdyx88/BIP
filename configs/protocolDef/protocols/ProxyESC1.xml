@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<protocol>
+    <id>ProxyESC1</id>
+    <ip>127.0.0.1</ip>
+    <port>20011</port>
+    <readPolicy>length:s=0,e=7</readPolicy>
+    <writePolicy>length:s=0,e=7</writePolicy>
+    <readTimeOut>30000</readTimeOut>
+    <connectionTimeOut>30000</connectionTimeOut>
+</protocol>

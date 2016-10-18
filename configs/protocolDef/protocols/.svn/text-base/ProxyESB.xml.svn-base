@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<protocol>
+    <id>ProxyESB</id>
+    <wsdl>configs/ws/client/30021000001/30021000001.wsdl</wsdl>
+    <ip>159.1.39.132</ip>
+    <port>10512</port>
+    <contextPath>/EsbWebService/*</contextPath>
+    <bindingName>ESBServerSoapBinding</bindingName>
+    <operationName>op02</operationName>
+</protocol>

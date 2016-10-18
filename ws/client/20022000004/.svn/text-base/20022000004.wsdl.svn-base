@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://esb.dcitsbiz.com/services/20022000004/wsdl" xmlns:d="http://esb.dcitsbiz.com/services/20022000004/metadata" xmlns:s="http://esb.dcitsbiz.com/services/20022000004" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soapnc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://esb.dcitsbiz.com/services/20022000004/wsdl" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/">
+  <wsdl:types>
+        <xsd:schema targetNamespace="http://esb.dcitsbiz.com/services/20022000004/wsdl" elementFormDefault="qualified" attributeFormDefault="qualified">
+            <xsd:import namespace="http://esb.dcitsbiz.com/services/20022000004" schemaLocation="20022000004.xsd"/>
+        </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Req2002200000404">
+    <wsdl:part name="Req2002200000404" element="s:Req2002200000404">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Rsp2002200000403">
+    <wsdl:part name="Rsp2002200000403" element="s:Rsp2002200000403">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Rsp2002200000404">
+    <wsdl:part name="Rsp2002200000404" element="s:Rsp2002200000404">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Req2002200000401">
+    <wsdl:part name="Req2002200000401" element="s:Req2002200000401">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Req2002200000402">
+    <wsdl:part name="Req2002200000402" element="s:Req2002200000402">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Rsp2002200000401">
+    <wsdl:part name="Rsp2002200000401" element="s:Rsp2002200000401">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Req2002200000403">
+    <wsdl:part name="Req2002200000403" element="s:Req2002200000403">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Rsp2002200000402">
+    <wsdl:part name="Rsp2002200000402" element="s:Rsp2002200000402">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ESBServerPortType">
+    <wsdl:operation name="op01">
+      <wsdl:input message="tns:Req2002200000401">
+    </wsdl:input>
+      <wsdl:output message="tns:Rsp2002200000401">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op02">
+      <wsdl:input message="tns:Req2002200000402">
+    </wsdl:input>
+      <wsdl:output message="tns:Rsp2002200000402">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op03">
+      <wsdl:input message="tns:Req2002200000403">
+    </wsdl:input>
+      <wsdl:output message="tns:Rsp2002200000403">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op04">
+      <wsdl:input message="tns:Req2002200000404">
+    </wsdl:input>
+      <wsdl:output message="tns:Rsp2002200000404">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ESBServerSoapBinding" type="tns:ESBServerPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="op01">
+      <soap:operation soapAction="urn:/op01"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op02">
+      <soap:operation soapAction="urn:/op02"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op03">
+      <soap:operation soapAction="urn:/op03"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="op04">
+      <soap:operation soapAction="urn:/op04"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="S20022000004">
+    <wsdl:port name="ESBServerSoapEndpoint" binding="tns:ESBServerSoapBinding">
+      <soap:address location="http://159.1.65.151:39001/EsbWebService/S20022000004"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

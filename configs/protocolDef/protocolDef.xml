@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<protocols>
+    <protocol>
+        <id>WSServer</id>
+        <implement>com.dcits.smartbip.protocol.http.server.JettyServer</implement>
+        <type>server</type>
+        <param>protocolDef/protocols/WSServer.xml</param>
+    </protocol>
+    <protocol>
+        <id>ProxyESB</id>
+        <implement>com.dcits.smartbip.protocol.ws.client.SOAPClient</implement>
+        <type>client</type>
+        <param>protocolDef/protocols/ProxyESB.xml</param>
+    </protocol>
+    <protocol>
+        <id>ProxyESC</id>
+        <implement>com.dcits.smartbip.protocol.tcp.client.TCPClient</implement>
+        <type>client</type>
+        <param>protocolDef/protocols/ProxyESC.xml</param>
+    </protocol>
+    <protocol>
+        <id>ProxyESC1</id>
+        <implement>com.dcits.smartbip.protocol.tcp.client.TCPClient</implement>
+        <type>client</type>
+        <param>protocolDef/protocols/ProxyESC1.xml</param>
+    </protocol>
+    <protocol>
+        <id>TCPServer</id>
+        <implement>com.dcits.smartbip.protocol.tcp.server.TCPShortServer</implement>
+        <type>server</type>
+        <param>protocolDef/protocols/TCPServer.xml</param>
+    </protocol>
+</protocols>

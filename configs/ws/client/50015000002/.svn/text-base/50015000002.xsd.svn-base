@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<x:schema xmlns:x="http://www.w3.org/2001/XMLSchema"
+          xmlns:d="http://esb.dcitsbiz.com/metadata"
+          xmlns:s="http://esb.dcitsbiz.com/services/50015000002"
+          xmlns:NCBS="http://esb.dcitsbiz.com/NCBS"
+          targetNamespace="http://esb.dcitsbiz.com/services/50015000002" elementFormDefault="qualified"
+          attributeFormDefault="qualified">
+    <x:import namespace="http://esb.dcitsbiz.com/metadata" schemaLocation="../../common/SoapHeader.xsd"/>
+    <x:import namespace="http://esb.dcitsbiz.com/NCBS" schemaLocation="../../common/NCBS.xsd"/>
+    <x:complexType name="ReqAppHeadType">
+        <x:sequence>
+            <x:element name="BrId" type="x:string" minOccurs="0"/>
+            <x:element name="TlrNo" type="x:string" minOccurs="0"/>
+        </x:sequence>
+    </x:complexType>
+    <x:complexType name="RspAppHeadType">
+        <x:sequence>
+            <x:element name="BrId" type="x:string" minOccurs="0"/>
+            <x:element name="TlrNo" type="x:string" minOccurs="0"/>
+        </x:sequence>
+    </x:complexType>
+    <x:element name="Req5001500000201" type="s:Req5001500000201Type"/>
+    <x:complexType name="Req5001500000201Type">
+        <x:sequence>
+            <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+            <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+            <x:element name="ReqLocalHead" type="NCBS:ReqLocalHeadType"/>
+            <x:element name="ReqAppBody" minOccurs="0">
+                <x:complexType>
+                    <x:sequence>
+                        <x:element name="ygyliush" type="x:string" minOccurs="0"/>
+                        <x:element name="yjaoyirq" type="x:string" minOccurs="0"/>
+                        <x:element name="yqzhriqi" type="x:string" minOccurs="0"/>
+                        <x:element name="yqzhlshu" type="x:string" minOccurs="0"/>
+                    </x:sequence>
+                </x:complexType>
+            </x:element>
+        </x:sequence>
+    </x:complexType>
+    <x:element name="Rsp5001500000201" type="s:Rsp5001500000201Type"/>
+    <x:complexType name="Rsp5001500000201Type">
+        <x:sequence>
+            <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+            <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+            <x:element name="RspLocalHead" type="NCBS:RspLocalHeadType"/>
+            <x:element minOccurs="0" name="RspAppBody">
+                <x:complexType>
+                    <x:sequence>
+                        <x:element name="beizhuxx" type="x:string" minOccurs="0"/>
+                        <x:element name="jiaoyirq" type="x:string" minOccurs="0"/>
+                        <x:element name="jiaoyigy" type="x:string" minOccurs="0"/>
+                        <x:element name="jiaoyijg" type="x:string" minOccurs="0"/>
+                        <x:element name="yjiaoyma" type="x:string" minOccurs="0"/>
+                        <x:element name="yuanjymc" type="x:string" minOccurs="0"/>
+                        <x:element name="jiaoyima" type="x:string" minOccurs="0"/>
+                        <x:element name="jiaoyimc" type="x:string" minOccurs="0"/>
+                        <x:element name="guiylius" type="x:string" minOccurs="0"/>
+                    </x:sequence>
+                </x:complexType>
+            </x:element>
+        </x:sequence>
+    </x:complexType>
+</x:schema>

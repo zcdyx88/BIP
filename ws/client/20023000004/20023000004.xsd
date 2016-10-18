@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<x:schema xmlns:x="http://www.w3.org/2001/XMLSchema" xmlns:d="http://esb.dcitsbiz.com/metadata" xmlns:s="http://esb.dcitsbiz.com/services/20023000004" xmlns:ECIF="http://esb.dcitsbiz.com/ECIF" xmlns:NCBS="http://esb.dcitsbiz.com/NCBS" targetNamespace="http://esb.dcitsbiz.com/services/20023000004" elementFormDefault="qualified" attributeFormDefault="qualified">
+  <x:import namespace="http://esb.dcitsbiz.com/metadata" schemaLocation="SoapHeader.xsd"/>
+  <x:import namespace="http://esb.dcitsbiz.com/ECIF" schemaLocation="ECIF.xsd"/>
+  <x:import namespace="http://esb.dcitsbiz.com/NCBS" schemaLocation="NCBS.xsd"/>
+  <x:complexType name="ReqAppHeadType">
+    <x:sequence>
+      <x:element name="BrId" type="x:string" minOccurs="0"/>
+      <x:element name="TlrNo" type="x:string" minOccurs="0"/>
+    </x:sequence>
+  </x:complexType>
+  <x:complexType name="RspAppHeadType">
+    <x:sequence>
+      <x:element name="BrId" type="x:string" minOccurs="0"/>
+      <x:element name="TlrNo" type="x:string" minOccurs="0"/>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req2002300000401" type="s:Req2002300000401Type"/>
+  <x:complexType name="Req2002300000401Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="ECIF:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="SRE_CODE" type="x:string" minOccurs="0"/>
+            <x:element name="FUN_CODE" type="x:string" minOccurs="0"/>
+            <x:element name="ECIFKH" type="x:string" minOccurs="0"/>
+            <x:element name="EXT_SYSTEM_ID" type="x:string" minOccurs="0"/>
+            <x:element name="PARTY_NAME" type="x:string" minOccurs="0"/>
+            <x:element name="CERT_TYPE" type="x:string" minOccurs="0"/>
+            <x:element name="CERT_NO" type="x:string" minOccurs="0"/>
+            <x:element name="SIGN_ACC_TYPE" type="x:string" minOccurs="0"/>
+            <x:element name="SIGN_ACC" type="x:string" minOccurs="0"/>
+            <x:element name="SIGN_STAT" type="x:string" minOccurs="0"/>
+            <x:element name="SIGN_TYPE" type="x:string" minOccurs="0"/>
+            <x:element name="FIRST_NO" type="x:string" minOccurs="0"/>
+            <x:element name="RESULT_SIZE" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp2002300000401" type="s:Rsp2002300000401Type"/>
+  <x:complexType name="Rsp2002300000401Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="ECIF:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="ECIFKH" type="x:string" minOccurs="0"/>
+            <x:element name="FIRST_NO" type="x:string" minOccurs="0"/>
+            <x:element name="RESULT_SIZE" type="x:string" minOccurs="0"/>
+            <x:element name="ALL_RESULT_SIZE" type="x:string" minOccurs="0"/>
+            <x:element name="GRP_SYNTHESIS_INFO" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="SIGN_ACC_TYPE" type="x:string" minOccurs="0"/>
+                  <x:element name="SIGN_ACC" type="x:string" minOccurs="0"/>
+                  <x:element name="CONT_ACC" type="x:string" minOccurs="0"/>
+                  <x:element name="SIGN_TYPE" type="x:string" minOccurs="0"/>
+                  <x:element name="ADDR_LINE" type="x:string" minOccurs="0"/>
+                  <x:element name="PHONE_NO" type="x:string" minOccurs="0"/>
+                  <x:element name="SIGN_DT" type="x:string" minOccurs="0"/>
+                  <x:element name="SIGNOFF_DT" type="x:string" minOccurs="0"/>
+                  <x:element name="SIGN_STAT" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req2002300000402" type="s:Req2002300000402Type"/>
+  <x:complexType name="Req2002300000402Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="ECIF:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="SRE_CODE" type="x:string" minOccurs="0"/>
+            <x:element name="FUN_CODE" type="x:string" minOccurs="0"/>
+            <x:element name="ECIFKH" type="x:string" minOccurs="0"/>
+            <x:element name="PARTY_NAME" type="x:string" minOccurs="0"/>
+            <x:element name="COMPANY_NO" type="x:string" minOccurs="0"/>
+            <x:element name="SIGN_ACC_TYPE" type="x:string" minOccurs="0"/>
+            <x:element name="SIGN_ACC" type="x:string" minOccurs="0"/>
+            <x:element name="SIGN_STAT" type="x:string" minOccurs="0"/>
+            <x:element name="SIGN_TYPE" type="x:string" minOccurs="0"/>
+            <x:element name="FIRST_NO" type="x:string" minOccurs="0"/>
+            <x:element name="RESULT_SIZE" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp2002300000402" type="s:Rsp2002300000402Type"/>
+  <x:complexType name="Rsp2002300000402Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="ECIF:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="ECIFKH" type="x:string" minOccurs="0"/>
+            <x:element name="FIRST_NO" type="x:string" minOccurs="0"/>
+            <x:element name="RESULT_SIZE" type="x:string" minOccurs="0"/>
+            <x:element name="ALL_RESULT_SIZE" type="x:string" minOccurs="0"/>
+            <x:element name="GRP_SYNTHESIS_INFO" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="SIGN_ACC_TYPE" type="x:string" minOccurs="0"/>
+                  <x:element name="SIGN_ACC" type="x:string" minOccurs="0"/>
+                  <x:element name="CONT_ACC" type="x:string" minOccurs="0"/>
+                  <x:element name="SIGN_TYPE" type="x:string" minOccurs="0"/>
+                  <x:element name="ADDR_LINE" type="x:string" minOccurs="0"/>
+                  <x:element name="PHONE_NO" type="x:string" minOccurs="0"/>
+                  <x:element name="SIGN_DT" type="x:string" minOccurs="0"/>
+                  <x:element name="SIGNOFF_DT" type="x:string" minOccurs="0"/>
+                  <x:element name="SIGN_STAT" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req2002300000403" type="s:Req2002300000403Type"/>
+  <x:complexType name="Req2002300000403Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="NCBS:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="kehuhaoo" type="x:string" minOccurs="0"/>
+            <x:element name="kehuzhao" type="x:string" minOccurs="0"/>
+            <x:element name="huobdaih" type="x:string" minOccurs="0"/>
+            <x:element name="xianggbh" type="x:string" minOccurs="0"/>
+            <x:element name="yewuzlbh" type="x:string" minOccurs="0"/>
+            <x:element name="chaohubz" type="x:string" minOccurs="0"/>
+            <x:element name="qyueztai" type="x:string" minOccurs="0"/>
+            <x:element name="qishibis" type="x:string" minOccurs="0"/>
+            <x:element name="chxunbis" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp2002300000403" type="s:Rsp2002300000403Type"/>
+  <x:complexType name="Rsp2002300000403Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="NCBS:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="listkehuqy" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="qyuezlmc" type="x:string" minOccurs="0"/>
+                  <x:element name="qianyrqi" type="x:string" minOccurs="0"/>
+                  <x:element name="qyueztai" type="x:string" minOccurs="0"/>
+                  <x:element name="yewuzlbh" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuzhao" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuzwmc" type="x:string" minOccurs="0"/>
+                  <x:element name="huobdaih" type="x:string" minOccurs="0"/>
+                  <x:element name="chaohubz" type="x:string" minOccurs="0"/>
+                  <x:element name="xianggbh" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="jieyuerq" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req2002300000404" type="s:Req2002300000404Type"/>
+  <x:complexType name="Req2002300000404Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="NCBS:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="kehuzhao" type="x:string" minOccurs="0"/>
+            <x:element name="kehuhaoo" type="x:string" minOccurs="0"/>
+            <x:element name="qishibis" type="x:string" minOccurs="0"/>
+            <x:element name="chxunbis" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp2002300000404" type="s:Rsp2002300000404Type"/>
+  <x:complexType name="Rsp2002300000404Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="NCBS:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="listnm01" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="xianggbh" type="x:string" minOccurs="0"/>
+                  <x:element name="yewuzlbh" type="x:string" minOccurs="0"/>
+                  <x:element name="qyuezlmc" type="x:string" minOccurs="0"/>
+                  <x:element name="qyueztai" type="x:string" minOccurs="0"/>
+                  <x:element name="shuomxxi" type="x:string" minOccurs="0"/>
+                  <x:element name="qianyjym" type="x:string" minOccurs="0"/>
+                  <x:element name="jyjiaoym" type="x:string" minOccurs="0"/>
+                  <x:element name="weihujym" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req2002300000405" type="s:Req2002300000405Type"/>
+  <x:complexType name="Req2002300000405Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="NCBS:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence/>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp2002300000405" type="s:Rsp2002300000405Type"/>
+  <x:complexType name="Rsp2002300000405Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="NCBS:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="listnm01" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="xianggbh" type="x:string" minOccurs="0"/>
+                  <x:element name="yewuzlbh" type="x:string" minOccurs="0"/>
+                  <x:element name="qyuezlmc" type="x:string" minOccurs="0"/>
+                  <x:element name="qyueztai" type="x:string" minOccurs="0"/>
+                  <x:element name="shuomxxi" type="x:string" minOccurs="0"/>
+                  <x:element name="qianyjym" type="x:string" minOccurs="0"/>
+                  <x:element name="jyjiaoym" type="x:string" minOccurs="0"/>
+                  <x:element name="weihujym" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+</x:schema>

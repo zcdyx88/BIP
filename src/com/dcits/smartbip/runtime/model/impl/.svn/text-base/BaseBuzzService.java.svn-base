@@ -1,0 +1,99 @@
+package com.dcits.smartbip.runtime.model.impl;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+import com.dcits.smartbip.exception.InterceptException;
+import com.dcits.smartbip.journal.JournalService;
+import com.dcits.smartbip.journal.impl.JournalConstants;
+import com.dcits.smartbip.journal.impl.RedisJournalService;
+import com.dcits.smartbip.journal.impl.UniqueInnerFlowNoGenerator;
+import com.dcits.smartbip.parser.model.ServiceDefinitionConstants;
+import com.dcits.smartbip.runtime.model.ICompositeData;
+import com.dcits.smartbip.runtime.model.IServiceProxy;
+
+import sun.util.logging.resources.logging;
+
+/**
+ * Created by vincentfxz on 16/5/9.
+ */
+public class BaseBuzzService extends AbstractBuzzService {
+
+    private Class reqClazz;
+    private Class rspClazz;
+    private String namespace;
+    private IServiceProxy serviceProxy;
+    private String type;
+    private JournalService journalService = RedisJournalService.getInstance();
+	private final Log log = LogFactory.getLog(BaseBuzzService.class);
+    @Override
+    protected Object invokeService(Object req) {
+    	String atomFlowNo = SessionContext.getContext().getValue("SEQ_NO")== null ? 
+    			"" : (String)SessionContext.getContext().getValue("SEQ_NO");
+        String processId = (String) SessionContext.getContext().getValue("DISPATCH_ID");
+        String compFlowId = (String) SessionContext.getContext().getValue(JournalConstants.UNIQUE_FLOW_NO);
+//        long time1 = System.currentTimeMillis();
+//        log.error("serviceProxy.pack");
+        String reqMsg = serviceProxy.pack((ICompositeData) req);       
+        journalService.invoke(compFlowId, atomFlowNo, processId, getId(), reqMsg, "1");
+//        log.error("serviceProxy.invoke(reqMsg)");
+        String respMsg = (String)serviceProxy.invoke(reqMsg);      
+        journalService.invoke(compFlowId, atomFlowNo, processId, getId(), respMsg, "2");
+//        log.error("serviceProxy.unpack(respMsg) begin");
+        ICompositeData resp = serviceProxy.unpack(respMsg);
+//        log.error("serviceProxy.unpack(respMsg) end ");
+/*        log.error(">>>>>>serviceProxy.pack耗时["  + (time2 - time1));
+        log.error(">>>>>> journalService.invoke耗时["  + (time3 - time2));
+        log.error(">>>>>>serviceProxy.invoke耗时["  + (time4 - time3));
+        log.error(">>>>>>journalService.invoke耗时["  + (time5 - time4));
+        log.error(">>>>>>serviceProxy.unpack耗时["  + (time6 - time5));*/
+        return resp;
+    }
+
+    @Override
+    public boolean interceptErrors() throws InterceptException {
+        return false;
+    }
+
+    public IServiceProxy getServiceProxy() {
+        return serviceProxy;
+    }
+
+    public void setServiceProxy(IServiceProxy serviceProxy) {
+        this.serviceProxy = serviceProxy;
+    }
+
+    public Class getReqClazz() {
+        return reqClazz;
+    }
+
+    public void setReqClazz(Class reqClazz) {
+        this.reqClazz = reqClazz;
+    }
+
+    public Class getRspClazz() {
+        return rspClazz;
+    }
+
+    public void setRspClazz(Class rspClazz) {
+        this.rspClazz = rspClazz;
+    }
+
+    @Override
+    public String getType() {
+        return ServiceDefinitionConstants.BUZZ_SERVICE_TYPE;
+    }
+
+    @Override
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getNamespace() {
+        return namespace;
+    }
+
+    public void setNamespace(String namespace) {
+        this.namespace = namespace;
+    }
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<metadatas>
+  <metadata>
+    <serviceid>10032000001</serviceid>
+    <wsdl>
+      <operation>op01</operation>
+      <operation>op02</operation>
+      <operation>op03</operation>
+      <operation>op04</operation>
+      <operation>op05</operation>
+      <operation>op06</operation>
+      <operation>op07</operation>
+      <operation>op08</operation>
+      <operation>op13</operation>
+      <file>10032000001.wsdl</file>
+    </wsdl>
+    <xsd>
+      <common>10032000001.xsd</common>
+    </xsd>
+    <instance>
+      <in/>
+      <out/>
+    </instance>
+  </metadata>
+</metadatas>

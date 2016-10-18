@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappers>
+    <!--  
+	<mapper>
+		<id>M3002101000103</id>
+		<file>mapperDef/3002101000103/M3002101000103.xml</file>
+	</mapper>
+	<mapper>
+		<id>M3002101000103_3002100000105</id>
+		<file>mapperDef/3002101000103/M3002101000103_3002100000105.xml</file>
+	</mapper>
+	<mapper>
+		<id>M3002101000103_3002100000106</id>
+		<file>mapperDef/3002101000103/M3002101000103_3002100000106.xml</file>
+	</mapper>
+	-->
+<mapper><id>M3002101000103</id><file>mapperDef/3002101000103/M3002101000103.xml</file></mapper><mapper><id>M3002101000103_3002100000105</id><file>mapperDef/3002101000103/M3002101000103_3002100000105.xml</file></mapper><mapper><id>M3002101000103_3002100000106</id><file>mapperDef/3002101000103/M3002101000103_3002100000106.xml</file></mapper></mappers>

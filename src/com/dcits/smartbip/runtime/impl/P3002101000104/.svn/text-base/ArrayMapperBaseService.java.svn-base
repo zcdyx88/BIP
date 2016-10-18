@@ -1,0 +1,121 @@
+package com.dcits.smartbip.runtime.impl.P3002101000104;
+
+import java.util.List;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+import com.dcits.smartbip.exception.InvokeException;
+import com.dcits.smartbip.runtime.model.ICompositeData;
+import com.dcits.smartbip.runtime.model.IService;
+import com.dcits.smartbip.runtime.model.impl.AbstractBaseService;
+import com.dcits.smartbip.runtime.model.impl.SessionContext;
+import com.dcits.smartbip.runtime.model.impl.SoapCompositeData;
+import com.dcits.smartbip.utils.CompositeDataUtils;
+
+
+public class ArrayMapperBaseService extends AbstractBaseService implements IService {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private static final Log log = LogFactory.getLog(ArrayMapperBaseService.class); 
+	@Override
+	public String getId() {
+		return "ArrayMapperBaseService";
+		
+	}
+	
+	@Override
+	public String getType() {
+		return "base";
+	}
+
+	@Override
+	public void setType(String type) {
+		
+	}
+	
+	@Override                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+	public Object execute(Object req) throws InvokeException {  
+		if (log.isInfoEnabled()) {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+			log.info("开始调用基础服务[ArrayMapperBaseService]......");                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+		}
+		
+		// 获得请求数据对象                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+		ICompositeData Req3002101000104 = (ICompositeData) SessionContext                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+				.getContext().getValue("Req3002101000104"); 
+		//获取请求原子服务对象
+		String reqObj = "Req3002100000102";
+		ICompositeData Req3002100000102 = (ICompositeData) SessionContext                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+		.getContext().getValue(reqObj);
+		//如果不存在该请求结构，创建空结果
+		if (null == Req3002100000102)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+		{                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+			Req3002100000102  = new SoapCompositeData();                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+			Req3002100000102.setId(reqObj);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+			Req3002100000102.setxPath("/"+reqObj);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+			getContext().setValue(reqObj,Req3002100000102);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+		}
+		
+		ICompositeData ReqAppBody = CompositeDataUtils.mkNodeNotExist(Req3002100000102, "ReqAppBody");
+		
+		ICompositeData arrayiItem = new SoapCompositeData();
+		arrayiItem.setId("lstytczfe");
+		ReqAppBody.setChild("lstytczfe", arrayiItem);
+		
+		List<ICompositeData> lstytczfe = CompositeDataUtils.getByPath(Req3002101000104, "ReqAppBody/lstytczfe");
+		for(ICompositeData ChildList : lstytczfe){
+			if("lstdkhbjh".equalsIgnoreCase(CompositeDataUtils.getValue(ChildList, "lstdkhbjh"))){
+				CompositeDataUtils.copy(ChildList, Req3002100000102,"lstdkhbjh", "ReqAppBody/lstdkhbjh");
+				List<ICompositeData> lstdkhbjh = CompositeDataUtils.getByPath(ChildList,"lstdkhbjh");
+				ICompositeData oArrayiItem = new SoapCompositeData();
+				Req3002100000102.setId("lstdkhbjh");
+				Req3002100000102.setChild("lstdkhbjh", oArrayiItem);
+				for(ICompositeData obankData : lstdkhbjh){
+					CompositeDataUtils.copy(obankData, Req3002100000102,"dzhhkzhl", "dzhhkzhl");
+					CompositeDataUtils.copy(obankData, Req3002100000102,"xzuetqhk", "xzuetqhk");
+					CompositeDataUtils.copy(obankData, Req3002100000102,"dzhkriqi", "dzhkriqi");
+					CompositeDataUtils.copy(obankData, Req3002100000102,"huanbjee", "huanbjee");
+					CompositeDataUtils.copy(obankData, Req3002100000102,"huankzhh", "huankzhh");
+					CompositeDataUtils.copy(obankData, Req3002100000102,"hkzhhzxh", "hkzhhzxh");
+					CompositeDataUtils.copy(obankData, Req3002100000102,"hkyujrgz", "hkyujrgz");
+					CompositeDataUtils.copy(obankData, Req3002100000102,"sfyxkuxq", "sfyxkuxq");
+					CompositeDataUtils.copy(obankData, Req3002100000102,"kuanxqts", "kuanxqts");
+					CompositeDataUtils.copy(obankData, Req3002100000102,"kxqjjrgz", "kxqjjrgz");
+					CompositeDataUtils.copy(obankData, Req3002100000102,"tqhkhxfs", "tqhkhxfs");
+				}
+			}else{
+				if(log.isDebugEnabled()){
+					log.debug("数组lstdkhbjh不存在");
+				}
+			}
+			if("lstdzqgjh".equalsIgnoreCase(CompositeDataUtils.getValue(ChildList, "lstdzqgjh"))){
+				CompositeDataUtils.copy(ChildList, Req3002100000102,"lstdzqgjh", "ReqAppBody/lstdzqgjh");
+				List<ICompositeData> lstdkhbjh = CompositeDataUtils.getByPath(ChildList,"lstdzqgjh");
+				ICompositeData tArrayiItem = new SoapCompositeData();
+				Req3002100000102.setId("lstdzqgjh");
+				Req3002100000102.setChild("lstdzqgjh", tArrayiItem);
+				for(ICompositeData tbankData : lstdkhbjh){
+					CompositeDataUtils.copy(tbankData, Req3002100000102,"dkjiejuh", "dkjiejuh");
+					CompositeDataUtils.copy(tbankData, Req3002100000102,"benqqish", "benqqish");
+					CompositeDataUtils.copy(tbankData, Req3002100000102,"qishriqi", "qishriqi");
+					CompositeDataUtils.copy(tbankData, Req3002100000102,"daoqriqi", "daoqriqi");
+					CompositeDataUtils.copy(tbankData, Req3002100000102,"huanbjee", "huanbjee");
+					CompositeDataUtils.copy(tbankData, Req3002100000102,"hxijinee", "hxijinee");
+					CompositeDataUtils.copy(tbankData, Req3002100000102,"chulizht", "chulizht");
+					CompositeDataUtils.copy(tbankData, Req3002100000102,"zwhkriqi", "zwhkriqi");
+				}
+			}else{
+				if(log.isDebugEnabled()){
+					log.debug("数组lstdzqgjh不存在");
+				}
+			}
+		}
+		if (log.isInfoEnabled()) {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+			log.info("结束调用基础服务[ArrayMapperBaseService]......");                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+		}
+		return null;
+	}
+
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<protocol>
+    <id>TCPServer</id>
+    <ip>127.0.0.1</ip>
+    <port>10001</port>
+    <threadCount>50</threadCount>
+    <queueSize>50</queueSize>
+    <readPolicy>length:s=0,e=7</readPolicy>
+    <writePolicy>length:s=0,e=7</writePolicy>
+</protocol>

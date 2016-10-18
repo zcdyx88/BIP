@@ -1,0 +1,3113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<x:schema xmlns:x="http://www.w3.org/2001/XMLSchema" xmlns:d="http://esb.dcitsbiz.com/metadata" xmlns:s="http://esb.dcitsbiz.com/services/30041000018" xmlns:PPL="http://esb.dcitsbiz.com/PPL" xmlns:CNAPS2="http://esb.dcitsbiz.com/CNAPS2" targetNamespace="http://esb.dcitsbiz.com/services/30041000018" elementFormDefault="qualified" attributeFormDefault="qualified">
+  <x:import namespace="http://esb.dcitsbiz.com/metadata" schemaLocation="SoapHeader.xsd"/>
+  <x:import namespace="http://esb.dcitsbiz.com/PPL" schemaLocation="PPL.xsd"/>
+  <x:import namespace="http://esb.dcitsbiz.com/CNAPS2" schemaLocation="CNAPS2.xsd"/>
+  <x:complexType name="ReqAppHeadType">
+    <x:sequence>
+      <x:element name="BrId" type="x:string" minOccurs="0"/>
+      <x:element name="TlrNo" type="x:string" minOccurs="0"/>
+    </x:sequence>
+  </x:complexType>
+  <x:complexType name="RspAppHeadType">
+    <x:sequence>
+      <x:element name="BrId" type="x:string" minOccurs="0"/>
+      <x:element name="TlrNo" type="x:string" minOccurs="0"/>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3004100001801" type="s:Req3004100001801Type"/>
+  <x:complexType name="Req3004100001801Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="PPL:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="zdpaypathcode" type="x:string" minOccurs="0"/>
+            <x:element name="remitmodel" type="x:string" minOccurs="0"/>
+            <x:element name="custometype" type="x:string" minOccurs="0"/>
+            <x:element name="cashflag" type="x:string" minOccurs="0"/>
+            <x:element name="busitype" type="x:string" minOccurs="0"/>
+            <x:element name="busikind" type="x:string" minOccurs="0"/>
+            <x:element name="customerlvl" type="x:string" minOccurs="0"/>
+            <x:element name="payeracc" type="x:string" minOccurs="0"/>
+            <x:element name="payername" type="x:string" minOccurs="0"/>
+            <x:element name="payeracctype" type="x:string" minOccurs="0"/>
+            <x:element name="payeraddr" type="x:string" minOccurs="0"/>
+            <x:element name="payeeaccbank" type="x:string" minOccurs="0"/>
+            <x:element name="payeeaccbankname" type="x:string" minOccurs="0"/>
+            <x:element name="payeeacctype" type="x:string" minOccurs="0"/>
+            <x:element name="payeeacc" type="x:string" minOccurs="0"/>
+            <x:element name="payeename" type="x:string" minOccurs="0"/>
+            <x:element name="payeeaddr" type="x:string" minOccurs="0"/>
+            <x:element name="currency" type="x:string" minOccurs="0"/>
+            <x:element name="amount" type="x:decimal" minOccurs="0"/>
+            <x:element name="priority" type="x:string" minOccurs="0"/>
+            <x:element name="cusvouchertype" type="x:string" minOccurs="0"/>
+            <x:element name="cusvouchbatno" type="x:string" minOccurs="0"/>
+            <x:element name="cusvouchbr" type="x:string" minOccurs="0"/>
+            <x:element name="cusvouchno" type="x:string" minOccurs="0"/>
+            <x:element name="cusvouchdate" type="x:string" minOccurs="0"/>
+            <x:element name="idtype" type="x:string" minOccurs="0"/>
+            <x:element name="idno" type="x:string" minOccurs="0"/>
+            <x:element name="cusvouchpswd" type="x:string" minOccurs="0"/>
+            <x:element name="useage" type="x:string" minOccurs="0"/>
+            <x:element name="postscript" type="x:string" minOccurs="0"/>
+            <x:element name="authtellerno" type="x:string" minOccurs="0"/>
+            <x:element name="paycondtion" type="x:string" minOccurs="0"/>
+            <x:element name="password" type="x:string" minOccurs="0"/>
+            <x:element name="cancelserno" type="x:string" minOccurs="0"/>
+            <x:element name="feeamount" type="x:decimal" minOccurs="0"/>
+            <x:element name="endtoendid" type="x:string" minOccurs="0"/>
+            <x:element name="payeeaccbrno" type="x:string" minOccurs="0"/>
+            <x:element name="payeeaccbrname" type="x:string" minOccurs="0"/>
+            <x:element name="agency1" type="x:string" minOccurs="0"/>
+            <x:element name="agency1name" type="x:string" minOccurs="0"/>
+            <x:element name="agency2" type="x:string" minOccurs="0"/>
+            <x:element name="agency2name" type="x:string" minOccurs="0"/>
+            <x:element name="Pkg_No" type="x:string" minOccurs="0"/>
+            <x:element name="depositflag" type="x:string" minOccurs="0"/>
+            <x:element name="subaccseqno" type="x:string" minOccurs="0"/>
+            <x:element name="credtype" type="x:string" minOccurs="0"/>
+            <x:element name="credno" type="x:string" minOccurs="0"/>
+            <x:element name="payercusttype" type="x:string" minOccurs="0"/>
+            <x:element name="outbanktype" type="x:string" minOccurs="0"/>
+            <x:element name="outbankno" type="x:string" minOccurs="0"/>
+            <x:element name="feeflag" type="x:string" minOccurs="0"/>
+            <x:element name="FeesInfo" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="fykonzbz" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuzhao" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaoxhao" type="x:string" minOccurs="0"/>
+                  <x:element name="shfeibzh" type="x:string" minOccurs="0"/>
+                  <x:element name="shoufdma" type="x:string" minOccurs="0"/>
+                  <x:element name="jiaoyije" type="x:decimal" minOccurs="0"/>
+                  <x:element name="shuliang" type="x:string" minOccurs="0"/>
+                  <x:element name="yingshfy" type="x:decimal" minOccurs="0"/>
+                  <x:element name="fyjzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="ywckhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="txqsriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzzriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzhouqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzongje" type="x:decimal" minOccurs="0"/>
+                  <x:element name="tanxqish" type="x:string" minOccurs="0"/>
+                  <x:element name="fyrzzhho" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyodm" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyoms" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd01" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd02" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd03" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="chaohubz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfoyjiz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfexuho" type="x:string" minOccurs="0"/>
+                  <x:element name="joynbizh" type="x:string" minOccurs="0"/>
+                  <x:element name="xnjnxmdm" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3004100001801" type="s:Rsp3004100001801Type"/>
+  <x:complexType name="Rsp3004100001801Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="PPL:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="agentserialno" type="x:string" minOccurs="0"/>
+            <x:element name="bankdate" type="x:string" minOccurs="0"/>
+            <x:element name="bankid" type="x:string" minOccurs="0"/>
+            <x:element name="sendbank" type="x:string" minOccurs="0"/>
+            <x:element name="entrustdate" type="x:string" minOccurs="0"/>
+            <x:element name="paypathcode" type="x:string" minOccurs="0"/>
+            <x:element name="lowagentserialno" type="x:string" minOccurs="0"/>
+            <x:element name="msgid" type="x:string" minOccurs="0"/>
+            <x:element name="remark1" type="x:string" minOccurs="0"/>
+            <x:element name="remark2" type="x:string" minOccurs="0"/>
+            <x:element name="remark3" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3004100001802" type="s:Req3004100001802Type"/>
+  <x:complexType name="Req3004100001802Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="PPL:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="zdpaypathcode" type="x:string" minOccurs="0"/>
+            <x:element name="remitmodel" type="x:string" minOccurs="0"/>
+            <x:element name="custometype" type="x:string" minOccurs="0"/>
+            <x:element name="cashflag" type="x:string" minOccurs="0"/>
+            <x:element name="busitype" type="x:string" minOccurs="0"/>
+            <x:element name="busikind" type="x:string" minOccurs="0"/>
+            <x:element name="customerlvl" type="x:string" minOccurs="0"/>
+            <x:element name="payeracc" type="x:string" minOccurs="0"/>
+            <x:element name="payername" type="x:string" minOccurs="0"/>
+            <x:element name="payeracctype" type="x:string" minOccurs="0"/>
+            <x:element name="payeraddr" type="x:string" minOccurs="0"/>
+            <x:element name="payeeaccbank" type="x:string" minOccurs="0"/>
+            <x:element name="payeeaccbankname" type="x:string" minOccurs="0"/>
+            <x:element name="payeeacctype" type="x:string" minOccurs="0"/>
+            <x:element name="payeeacc" type="x:string" minOccurs="0"/>
+            <x:element name="payeename" type="x:string" minOccurs="0"/>
+            <x:element name="payeeaddr" type="x:string" minOccurs="0"/>
+            <x:element name="currency" type="x:string" minOccurs="0"/>
+            <x:element name="amount" type="x:decimal" minOccurs="0"/>
+            <x:element name="priority" type="x:string" minOccurs="0"/>
+            <x:element name="cusvouchertype" type="x:string" minOccurs="0"/>
+            <x:element name="cusvouchbatno" type="x:string" minOccurs="0"/>
+            <x:element name="cusvouchno" type="x:string" minOccurs="0"/>
+            <x:element name="cusvouchbr" type="x:string" minOccurs="0"/>
+            <x:element name="cusvouchdate" type="x:string" minOccurs="0"/>
+            <x:element name="idtype" type="x:string" minOccurs="0"/>
+            <x:element name="idno" type="x:string" minOccurs="0"/>
+            <x:element name="cusvouchpswd" type="x:string" minOccurs="0"/>
+            <x:element name="useage" type="x:string" minOccurs="0"/>
+            <x:element name="postscript" type="x:string" minOccurs="0"/>
+            <x:element name="authtellerno" type="x:string" minOccurs="0"/>
+            <x:element name="paycondtion" type="x:string" minOccurs="0"/>
+            <x:element name="password" type="x:string" minOccurs="0"/>
+            <x:element name="cancelserno" type="x:string" minOccurs="0"/>
+            <x:element name="feeamount" type="x:decimal" minOccurs="0"/>
+            <x:element name="subaccseqno" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3004100001802" type="s:Rsp3004100001802Type"/>
+  <x:complexType name="Rsp3004100001802Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="PPL:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="agentserialno" type="x:string" minOccurs="0"/>
+            <x:element name="bankdate" type="x:string" minOccurs="0"/>
+            <x:element name="bankid" type="x:string" minOccurs="0"/>
+            <x:element name="sendbank" type="x:string" minOccurs="0"/>
+            <x:element name="entrustdate" type="x:string" minOccurs="0"/>
+            <x:element name="msgid" type="x:string" minOccurs="0"/>
+            <x:element name="paypathcode" type="x:string" minOccurs="0"/>
+            <x:element name="lowagentserialno" type="x:string" minOccurs="0"/>
+            <x:element name="remark1" type="x:string" minOccurs="0"/>
+            <x:element name="remark2" type="x:string" minOccurs="0"/>
+            <x:element name="remark3" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3004100001804" type="s:Req3004100001804Type"/>
+  <x:complexType name="Req3004100001804Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="PPL:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="paypathcode" type="x:string" minOccurs="0"/>
+            <x:element name="cashflag" type="x:string" minOccurs="0"/>
+            <x:element name="busitype" type="x:string" minOccurs="0"/>
+            <x:element name="busikind" type="x:string" minOccurs="0"/>
+            <x:element name="abstracttype" type="x:string" minOccurs="0"/>
+            <x:element name="payeracc" type="x:string" minOccurs="0"/>
+            <x:element name="payername" type="x:string" minOccurs="0"/>
+            <x:element name="payeracctype" type="x:string" minOccurs="0"/>
+            <x:element name="payeraddr" type="x:string" minOccurs="0"/>
+            <x:element name="payeeaccbank" type="x:string" minOccurs="0"/>
+            <x:element name="payeeaccbankname" type="x:string" minOccurs="0"/>
+            <x:element name="payeeacctype" type="x:string" minOccurs="0"/>
+            <x:element name="payeeacc" type="x:string" minOccurs="0"/>
+            <x:element name="payeename" type="x:string" minOccurs="0"/>
+            <x:element name="payeeaddr" type="x:string" minOccurs="0"/>
+            <x:element name="currency" type="x:string" minOccurs="0"/>
+            <x:element name="amount" type="x:decimal" minOccurs="0"/>
+            <x:element name="cusvouchertype" type="x:string" minOccurs="0"/>
+            <x:element name="cusvouchbatno" type="x:string" minOccurs="0"/>
+            <x:element name="cusvouchno" type="x:string" minOccurs="0"/>
+            <x:element name="cusvouchbr" type="x:string" minOccurs="0"/>
+            <x:element name="cusvouchdate" type="x:string" minOccurs="0"/>
+            <x:element name="idtype" type="x:string" minOccurs="0"/>
+            <x:element name="idno" type="x:string" minOccurs="0"/>
+            <x:element name="cusvouchpswd" type="x:string" minOccurs="0"/>
+            <x:element name="useage" type="x:string" minOccurs="0"/>
+            <x:element name="postscript" type="x:string" minOccurs="0"/>
+            <x:element name="authtellerno" type="x:string" minOccurs="0"/>
+            <x:element name="paycondtion" type="x:string" minOccurs="0"/>
+            <x:element name="password" type="x:string" minOccurs="0"/>
+            <x:element name="cancelserno" type="x:string" minOccurs="0"/>
+            <x:element name="subaccseqno" type="x:string" minOccurs="0"/>
+            <x:element name="remark1" type="x:string" minOccurs="0"/>
+            <x:element name="remark2" type="x:string" minOccurs="0"/>
+            <x:element name="remark3" type="x:string" minOccurs="0"/>
+            <x:element name="remark4" type="x:string" minOccurs="0"/>
+            <x:element name="remark5" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3004100001804" type="s:Rsp3004100001804Type"/>
+  <x:complexType name="Rsp3004100001804Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="PPL:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="agentserialno" type="x:string" minOccurs="0"/>
+            <x:element name="bankdate" type="x:string" minOccurs="0"/>
+            <x:element name="bankid" type="x:string" minOccurs="0"/>
+            <x:element name="sendbank" type="x:string" minOccurs="0"/>
+            <x:element name="entrustdate" type="x:string" minOccurs="0"/>
+            <x:element name="msgid" type="x:string" minOccurs="0"/>
+            <x:element name="rmk" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3004100001805" type="s:Req3004100001805Type"/>
+  <x:complexType name="Req3004100001805Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="PPL:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="oagentserialno" type="x:string" minOccurs="0"/>
+            <x:element name="paypathcode" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3004100001805" type="s:Rsp3004100001805Type"/>
+  <x:complexType name="Rsp3004100001805Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="PPL:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="agentserialno" type="x:string" minOccurs="0"/>
+            <x:element name="oworkdate" type="x:string" minOccurs="0"/>
+            <x:element name="workdate" type="x:string" minOccurs="0"/>
+            <x:element name="msgid" type="x:string" minOccurs="0"/>
+            <x:element name="amount" type="x:decimal" minOccurs="0"/>
+            <x:element name="rmk" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3004100001806" type="s:Req3004100001806Type"/>
+  <x:complexType name="Req3004100001806Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="PPL:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="paypathcode" type="x:string" minOccurs="0"/>
+            <x:element name="busitype" type="x:string" minOccurs="0"/>
+            <x:element name="busikind" type="x:string" minOccurs="0"/>
+            <x:element name="abstracttype" type="x:string" minOccurs="0"/>
+            <x:element name="payeracctype" type="x:string" minOccurs="0"/>
+            <x:element name="payeracc" type="x:string" minOccurs="0"/>
+            <x:element name="payername" type="x:string" minOccurs="0"/>
+            <x:element name="payeraddr" type="x:string" minOccurs="0"/>
+            <x:element name="payeraccbank" type="x:string" minOccurs="0"/>
+            <x:element name="payeeaccbank" type="x:string" minOccurs="0"/>
+            <x:element name="payeeacc" type="x:string" minOccurs="0"/>
+            <x:element name="payeename" type="x:string" minOccurs="0"/>
+            <x:element name="payeeaddr" type="x:string" minOccurs="0"/>
+            <x:element name="payeeaccbankname" type="x:string" minOccurs="0"/>
+            <x:element name="payeeacctype" type="x:string" minOccurs="0"/>
+            <x:element name="currency" type="x:string" minOccurs="0"/>
+            <x:element name="amount" type="x:decimal" minOccurs="0"/>
+            <x:element name="useage" type="x:string" minOccurs="0"/>
+            <x:element name="postscript" type="x:string" minOccurs="0"/>
+            <x:element name="voucherflag" type="x:string" minOccurs="0"/>
+            <x:element name="password" type="x:string" minOccurs="0"/>
+            <x:element name="cusvouchertype" type="x:string" minOccurs="0"/>
+            <x:element name="cusvouchbatno" type="x:string" minOccurs="0"/>
+            <x:element name="cusvouchbr" type="x:string" minOccurs="0"/>
+            <x:element name="cusvouchno" type="x:string" minOccurs="0"/>
+            <x:element name="cusvouchdate" type="x:string" minOccurs="0"/>
+            <x:element name="subaccseqno" type="x:string" minOccurs="0"/>
+            <x:element name="depositflag" type="x:string" minOccurs="0"/>
+            <x:element name="payercusttype" type="x:string" minOccurs="0"/>
+            <x:element name="outbanktype" type="x:string" minOccurs="0"/>
+            <x:element name="outbankno" type="x:string" minOccurs="0"/>
+            <x:element name="feeflag" type="x:string" minOccurs="0"/>
+            <x:element name="FeesInfo" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="fykonzbz" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuzhao" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaoxhao" type="x:string" minOccurs="0"/>
+                  <x:element name="shfeibzh" type="x:string" minOccurs="0"/>
+                  <x:element name="shoufdma" type="x:string" minOccurs="0"/>
+                  <x:element name="jiaoyije" type="x:decimal" minOccurs="0"/>
+                  <x:element name="shuliang" type="x:string" minOccurs="0"/>
+                  <x:element name="yingshfy" type="x:decimal" minOccurs="0"/>
+                  <x:element name="fyjzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="ywckhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="txqsriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzzriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzhouqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzongje" type="x:decimal" minOccurs="0"/>
+                  <x:element name="tanxqish" type="x:string" minOccurs="0"/>
+                  <x:element name="fyrzzhho" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyodm" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyoms" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd01" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd02" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd03" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="chaohubz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfoyjiz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfexuho" type="x:string" minOccurs="0"/>
+                  <x:element name="joynbizh" type="x:string" minOccurs="0"/>
+                  <x:element name="xnjnxmdm" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+            <x:element name="remark1" type="x:string" minOccurs="0"/>
+            <x:element name="remark2" type="x:string" minOccurs="0"/>
+            <x:element name="remark3" type="x:string" minOccurs="0"/>
+            <x:element name="remark4" type="x:string" minOccurs="0"/>
+            <x:element name="remark5" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3004100001806" type="s:Rsp3004100001806Type"/>
+  <x:complexType name="Rsp3004100001806Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="PPL:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="workdate" type="x:string" minOccurs="0"/>
+            <x:element name="agentserialno" type="x:string" minOccurs="0"/>
+            <x:element name="paypathcode" type="x:string" minOccurs="0"/>
+            <x:element name="accbrno" type="x:string" minOccurs="0"/>
+            <x:element name="bankid" type="x:string" minOccurs="0"/>
+            <x:element name="sendbank" type="x:string" minOccurs="0"/>
+            <x:element name="entrustdate" type="x:string" minOccurs="0"/>
+            <x:element name="msgid" type="x:string" minOccurs="0"/>
+            <x:element name="remark1" type="x:string" minOccurs="0"/>
+            <x:element name="remark2" type="x:string" minOccurs="0"/>
+            <x:element name="remark3" type="x:string" minOccurs="0"/>
+            <x:element name="remark4" type="x:string" minOccurs="0"/>
+            <x:element name="remark5" type="x:string" minOccurs="0"/>
+            <x:element name="remark6" type="x:string" minOccurs="0"/>
+            <x:element name="remark7" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3004100001807" type="s:Req3004100001807Type"/>
+  <x:complexType name="Req3004100001807Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="PPL:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="paypathcode" type="x:string" minOccurs="0"/>
+            <x:element name="busitype" type="x:string" minOccurs="0"/>
+            <x:element name="busikind" type="x:string" minOccurs="0"/>
+            <x:element name="payeracc" type="x:string" minOccurs="0"/>
+            <x:element name="payername" type="x:string" minOccurs="0"/>
+            <x:element name="payeracctype" type="x:string" minOccurs="0"/>
+            <x:element name="realpayeracc" type="x:string" minOccurs="0"/>
+            <x:element name="realpayername" type="x:string" minOccurs="0"/>
+            <x:element name="payeraccbank" type="x:string" minOccurs="0"/>
+            <x:element name="payeraccbankname" type="x:string" minOccurs="0"/>
+            <x:element name="priority" type="x:string" minOccurs="0"/>
+            <x:element name="cardpin" type="x:string" minOccurs="0"/>
+            <x:element name="pwdmode" type="x:string" minOccurs="0"/>
+            <x:element name="recvbank" type="x:string" minOccurs="0"/>
+            <x:element name="payeeacc" type="x:string" minOccurs="0"/>
+            <x:element name="payeename" type="x:string" minOccurs="0"/>
+            <x:element name="currency" type="x:string" minOccurs="0"/>
+            <x:element name="amount" type="x:decimal" minOccurs="0"/>
+            <x:element name="subaccseqno" type="x:string" minOccurs="0"/>
+            <x:element name="depositflag" type="x:string" minOccurs="0"/>
+            <x:element name="postscript" type="x:string" minOccurs="0"/>
+            <x:element name="cusvouchdate" type="x:string" minOccurs="0"/>
+            <x:element name="cusvoucherno" type="x:string" minOccurs="0"/>
+            <x:element name="payercusttype" type="x:string" minOccurs="0"/>
+            <x:element name="outbanktype" type="x:string" minOccurs="0"/>
+            <x:element name="outbankno" type="x:string" minOccurs="0"/>
+            <x:element name="feeflag" type="x:string" minOccurs="0"/>
+            <x:element name="FeesInfo" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="fykonzbz" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuzhao" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaoxhao" type="x:string" minOccurs="0"/>
+                  <x:element name="shfeibzh" type="x:string" minOccurs="0"/>
+                  <x:element name="shoufdma" type="x:string" minOccurs="0"/>
+                  <x:element name="jiaoyije" type="x:decimal" minOccurs="0"/>
+                  <x:element name="shuliang" type="x:string" minOccurs="0"/>
+                  <x:element name="yingshfy" type="x:decimal" minOccurs="0"/>
+                  <x:element name="fyjzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="ywckhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="txqsriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzzriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzhouqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzongje" type="x:decimal" minOccurs="0"/>
+                  <x:element name="tanxqish" type="x:string" minOccurs="0"/>
+                  <x:element name="fyrzzhho" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyodm" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyoms" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd01" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd02" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd03" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="chaohubz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfoyjiz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfexuho" type="x:string" minOccurs="0"/>
+                  <x:element name="joynbizh" type="x:string" minOccurs="0"/>
+                  <x:element name="xnjnxmdm" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3004100001807" type="s:Rsp3004100001807Type"/>
+  <x:complexType name="Rsp3004100001807Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="PPL:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="workdate" type="x:string" minOccurs="0"/>
+            <x:element name="agentserialno" type="x:string" minOccurs="0"/>
+            <x:element name="bankdate" type="x:string" minOccurs="0"/>
+            <x:element name="bankid" type="x:string" minOccurs="0"/>
+            <x:element name="sendbank" type="x:string" minOccurs="0"/>
+            <x:element name="entrustdate" type="x:string" minOccurs="0"/>
+            <x:element name="msgid" type="x:string" minOccurs="0"/>
+            <x:element name="shoufdma" type="x:string" minOccurs="0"/>
+            <x:element name="shfdmamc" type="x:string" minOccurs="0"/>
+            <x:element name="yingshfy" type="x:decimal" minOccurs="0"/>
+            <x:element name="tanxywbh" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3004100001808" type="s:Req3004100001808Type"/>
+  <x:complexType name="Req3004100001808Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="PPL:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="paypathcode" type="x:string" minOccurs="0"/>
+            <x:element name="busitype" type="x:string" minOccurs="0"/>
+            <x:element name="busikind" type="x:string" minOccurs="0"/>
+            <x:element name="payeracctype" type="x:string" minOccurs="0"/>
+            <x:element name="lmtpayeracctype" type="x:string" minOccurs="0"/>
+            <x:element name="payeracc" type="x:string" minOccurs="0"/>
+            <x:element name="payername" type="x:string" minOccurs="0"/>
+            <x:element name="payerclearbank" type="x:string" minOccurs="0"/>
+            <x:element name="payeeclearbank" type="x:string" minOccurs="0"/>
+            <x:element name="payeeacc" type="x:string" minOccurs="0"/>
+            <x:element name="payeename" type="x:string" minOccurs="0"/>
+            <x:element name="currency" type="x:string" minOccurs="0"/>
+            <x:element name="amount" type="x:decimal" minOccurs="0"/>
+            <x:element name="postscript" type="x:string" minOccurs="0"/>
+            <x:element name="authid" type="x:string" minOccurs="0"/>
+            <x:element name="ordernum" type="x:string" minOccurs="0"/>
+            <x:element name="thirdfeeamt" type="x:decimal" minOccurs="0"/>
+            <x:element name="thirdfeebranchid" type="x:string" minOccurs="0"/>
+            <x:element name="electbusinessid" type="x:string" minOccurs="0"/>
+            <x:element name="electbusinessname" type="x:string" minOccurs="0"/>
+            <x:element name="authcode" type="x:string" minOccurs="0"/>
+            <x:element name="depositflag" type="x:string" minOccurs="0"/>
+            <x:element name="authinfo" type="x:string" minOccurs="0"/>
+            <x:element name="FeesInfo" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="fykonzbz" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuzhao" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaoxhao" type="x:string" minOccurs="0"/>
+                  <x:element name="shfeibzh" type="x:string" minOccurs="0"/>
+                  <x:element name="shoufdma" type="x:string" minOccurs="0"/>
+                  <x:element name="jiaoyije" type="x:decimal" minOccurs="0"/>
+                  <x:element name="shuliang" type="x:string" minOccurs="0"/>
+                  <x:element name="yingshfy" type="x:decimal" minOccurs="0"/>
+                  <x:element name="fyjzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="ywckhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="txqsriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzzriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzhouqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzongje" type="x:decimal" minOccurs="0"/>
+                  <x:element name="tanxqish" type="x:string" minOccurs="0"/>
+                  <x:element name="fyrzzhho" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyodm" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyoms" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd01" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd02" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd03" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="chaohubz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfoyjiz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfexuho" type="x:string" minOccurs="0"/>
+                  <x:element name="joynbizh" type="x:string" minOccurs="0"/>
+                  <x:element name="xnjnxmdm" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3004100001808" type="s:Rsp3004100001808Type"/>
+  <x:complexType name="Rsp3004100001808Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="PPL:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="workdate" type="x:string" minOccurs="0"/>
+            <x:element name="agentserialno" type="x:string" minOccurs="0"/>
+            <x:element name="bankdate" type="x:string" minOccurs="0"/>
+            <x:element name="bankid" type="x:string" minOccurs="0"/>
+            <x:element name="sendbank" type="x:string" minOccurs="0"/>
+            <x:element name="entrustdate" type="x:string" minOccurs="0"/>
+            <x:element name="msgid" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3004100001809" type="s:Req3004100001809Type"/>
+  <x:complexType name="Req3004100001809Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="PPL:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="busitype" type="x:string" minOccurs="0"/>
+            <x:element name="priority" type="x:string" minOccurs="0"/>
+            <x:element name="amtfrom" type="x:string" minOccurs="0"/>
+            <x:element name="setforno" type="x:string" minOccurs="0"/>
+            <x:element name="cancelno" type="x:string" minOccurs="0"/>
+            <x:element name="payeracc" type="x:string" minOccurs="0"/>
+            <x:element name="customno" type="x:string" minOccurs="0"/>
+            <x:element name="payername" type="x:string" minOccurs="0"/>
+            <x:element name="payeraddr" type="x:string" minOccurs="0"/>
+            <x:element name="customtype" type="x:string" minOccurs="0"/>
+            <x:element name="acctype" type="x:string" minOccurs="0"/>
+            <x:element name="currency" type="x:string" minOccurs="0"/>
+            <x:element name="amount" type="x:decimal" minOccurs="0"/>
+            <x:element name="payeeacc" type="x:string" minOccurs="0"/>
+            <x:element name="payeename" type="x:string" minOccurs="0"/>
+            <x:element name="payeebank" type="x:string" minOccurs="0"/>
+            <x:element name="payeeaddr" type="x:string" minOccurs="0"/>
+            <x:element name="payeeaccbank" type="x:string" minOccurs="0"/>
+            <x:element name="postscript" type="x:string" minOccurs="0"/>
+            <x:element name="busikind" type="x:string" minOccurs="0"/>
+            <x:element name="countstd" type="x:string" minOccurs="0"/>
+            <x:element name="swiftno" type="x:string" minOccurs="0"/>
+            <x:element name="sbflag" type="x:string" minOccurs="0"/>
+            <x:element name="intdeccols" type="x:string" minOccurs="0"/>
+            <x:element name="subaccseqno" type="x:string" minOccurs="0"/>
+            <x:element name="depositflag" type="x:string" minOccurs="0"/>
+            <x:element name="fcytype" type="x:string" minOccurs="0"/>
+            <x:element name="cusvouchno" type="x:string" minOccurs="0"/>
+            <x:element name="cusvouchdate" type="x:string" minOccurs="0"/>
+            <x:element name="FeesInfo" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="fykonzbz" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuzhao" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaoxhao" type="x:string" minOccurs="0"/>
+                  <x:element name="shfeibzh" type="x:string" minOccurs="0"/>
+                  <x:element name="shoufdma" type="x:string" minOccurs="0"/>
+                  <x:element name="jiaoyije" type="x:decimal" minOccurs="0"/>
+                  <x:element name="shuliang" type="x:string" minOccurs="0"/>
+                  <x:element name="yingshfy" type="x:decimal" minOccurs="0"/>
+                  <x:element name="fyjzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="ywckhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="txqsriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzzriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzhouqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzongje" type="x:decimal" minOccurs="0"/>
+                  <x:element name="tanxqish" type="x:string" minOccurs="0"/>
+                  <x:element name="fyrzzhho" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyodm" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyoms" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd01" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd02" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd03" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="chaohubz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfoyjiz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfexuho" type="x:string" minOccurs="0"/>
+                  <x:element name="joynbizh" type="x:string" minOccurs="0"/>
+                  <x:element name="xnjnxmdm" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3004100001809" type="s:Rsp3004100001809Type"/>
+  <x:complexType name="Rsp3004100001809Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="PPL:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="agentserialno" type="x:string" minOccurs="0"/>
+            <x:element name="bankid" type="x:string" minOccurs="0"/>
+            <x:element name="amount" type="x:decimal" minOccurs="0"/>
+            <x:element name="currency" type="x:string" minOccurs="0"/>
+            <x:element name="workdate" type="x:string" minOccurs="0"/>
+            <x:element name="dealmsg" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3004100001810" type="s:Req3004100001810Type"/>
+  <x:complexType name="Req3004100001810Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="PPL:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="paypathcode" type="x:string" minOccurs="0"/>
+            <x:element name="feecaltype" type="x:string" minOccurs="0"/>
+            <x:element name="busitype" type="x:string" minOccurs="0"/>
+            <x:element name="busikind" type="x:string" minOccurs="0"/>
+            <x:element name="payeracc" type="x:string" minOccurs="0"/>
+            <x:element name="payername" type="x:string" minOccurs="0"/>
+            <x:element name="payeracctype" type="x:string" minOccurs="0"/>
+            <x:element name="payeraddr" type="x:string" minOccurs="0"/>
+            <x:element name="payeeacctype" type="x:string" minOccurs="0"/>
+            <x:element name="payeeacc" type="x:string" minOccurs="0"/>
+            <x:element name="payeename" type="x:string" minOccurs="0"/>
+            <x:element name="payeeaddr" type="x:string" minOccurs="0"/>
+            <x:element name="payeeaccbank" type="x:string" minOccurs="0"/>
+            <x:element name="payeeaccname" type="x:string" minOccurs="0"/>
+            <x:element name="currency" type="x:string" minOccurs="0"/>
+            <x:element name="amount" type="x:string" minOccurs="0"/>
+            <x:element name="postscript" type="x:string" minOccurs="0"/>
+            <x:element name="idtype" type="x:string" minOccurs="0"/>
+            <x:element name="idno" type="x:string" minOccurs="0"/>
+            <x:element name="scdtrkinf" type="x:string" minOccurs="0"/>
+            <x:element name="thdtrkinf" type="x:string" minOccurs="0"/>
+            <x:element name="custransamount" type="x:string" minOccurs="0"/>
+            <x:element name="cusfeeamount" type="x:string" minOccurs="0"/>
+            <x:element name="password" type="x:string" minOccurs="0"/>
+            <x:element name="subaccseqno" type="x:string" minOccurs="0"/>
+            <x:element name="feeflag" type="x:string" minOccurs="0"/>
+            <x:element name="FeesInfo" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="fykonzbz" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuzhao" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaoxhao" type="x:string" minOccurs="0"/>
+                  <x:element name="shfeibzh" type="x:string" minOccurs="0"/>
+                  <x:element name="shoufdma" type="x:string" minOccurs="0"/>
+                  <x:element name="jiaoyije" type="x:decimal" minOccurs="0"/>
+                  <x:element name="shuliang" type="x:string" minOccurs="0"/>
+                  <x:element name="yingshfy" type="x:decimal" minOccurs="0"/>
+                  <x:element name="fyjzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="ywckhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="txqsriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzzriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzhouqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzongje" type="x:decimal" minOccurs="0"/>
+                  <x:element name="tanxqish" type="x:string" minOccurs="0"/>
+                  <x:element name="fyrzzhho" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyodm" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyoms" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd01" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd02" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd03" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="chaohubz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfoyjiz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfexuho" type="x:string" minOccurs="0"/>
+                  <x:element name="joynbizh" type="x:string" minOccurs="0"/>
+                  <x:element name="xnjnxmdm" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3004100001810" type="s:Rsp3004100001810Type"/>
+  <x:complexType name="Rsp3004100001810Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="PPL:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="workdate" type="x:string" minOccurs="0"/>
+            <x:element name="agentserialno" type="x:string" minOccurs="0"/>
+            <x:element name="bankdate" type="x:string" minOccurs="0"/>
+            <x:element name="bankide" type="x:string" minOccurs="0"/>
+            <x:element name="msgid" type="x:string" minOccurs="0"/>
+            <x:element name="corptradetype" type="x:string" minOccurs="0"/>
+            <x:element name="cusfeeamount" type="x:string" minOccurs="0"/>
+            <x:element name="remark1" type="x:string" minOccurs="0"/>
+            <x:element name="remark2" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3004100001811" type="s:Req3004100001811Type"/>
+  <x:complexType name="Req3004100001811Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="eb_date" type="x:string" minOccurs="0"/>
+            <x:element name="remit_date" type="x:string" minOccurs="0"/>
+            <x:element name="remit_type" type="x:string" minOccurs="0"/>
+            <x:element name="remit_path" type="x:string" minOccurs="0"/>
+            <x:element name="value_date" type="x:string" minOccurs="0"/>
+            <x:element name="remit_ccy" type="x:string" minOccurs="0"/>
+            <x:element name="remit_amt" type="x:string" minOccurs="0"/>
+            <x:element name="fee_flag" type="x:string" minOccurs="0"/>
+            <x:element name="fee_ccy" type="x:string" minOccurs="0"/>
+            <x:element name="cable_fee" type="x:string" minOccurs="0"/>
+            <x:element name="fee_amt" type="x:string" minOccurs="0"/>
+            <x:element name="net_amt" type="x:string" minOccurs="0"/>
+            <x:element name="paytype" type="x:string" minOccurs="0"/>
+            <x:element name="ord_id" type="x:string" minOccurs="0"/>
+            <x:element name="idcode" type="x:string" minOccurs="0"/>
+            <x:element name="ord_acc" type="x:string" minOccurs="0"/>
+            <x:element name="bene_acc" type="x:string" minOccurs="0"/>
+            <x:element name="ord_name" type="x:string" minOccurs="0"/>
+            <x:element name="bene_name" type="x:string" minOccurs="0"/>
+            <x:element name="ord_nmadd" type="x:string" minOccurs="0"/>
+            <x:element name="bene_nmadd" type="x:string" minOccurs="0"/>
+            <x:element name="trans_org_code" type="x:string" minOccurs="0"/>
+            <x:element name="cust_mgr_id" type="x:string" minOccurs="0"/>
+            <x:element name="cnty_code" type="x:string" minOccurs="0"/>
+            <x:element name="f70" type="x:string" minOccurs="0"/>
+            <x:element name="f71a" type="x:string" minOccurs="0"/>
+            <x:element name="remit_flag" type="x:string" minOccurs="0"/>
+            <x:element name="txcode" type="x:string" minOccurs="0"/>
+            <x:element name="txrem" type="x:string" minOccurs="0"/>
+            <x:element name="acc_bk_id" type="x:string" minOccurs="0"/>
+            <x:element name="rec_bk_id" type="x:string" minOccurs="0"/>
+            <x:element name="zhaolaiy" type="x:string" minOccurs="0"/>
+            <x:element name="dr_cust_accno" type="x:string" minOccurs="0"/>
+            <x:element name="jigolaiy" type="x:string" minOccurs="0"/>
+            <x:element name="jigouhao" type="x:string" minOccurs="0"/>
+            <x:element name="yewubima" type="x:string" minOccurs="0"/>
+            <x:element name="zhhaxhao" type="x:string" minOccurs="0"/>
+            <x:element name="fee_dr_total_accno" type="x:string" minOccurs="0"/>
+            <x:element name="fee_custaccno" type="x:string" minOccurs="0"/>
+            <x:element name="crtuser" type="x:string" minOccurs="0"/>
+            <x:element name="inptelc" type="x:string" minOccurs="0"/>
+            <x:element name="field_1" type="x:string" minOccurs="0"/>
+            <x:element name="field_2" type="x:string" minOccurs="0"/>
+            <x:element name="field_3" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3004100001811" type="s:Rsp3004100001811Type"/>
+  <x:complexType name="Rsp3004100001811Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="return_result" type="x:string" minOccurs="0"/>
+            <x:element name="field_1" type="x:string" minOccurs="0"/>
+            <x:element name="field_2" type="x:string" minOccurs="0"/>
+            <x:element name="field_3" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3004100001812" type="s:Req3004100001812Type"/>
+  <x:complexType name="Req3004100001812Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="PPL:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="busitype" type="x:string" minOccurs="0"/>
+            <x:element name="priority" type="x:string" minOccurs="0"/>
+            <x:element name="amtfrom" type="x:string" minOccurs="0"/>
+            <x:element name="setforno" type="x:string" minOccurs="0"/>
+            <x:element name="cancelno" type="x:string" minOccurs="0"/>
+            <x:element name="payeracc" type="x:string" minOccurs="0"/>
+            <x:element name="customno" type="x:string" minOccurs="0"/>
+            <x:element name="payername" type="x:string" minOccurs="0"/>
+            <x:element name="payeraddr" type="x:string" minOccurs="0"/>
+            <x:element name="customtype" type="x:string" minOccurs="0"/>
+            <x:element name="acctype" type="x:string" minOccurs="0"/>
+            <x:element name="currency" type="x:string" minOccurs="0"/>
+            <x:element name="amount" type="x:decimal" minOccurs="0"/>
+            <x:element name="payeeacc" type="x:string" minOccurs="0"/>
+            <x:element name="payeename" type="x:string" minOccurs="0"/>
+            <x:element name="payeebank" type="x:string" minOccurs="0"/>
+            <x:element name="payeeaddr" type="x:string" minOccurs="0"/>
+            <x:element name="postscript" type="x:string" minOccurs="0"/>
+            <x:element name="busikind" type="x:string" minOccurs="0"/>
+            <x:element name="swiftno" type="x:string" minOccurs="0"/>
+            <x:element name="sbflag" type="x:string" minOccurs="0"/>
+            <x:element name="intdeccols" type="x:string" minOccurs="0"/>
+            <x:element name="wgmsgrefno" type="x:string" minOccurs="0"/>
+            <x:element name="fiftytwoa" type="x:string" minOccurs="0"/>
+            <x:element name="fiftytwod" type="x:string" minOccurs="0"/>
+            <x:element name="fiftysevena" type="x:string" minOccurs="0"/>
+            <x:element name="fiftysevend" type="x:string" minOccurs="0"/>
+            <x:element name="countstd" type="x:string" minOccurs="0"/>
+            <x:element name="subaccseqno" type="x:string" minOccurs="0"/>
+            <x:element name="depositflag" type="x:string" minOccurs="0"/>
+            <x:element name="fcytype" type="x:string" minOccurs="0"/>
+            <x:element name="cusvouchno" type="x:string" minOccurs="0"/>
+            <x:element name="cusvouchdate" type="x:string" minOccurs="0"/>
+            <x:element name="FeesInfo" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="fykonzbz" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuzhao" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaoxhao" type="x:string" minOccurs="0"/>
+                  <x:element name="shfeibzh" type="x:string" minOccurs="0"/>
+                  <x:element name="shoufdma" type="x:string" minOccurs="0"/>
+                  <x:element name="jiaoyije" type="x:decimal" minOccurs="0"/>
+                  <x:element name="shuliang" type="x:string" minOccurs="0"/>
+                  <x:element name="yingshfy" type="x:decimal" minOccurs="0"/>
+                  <x:element name="fyjzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="ywckhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="txqsriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzzriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzhouqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzongje" type="x:decimal" minOccurs="0"/>
+                  <x:element name="tanxqish" type="x:string" minOccurs="0"/>
+                  <x:element name="fyrzzhho" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyodm" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyoms" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd01" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd02" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd03" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="chaohubz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfoyjiz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfexuho" type="x:string" minOccurs="0"/>
+                  <x:element name="joynbizh" type="x:string" minOccurs="0"/>
+                  <x:element name="xnjnxmdm" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3004100001812" type="s:Rsp3004100001812Type"/>
+  <x:complexType name="Rsp3004100001812Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="PPL:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="agentserialno" type="x:string" minOccurs="0"/>
+            <x:element name="bankid" type="x:string" minOccurs="0"/>
+            <x:element name="amount" type="x:decimal" minOccurs="0"/>
+            <x:element name="currency" type="x:string" minOccurs="0"/>
+            <x:element name="workdate" type="x:string" minOccurs="0"/>
+            <x:element name="dealmsg" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3004100001813" type="s:Req3004100001813Type"/>
+  <x:complexType name="Req3004100001813Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="PPL:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="busitype" type="x:string" minOccurs="0"/>
+            <x:element name="priority" type="x:string" minOccurs="0"/>
+            <x:element name="amtfrom" type="x:string" minOccurs="0"/>
+            <x:element name="setforno" type="x:string" minOccurs="0"/>
+            <x:element name="cancelno" type="x:string" minOccurs="0"/>
+            <x:element name="payeracc" type="x:string" minOccurs="0"/>
+            <x:element name="customno" type="x:string" minOccurs="0"/>
+            <x:element name="payername" type="x:string" minOccurs="0"/>
+            <x:element name="payeraddr" type="x:string" minOccurs="0"/>
+            <x:element name="customtype" type="x:string" minOccurs="0"/>
+            <x:element name="acctype" type="x:string" minOccurs="0"/>
+            <x:element name="currency" type="x:string" minOccurs="0"/>
+            <x:element name="amount" type="x:decimal" minOccurs="0"/>
+            <x:element name="payeeacc" type="x:string" minOccurs="0"/>
+            <x:element name="payeename" type="x:string" minOccurs="0"/>
+            <x:element name="payeebank" type="x:string" minOccurs="0"/>
+            <x:element name="payeeaddr" type="x:string" minOccurs="0"/>
+            <x:element name="payeeaccbank" type="x:string" minOccurs="0"/>
+            <x:element name="postscript" type="x:string" minOccurs="0"/>
+            <x:element name="busikind" type="x:string" minOccurs="0"/>
+            <x:element name="countstd" type="x:string" minOccurs="0"/>
+            <x:element name="swiftno" type="x:string" minOccurs="0"/>
+            <x:element name="sbflag" type="x:string" minOccurs="0"/>
+            <x:element name="intdeccols" type="x:string" minOccurs="0"/>
+            <x:element name="subaccseqno" type="x:string" minOccurs="0"/>
+            <x:element name="depositflag" type="x:string" minOccurs="0"/>
+            <x:element name="fcytype" type="x:string" minOccurs="0"/>
+            <x:element name="cusvouchno" type="x:string" minOccurs="0"/>
+            <x:element name="cusvouchdate" type="x:string" minOccurs="0"/>
+            <x:element name="FeesInfo" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="fykonzbz" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuzhao" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaoxhao" type="x:string" minOccurs="0"/>
+                  <x:element name="shfeibzh" type="x:string" minOccurs="0"/>
+                  <x:element name="shoufdma" type="x:string" minOccurs="0"/>
+                  <x:element name="jiaoyije" type="x:decimal" minOccurs="0"/>
+                  <x:element name="shuliang" type="x:string" minOccurs="0"/>
+                  <x:element name="yingshfy" type="x:decimal" minOccurs="0"/>
+                  <x:element name="fyjzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="ywckhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="txqsriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzzriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzhouqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzongje" type="x:decimal" minOccurs="0"/>
+                  <x:element name="tanxqish" type="x:string" minOccurs="0"/>
+                  <x:element name="fyrzzhho" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyodm" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyoms" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd01" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd02" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd03" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="chaohubz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfoyjiz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfexuho" type="x:string" minOccurs="0"/>
+                  <x:element name="joynbizh" type="x:string" minOccurs="0"/>
+                  <x:element name="xnjnxmdm" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+            <x:element name="accttype" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3004100001813" type="s:Rsp3004100001813Type"/>
+  <x:complexType name="Rsp3004100001813Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="PPL:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="agentserialno" type="x:string" minOccurs="0"/>
+            <x:element name="bankid" type="x:string" minOccurs="0"/>
+            <x:element name="amount" type="x:decimal" minOccurs="0"/>
+            <x:element name="currency" type="x:string" minOccurs="0"/>
+            <x:element name="workdate" type="x:string" minOccurs="0"/>
+            <x:element name="dealmsg" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3004100001814" type="s:Req3004100001814Type"/>
+  <x:complexType name="Req3004100001814Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="PPL:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="agentserialno" type="x:string" minOccurs="0"/>
+            <x:element name="busitype" type="x:string" minOccurs="0"/>
+            <x:element name="priority" type="x:string" minOccurs="0"/>
+            <x:element name="setforno" type="x:string" minOccurs="0"/>
+            <x:element name="cancelno" type="x:string" minOccurs="0"/>
+            <x:element name="payeracc" type="x:string" minOccurs="0"/>
+            <x:element name="customno" type="x:string" minOccurs="0"/>
+            <x:element name="payername" type="x:string" minOccurs="0"/>
+            <x:element name="payeraddr" type="x:string" minOccurs="0"/>
+            <x:element name="customtype" type="x:string" minOccurs="0"/>
+            <x:element name="acctype" type="x:string" minOccurs="0"/>
+            <x:element name="currency" type="x:string" minOccurs="0"/>
+            <x:element name="amount" type="x:decimal" minOccurs="0"/>
+            <x:element name="payeeacc" type="x:string" minOccurs="0"/>
+            <x:element name="payeename" type="x:string" minOccurs="0"/>
+            <x:element name="payeebank" type="x:string" minOccurs="0"/>
+            <x:element name="payeeaddr" type="x:string" minOccurs="0"/>
+            <x:element name="payeeaccbank" type="x:string" minOccurs="0"/>
+            <x:element name="postscript" type="x:string" minOccurs="0"/>
+            <x:element name="busikind" type="x:string" minOccurs="0"/>
+            <x:element name="wgmsgrefno" type="x:string" minOccurs="0"/>
+            <x:element name="swiftno" type="x:string" minOccurs="0"/>
+            <x:element name="sbflag" type="x:string" minOccurs="0"/>
+            <x:element name="fcytype" type="x:string" minOccurs="0"/>
+            <x:element name="accttype" type="x:string" minOccurs="0"/>
+            <x:element name="subaccseqno" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3004100001814" type="s:Rsp3004100001814Type"/>
+  <x:complexType name="Rsp3004100001814Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="PPL:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="agentserialno" type="x:string" minOccurs="0"/>
+            <x:element name="bankid" type="x:string" minOccurs="0"/>
+            <x:element name="amount" type="x:decimal" minOccurs="0"/>
+            <x:element name="currency" type="x:string" minOccurs="0"/>
+            <x:element name="workdate" type="x:string" minOccurs="0"/>
+            <x:element name="dealmsg" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3004100001815" type="s:Req3004100001815Type"/>
+  <x:complexType name="Req3004100001815Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="PPL:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="busitype" type="x:string" minOccurs="0"/>
+            <x:element name="priority" type="x:string" minOccurs="0"/>
+            <x:element name="amtfrom" type="x:string" minOccurs="0"/>
+            <x:element name="setforno" type="x:string" minOccurs="0"/>
+            <x:element name="cancelno" type="x:string" minOccurs="0"/>
+            <x:element name="payeracc" type="x:string" minOccurs="0"/>
+            <x:element name="customno" type="x:string" minOccurs="0"/>
+            <x:element name="payername" type="x:string" minOccurs="0"/>
+            <x:element name="payeraddr" type="x:string" minOccurs="0"/>
+            <x:element name="customtype" type="x:string" minOccurs="0"/>
+            <x:element name="acctype" type="x:string" minOccurs="0"/>
+            <x:element name="currency" type="x:string" minOccurs="0"/>
+            <x:element name="amount" type="x:decimal" minOccurs="0"/>
+            <x:element name="payeeacc" type="x:string" minOccurs="0"/>
+            <x:element name="payeename" type="x:string" minOccurs="0"/>
+            <x:element name="payeebank" type="x:string" minOccurs="0"/>
+            <x:element name="payeeaddr" type="x:string" minOccurs="0"/>
+            <x:element name="postscript" type="x:string" minOccurs="0"/>
+            <x:element name="busikind" type="x:string" minOccurs="0"/>
+            <x:element name="swiftno" type="x:string" minOccurs="0"/>
+            <x:element name="sbflag" type="x:string" minOccurs="0"/>
+            <x:element name="intdeccols" type="x:string" minOccurs="0"/>
+            <x:element name="wgmsgrefno" type="x:string" minOccurs="0"/>
+            <x:element name="fiftytwoa" type="x:string" minOccurs="0"/>
+            <x:element name="fiftytwod" type="x:string" minOccurs="0"/>
+            <x:element name="fiftysevena" type="x:string" minOccurs="0"/>
+            <x:element name="fiftysevend" type="x:string" minOccurs="0"/>
+            <x:element name="countstd" type="x:string" minOccurs="0"/>
+            <x:element name="subaccseqno" type="x:string" minOccurs="0"/>
+            <x:element name="depositflag" type="x:string" minOccurs="0"/>
+            <x:element name="fcytype" type="x:string" minOccurs="0"/>
+            <x:element name="cusvouchno" type="x:string" minOccurs="0"/>
+            <x:element name="cusvouchdate" type="x:string" minOccurs="0"/>
+            <x:element name="FeesInfo" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="fykonzbz" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuzhao" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaoxhao" type="x:string" minOccurs="0"/>
+                  <x:element name="shfeibzh" type="x:string" minOccurs="0"/>
+                  <x:element name="shoufdma" type="x:string" minOccurs="0"/>
+                  <x:element name="jiaoyije" type="x:decimal" minOccurs="0"/>
+                  <x:element name="shuliang" type="x:string" minOccurs="0"/>
+                  <x:element name="yingshfy" type="x:decimal" minOccurs="0"/>
+                  <x:element name="fyjzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="ywckhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="txqsriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzzriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzhouqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzongje" type="x:decimal" minOccurs="0"/>
+                  <x:element name="tanxqish" type="x:string" minOccurs="0"/>
+                  <x:element name="fyrzzhho" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyodm" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyoms" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd01" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd02" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd03" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="chaohubz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfoyjiz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfexuho" type="x:string" minOccurs="0"/>
+                  <x:element name="joynbizh" type="x:string" minOccurs="0"/>
+                  <x:element name="xnjnxmdm" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+            <x:element name="accttype" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3004100001815" type="s:Rsp3004100001815Type"/>
+  <x:complexType name="Rsp3004100001815Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="PPL:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="agentserialno" type="x:string" minOccurs="0"/>
+            <x:element name="bankid" type="x:string" minOccurs="0"/>
+            <x:element name="amount" type="x:decimal" minOccurs="0"/>
+            <x:element name="currency" type="x:string" minOccurs="0"/>
+            <x:element name="workdate" type="x:string" minOccurs="0"/>
+            <x:element name="dealmsg" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3004100001816" type="s:Req3004100001816Type"/>
+  <x:complexType name="Req3004100001816Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="PPL:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="agentserialno" type="x:string" minOccurs="0"/>
+            <x:element name="busitype" type="x:string" minOccurs="0"/>
+            <x:element name="priority" type="x:string" minOccurs="0"/>
+            <x:element name="setforno" type="x:string" minOccurs="0"/>
+            <x:element name="cancelno" type="x:string" minOccurs="0"/>
+            <x:element name="payeracc" type="x:string" minOccurs="0"/>
+            <x:element name="customno" type="x:string" minOccurs="0"/>
+            <x:element name="payername" type="x:string" minOccurs="0"/>
+            <x:element name="payeraddr" type="x:string" minOccurs="0"/>
+            <x:element name="customtype" type="x:string" minOccurs="0"/>
+            <x:element name="acctype" type="x:string" minOccurs="0"/>
+            <x:element name="currency" type="x:string" minOccurs="0"/>
+            <x:element name="amount" type="x:decimal" minOccurs="0"/>
+            <x:element name="payeeacc" type="x:string" minOccurs="0"/>
+            <x:element name="payeename" type="x:string" minOccurs="0"/>
+            <x:element name="payeebank" type="x:string" minOccurs="0"/>
+            <x:element name="payeeaddr" type="x:string" minOccurs="0"/>
+            <x:element name="postscript" type="x:string" minOccurs="0"/>
+            <x:element name="busikind" type="x:string" minOccurs="0"/>
+            <x:element name="swiftno" type="x:string" minOccurs="0"/>
+            <x:element name="sbflag" type="x:string" minOccurs="0"/>
+            <x:element name="intdeccols" type="x:string" minOccurs="0"/>
+            <x:element name="wgmsgrefno" type="x:string" minOccurs="0"/>
+            <x:element name="fiftytwoa" type="x:string" minOccurs="0"/>
+            <x:element name="fiftytwod" type="x:string" minOccurs="0"/>
+            <x:element name="fiftysevena" type="x:string" minOccurs="0"/>
+            <x:element name="fiftysevend" type="x:string" minOccurs="0"/>
+            <x:element name="fcytype" type="x:string" minOccurs="0"/>
+            <x:element name="accttype" type="x:string" minOccurs="0"/>
+            <x:element name="subaccseqno" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3004100001816" type="s:Rsp3004100001816Type"/>
+  <x:complexType name="Rsp3004100001816Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="PPL:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="agentserialno" type="x:string" minOccurs="0"/>
+            <x:element name="bankid" type="x:string" minOccurs="0"/>
+            <x:element name="amount" type="x:decimal" minOccurs="0"/>
+            <x:element name="currency" type="x:string" minOccurs="0"/>
+            <x:element name="workdate" type="x:string" minOccurs="0"/>
+            <x:element name="dealmsg" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3004100001817" type="s:Req3004100001817Type"/>
+  <x:complexType name="Req3004100001817Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="CNAPS2:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="Biz_Type_Code" type="x:string" minOccurs="0"/>
+            <x:element name="Biz_Ctgy_Code" type="x:string" minOccurs="0"/>
+            <x:element name="Curcd" type="x:string" minOccurs="0"/>
+            <x:element name="Amount" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTEBAT" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE_SEQ" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Name" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Actno" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Addr" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Acc_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Acc_Brname" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_St_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Cust_Type" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Subact_Seq" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Brno_Type" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_St_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Name" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Actno" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Addr" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Acc_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Acc_Brname" type="x:string" minOccurs="0"/>
+            <x:element name="Content" type="x:string" minOccurs="0"/>
+            <x:element name="Remarks" type="x:string" minOccurs="0"/>
+            <x:element name="Content2" type="x:string" minOccurs="0"/>
+            <x:element name="Remarks2" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Type" type="x:string" minOccurs="0"/>
+            <x:element name="Reversal_Number" type="x:string" minOccurs="0"/>
+            <x:element name="ACCOUNT_FLAG" type="x:string" minOccurs="0"/>
+            <x:element name="GlobalSeq" type="x:string" minOccurs="0"/>
+            <x:element name="OrgSysID" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3004100001817" type="s:Rsp3004100001817Type"/>
+  <x:complexType name="Rsp3004100001817Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="CNAPS2:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="Cpg_Id" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3004100001818" type="s:Req3004100001818Type"/>
+  <x:complexType name="Req3004100001818Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="CNAPS2:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="Biz_Type_Code" type="x:string" minOccurs="0"/>
+            <x:element name="Curcd" type="x:string" minOccurs="0"/>
+            <x:element name="Amount" type="x:string" minOccurs="0"/>
+            <x:element name="Biz_Priority" type="x:string" minOccurs="0"/>
+            <x:element name="E2E_Id" type="x:string" minOccurs="0"/>
+            <x:element name="Reversal_Number" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTEBAT" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE_SEQ" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Type" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Actno" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Name" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Addr" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Acc_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Acc_Brname" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Cust_Type" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Subact_Seq" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Brno_Type" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Name" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Addr" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Actno" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Acc_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Acc_Brname" type="x:string" minOccurs="0"/>
+            <x:element name="Biz_Ctgy_Code" type="x:string" minOccurs="0"/>
+            <x:element name="Cb_Flag" type="x:string" minOccurs="0"/>
+            <x:element name="Remarks" type="x:string" minOccurs="0"/>
+            <x:element name="Memo" type="x:string" minOccurs="0"/>
+            <x:element name="GlobalSeq" type="x:string" minOccurs="0"/>
+            <x:element name="OrgSysID" type="x:string" minOccurs="0"/>
+            <x:element name="CLLTN_NOTES_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="CLLTN_NOTES_TYPE" type="x:string" minOccurs="0"/>
+            <x:element name="Note_Number" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_NOTES_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_Amends_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_Amends_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_REJECT_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_REJECT_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_ORI_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_ORI_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_PAY_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_PAY_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_ADD_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_ADD_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="Check_Notes_Date" type="x:string" minOccurs="0"/>
+            <x:element name="Check_App_Name" type="x:string" minOccurs="0"/>
+            <x:element name="Check_Notes_Curcd" type="x:string" minOccurs="0"/>
+            <x:element name="Check_Notes_Amount" type="x:string" minOccurs="0"/>
+            <x:element name="Check_Exchage_Curcd" type="x:string" minOccurs="0"/>
+            <x:element name="Check_Exchage" type="x:string" minOccurs="0"/>
+            <x:element name="Check_Notes_Num" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Date" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Key" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Ctgy" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Payer_Name" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Pay_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Curcd" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Amount" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_App_Actno" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_App_Name" type="x:string" minOccurs="0"/>
+            <x:element name="DFT_OVER_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Over_Amt" type="x:string" minOccurs="0"/>
+            <x:element name="DFT_ST_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_St_Amt" type="x:string" minOccurs="0"/>
+            <x:element name="Cbbiz_Assoc_Biz_Date" type="x:string" minOccurs="0"/>
+            <x:element name="Cbbiz_Fee_Code" type="x:string" minOccurs="0"/>
+            <x:element name="CBBIZ_SNDBNK_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="Cbbiz_Sndbnk_Fee" type="x:string" minOccurs="0"/>
+            <x:element name="CBBIZ_RCVBNK_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="Cbbiz_Rcvbnk_Fee" type="x:string" minOccurs="0"/>
+            <x:element name="Cbbiz_Remark" type="x:string" minOccurs="0"/>
+            <x:element name="ACCOUNT_FLAG" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3004100001818" type="s:Rsp3004100001818Type"/>
+  <x:complexType name="Rsp3004100001818Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="CNAPS2:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="Cpg_Id" type="x:string" minOccurs="0"/>
+            <x:element name="CYCLE" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="shoufdma" type="x:string" minOccurs="0"/>
+                  <x:element name="shfdmamc" type="x:string" minOccurs="0"/>
+                  <x:element name="shuliang" type="x:string" minOccurs="0"/>
+                  <x:element name="yingshfy" type="x:string" minOccurs="0"/>
+                  <x:element name="shifujne" type="x:string" minOccurs="0"/>
+                  <x:element name="shouqibz" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuzhao" type="x:string" minOccurs="0"/>
+                  <x:element name="zhhaxhao" type="x:string" minOccurs="0"/>
+                  <x:element name="fyjzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="fyrzzhho" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd01" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd02" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd03" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="tanxywbh" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3004100001819" type="s:Req3004100001819Type"/>
+  <x:complexType name="Req3004100001819Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="CNAPS2:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="BIZ_TYPE_CODE" type="x:string" minOccurs="0"/>
+            <x:element name="CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="BIZ_PRIORITY" type="x:string" minOccurs="0"/>
+            <x:element name="E2E_ID" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTEBAT" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE_SEQ" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="PAYER_ACTNO" type="x:string" minOccurs="0"/>
+            <x:element name="PAYER_NAME" type="x:string" minOccurs="0"/>
+            <x:element name="PAYER_ADDR" type="x:string" minOccurs="0"/>
+            <x:element name="PAYER_ACC_BRNO" type="x:string" minOccurs="0"/>
+            <x:element name="PAYER_ACC_BRNAME" type="x:string" minOccurs="0"/>
+            <x:element name="PAYER_BRNO" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Cust_Type" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Subact_Seq" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Brno_Type" type="x:string" minOccurs="0"/>
+            <x:element name="PAYEE_BRNO" type="x:string" minOccurs="0"/>
+            <x:element name="PAYEE_NAME" type="x:string" minOccurs="0"/>
+            <x:element name="PAYEE_ADDR" type="x:string" minOccurs="0"/>
+            <x:element name="PAYEE_ACTNO" type="x:string" minOccurs="0"/>
+            <x:element name="PAYEE_ACC_BRNO" type="x:string" minOccurs="0"/>
+            <x:element name="PAYEE_ACC_BRNAME" type="x:string" minOccurs="0"/>
+            <x:element name="BIZ_CTGY_CODE" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY1" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY1NAME" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY2" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY2NAME" type="x:string" minOccurs="0"/>
+            <x:element name="LEND_INT_RATE" type="x:string" minOccurs="0"/>
+            <x:element name="LEND_DLINE" type="x:string" minOccurs="0"/>
+            <x:element name="CLR_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="REMARKS" type="x:string" minOccurs="0"/>
+            <x:element name="REMARKS2" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Type" type="x:string" minOccurs="0"/>
+            <x:element name="GlobalSeq" type="x:string" minOccurs="0"/>
+            <x:element name="OrgSysID" type="x:string" minOccurs="0"/>
+            <x:element name="CBBIZ_ASSOC_BIZ_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="CBBIZ_FEE_CODE" type="x:string" minOccurs="0"/>
+            <x:element name="CBBIZ_SNDBNK_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="CBBIZ_SNDBNK_FEE" type="x:string" minOccurs="0"/>
+            <x:element name="CBBIZ_RCVBNK_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="CBBIZ_RCVBNK_FEE" type="x:string" minOccurs="0"/>
+            <x:element name="CBBIZ_REMARK" type="x:string" minOccurs="0"/>
+            <x:element name="ACCOUNT_FLAG" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3004100001819" type="s:Rsp3004100001819Type"/>
+  <x:complexType name="Rsp3004100001819Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="CNAPS2:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="Cpg_Id" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3004100001820" type="s:Req3004100001820Type"/>
+  <x:complexType name="Req3004100001820Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="CNAPS2:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="TmlCd" type="x:string" minOccurs="0"/>
+            <x:element name="ReqDate" type="x:string" minOccurs="0"/>
+            <x:element name="ReqTime" type="x:string" minOccurs="0"/>
+            <x:element name="Pkg_No" type="x:string" minOccurs="0"/>
+            <x:element name="Channel" type="x:string" minOccurs="0"/>
+            <x:element name="TlrNo" type="x:string" minOccurs="0"/>
+            <x:element name="Txno" type="x:string" minOccurs="0"/>
+            <x:element name="ReqSeq" type="x:string" minOccurs="0"/>
+            <x:element name="ChannelID" type="x:string" minOccurs="0"/>
+            <x:element name="Biz_Type_Code" type="x:string" minOccurs="0"/>
+            <x:element name="Curcd" type="x:string" minOccurs="0"/>
+            <x:element name="Amount" type="x:string" minOccurs="0"/>
+            <x:element name="Biz_Priority" type="x:string" minOccurs="0"/>
+            <x:element name="E2E_Id" type="x:string" minOccurs="0"/>
+            <x:element name="Reversal_Number" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTEBAT" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE_SEQ" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Type" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Actno" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Name" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Addr" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Acc_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Acc_Brname" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Cust_Type" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Subact_Seq" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Brno_Type" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Name" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Addr" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Actno" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Acc_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Acc_Brname" type="x:string" minOccurs="0"/>
+            <x:element name="Biz_Ctgy_Code" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY1" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY1NAME" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY2" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY2NAME" type="x:string" minOccurs="0"/>
+            <x:element name="Cb_Flag" type="x:string" minOccurs="0"/>
+            <x:element name="Remarks" type="x:string" minOccurs="0"/>
+            <x:element name="Memo" type="x:string" minOccurs="0"/>
+            <x:element name="GlobalSeq" type="x:string" minOccurs="0"/>
+            <x:element name="OrgSysID" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3004100001820" type="s:Rsp3004100001820Type"/>
+  <x:complexType name="Rsp3004100001820Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="CNAPS2:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="RespDate" type="x:string" minOccurs="0"/>
+            <x:element name="RespTime" type="x:string" minOccurs="0"/>
+            <x:element name="Pkg_No" type="x:string" minOccurs="0"/>
+            <x:element name="Channel" type="x:string" minOccurs="0"/>
+            <x:element name="RetCode" type="x:string" minOccurs="0"/>
+            <x:element name="RetMsg" type="x:string" minOccurs="0"/>
+            <x:element name="Tlsno" type="x:string" minOccurs="0"/>
+            <x:element name="Rsp_Rsv1" type="x:string" minOccurs="0"/>
+            <x:element name="Rsp_Rsv2" type="x:string" minOccurs="0"/>
+            <x:element name="Cpg_Id" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3004100001821" type="s:Req3004100001821Type"/>
+  <x:complexType name="Req3004100001821Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="CNAPS2:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="BIZ_TYPE_CODE" type="x:string" minOccurs="0"/>
+            <x:element name="CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="BIZ_PRIORITY" type="x:string" minOccurs="0"/>
+            <x:element name="E2E_ID" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTEBAT" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE_SEQ" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Type" type="x:string" minOccurs="0"/>
+            <x:element name="PAYER_ACTNO" type="x:string" minOccurs="0"/>
+            <x:element name="PAYER_NAME" type="x:string" minOccurs="0"/>
+            <x:element name="PAYER_ADDR" type="x:string" minOccurs="0"/>
+            <x:element name="PAYER_ACC_BRNO" type="x:string" minOccurs="0"/>
+            <x:element name="PAYER_ACC_BRNAME" type="x:string" minOccurs="0"/>
+            <x:element name="PAYER_BRNO" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Cust_Type" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Subact_Seq" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Brno_Type" type="x:string" minOccurs="0"/>
+            <x:element name="PAYEE_BRNO" type="x:string" minOccurs="0"/>
+            <x:element name="PAYEE_NAME" type="x:string" minOccurs="0"/>
+            <x:element name="PAYEE_ADDR" type="x:string" minOccurs="0"/>
+            <x:element name="PAYEE_ACTNO" type="x:string" minOccurs="0"/>
+            <x:element name="PAYEE_ACC_BRNO" type="x:string" minOccurs="0"/>
+            <x:element name="PAYEE_ACC_BRNAME" type="x:string" minOccurs="0"/>
+            <x:element name="BIZ_CTGY_CODE" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY1" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY1NAME" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY2" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY2NAME" type="x:string" minOccurs="0"/>
+            <x:element name="REMARKS" type="x:string" minOccurs="0"/>
+            <x:element name="REMARKS2" type="x:string" minOccurs="0"/>
+            <x:element name="CYCLE_A" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="fykonzbz" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuzhao" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaoxhao" type="x:string" minOccurs="0"/>
+                  <x:element name="shfeibzh" type="x:string" minOccurs="0"/>
+                  <x:element name="shoufdma" type="x:string" minOccurs="0"/>
+                  <x:element name="jiaoyije" type="x:string" minOccurs="0"/>
+                  <x:element name="shuliang" type="x:string" minOccurs="0"/>
+                  <x:element name="yingshfy" type="x:string" minOccurs="0"/>
+                  <x:element name="fyjzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="ywckhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="txqsriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzzriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzhouqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzongje" type="x:string" minOccurs="0"/>
+                  <x:element name="tanxqish" type="x:string" minOccurs="0"/>
+                  <x:element name="fyrzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyodm" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyoms" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd01" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd02" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd03" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="chaohubz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfoyjiz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfexuho" type="x:string" minOccurs="0"/>
+                  <x:element name="joynbizh" type="x:string" minOccurs="0"/>
+                  <x:element name="xnjnxmdm" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+            <x:element name="CYCLE_B" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="BZJKBZ" type="x:string" minOccurs="0"/>
+                  <x:element name="ZIJNLY" type="x:string" minOccurs="0"/>
+                  <x:element name="JGYYJB" type="x:string" minOccurs="0"/>
+                  <x:element name="DIOCJG" type="x:string" minOccurs="0"/>
+                  <x:element name="YEWUDH" type="x:string" minOccurs="0"/>
+                  <x:element name="ZHAOXH" type="x:string" minOccurs="0"/>
+                  <x:element name="XIOZXH" type="x:string" minOccurs="0"/>
+                  <x:element name="ZZCZLX" type="x:string" minOccurs="0"/>
+                  <x:element name="ZYZCZH" type="x:string" minOccurs="0"/>
+                  <x:element name="FUKRXM" type="x:string" minOccurs="0"/>
+                  <x:element name="ZHHUXZ" type="x:string" minOccurs="0"/>
+                  <x:element name="JIEDBZ" type="x:string" minOccurs="0"/>
+                  <x:element name="CHUIBZ" type="x:string" minOccurs="0"/>
+                  <x:element name="JIO1JE" type="x:string" minOccurs="0"/>
+                  <x:element name="ZHYODM" type="x:string" minOccurs="0"/>
+                  <x:element name="YULZ01" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+            <x:element name="GlobalSeq" type="x:string" minOccurs="0"/>
+            <x:element name="OrgSysID" type="x:string" minOccurs="0"/>
+            <x:element name="LEND_INT_RATE" type="x:string" minOccurs="0"/>
+            <x:element name="LEND_DLINE" type="x:string" minOccurs="0"/>
+            <x:element name="CBBIZ_ASSOC_BIZ_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="CBBIZ_FEE_CODE" type="x:string" minOccurs="0"/>
+            <x:element name="CBBIZ_SNDBNK_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="CBBIZ_SNDBNK_FEE" type="x:string" minOccurs="0"/>
+            <x:element name="CBBIZ_RCVBNK_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="CBBIZ_RCVBNK_FEE" type="x:string" minOccurs="0"/>
+            <x:element name="CBBIZ_REMARK" type="x:string" minOccurs="0"/>
+            <x:element name="HDPrtFlag" type="x:string" minOccurs="0"/>
+            <x:element name="RSV1" type="x:string" minOccurs="0"/>
+            <x:element name="RSV2" type="x:string" minOccurs="0"/>
+            <x:element name="RSV3" type="x:string" minOccurs="0"/>
+            <x:element name="RSV4" type="x:string" minOccurs="0"/>
+            <x:element name="RSV5" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3004100001821" type="s:Rsp3004100001821Type"/>
+  <x:complexType name="Rsp3004100001821Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="CNAPS2:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="Cpg_Id" type="x:string" minOccurs="0"/>
+            <x:element name="CYCLE" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="shoufdma" type="x:string" minOccurs="0"/>
+                  <x:element name="shfdmamc" type="x:string" minOccurs="0"/>
+                  <x:element name="shuliang" type="x:string" minOccurs="0"/>
+                  <x:element name="yingshfy" type="x:string" minOccurs="0"/>
+                  <x:element name="shifujne" type="x:string" minOccurs="0"/>
+                  <x:element name="shouqibz" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuzhao" type="x:string" minOccurs="0"/>
+                  <x:element name="zhhaxhao" type="x:string" minOccurs="0"/>
+                  <x:element name="fyjzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="fyrzzhho" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd01" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd02" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd03" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="tanxywbh" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+            <x:element name="Rsp_Rsv1" type="x:string" minOccurs="0"/>
+            <x:element name="Rsp_Rsv2" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3004100001822" type="s:Req3004100001822Type"/>
+  <x:complexType name="Req3004100001822Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="CNAPS2:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="Biz_Type_Code" type="x:string" minOccurs="0"/>
+            <x:element name="Curcd" type="x:string" minOccurs="0"/>
+            <x:element name="Amount" type="x:string" minOccurs="0"/>
+            <x:element name="Biz_Priority" type="x:string" minOccurs="0"/>
+            <x:element name="E2E_Id" type="x:string" minOccurs="0"/>
+            <x:element name="Reversal_Number" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTEBAT" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE_SEQ" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Type" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Actno" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Name" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Addr" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Acc_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Acc_Brname" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Cust_Type" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Subact_Seq" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Brno_Type" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Name" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Addr" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Actno" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Acc_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Acc_Brname" type="x:string" minOccurs="0"/>
+            <x:element name="Biz_Ctgy_Code" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY1" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY1NAME" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY2" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY2NAME" type="x:string" minOccurs="0"/>
+            <x:element name="Cb_Flag" type="x:string" minOccurs="0"/>
+            <x:element name="Remarks" type="x:string" minOccurs="0"/>
+            <x:element name="Memo" type="x:string" minOccurs="0"/>
+            <x:element name="CYCLE_A" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="fykonzbz" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuzhao" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaoxhao" type="x:string" minOccurs="0"/>
+                  <x:element name="shfeibzh" type="x:string" minOccurs="0"/>
+                  <x:element name="shoufdma" type="x:string" minOccurs="0"/>
+                  <x:element name="jiaoyije" type="x:string" minOccurs="0"/>
+                  <x:element name="shuliang" type="x:string" minOccurs="0"/>
+                  <x:element name="yingshfy" type="x:string" minOccurs="0"/>
+                  <x:element name="fyjzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="ywckhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="txqsriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzzriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzhouqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzongje" type="x:string" minOccurs="0"/>
+                  <x:element name="tanxqish" type="x:string" minOccurs="0"/>
+                  <x:element name="fyrzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyodm" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyoms" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd01" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd02" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd03" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="chaohubz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfoyjiz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfexuho" type="x:string" minOccurs="0"/>
+                  <x:element name="joynbizh" type="x:string" minOccurs="0"/>
+                  <x:element name="xnjnxmdm" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+            <x:element name="CYCLE_B" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="BZJKBZ" type="x:string" minOccurs="0"/>
+                  <x:element name="ZIJNLY" type="x:string" minOccurs="0"/>
+                  <x:element name="JGYYJB" type="x:string" minOccurs="0"/>
+                  <x:element name="DIOCJG" type="x:string" minOccurs="0"/>
+                  <x:element name="YEWUDH" type="x:string" minOccurs="0"/>
+                  <x:element name="ZHAOXH" type="x:string" minOccurs="0"/>
+                  <x:element name="XIOZXH" type="x:string" minOccurs="0"/>
+                  <x:element name="ZZCZLX" type="x:string" minOccurs="0"/>
+                  <x:element name="ZYZCZH" type="x:string" minOccurs="0"/>
+                  <x:element name="FUKRXM" type="x:string" minOccurs="0"/>
+                  <x:element name="ZHHUXZ" type="x:string" minOccurs="0"/>
+                  <x:element name="JIEDBZ" type="x:string" minOccurs="0"/>
+                  <x:element name="CHUIBZ" type="x:string" minOccurs="0"/>
+                  <x:element name="JIO1JE" type="x:string" minOccurs="0"/>
+                  <x:element name="ZHYODM" type="x:string" minOccurs="0"/>
+                  <x:element name="YULZ01" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+            <x:element name="GlobalSeq" type="x:string" minOccurs="0"/>
+            <x:element name="OrgSysID" type="x:string" minOccurs="0"/>
+            <x:element name="CLLTN_NOTES_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="CLLTN_NOTES_TYPE" type="x:string" minOccurs="0"/>
+            <x:element name="Note_Number" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_NOTES_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_Amends_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_Amends_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_REJECT_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_REJECT_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_ORI_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_ORI_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_PAY_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_PAY_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_ADD_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_ADD_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="Check_Notes_Date" type="x:string" minOccurs="0"/>
+            <x:element name="Check_App_Name" type="x:string" minOccurs="0"/>
+            <x:element name="Check_Notes_Curcd" type="x:string" minOccurs="0"/>
+            <x:element name="Check_Notes_Amount" type="x:string" minOccurs="0"/>
+            <x:element name="Check_Exchage_Curcd" type="x:string" minOccurs="0"/>
+            <x:element name="Check_Exchage" type="x:string" minOccurs="0"/>
+            <x:element name="Check_Notes_Num" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Date" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Key" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Ctgy" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Payer_Name" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Pay_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Curcd" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Amount" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_App_Actno" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_App_Name" type="x:string" minOccurs="0"/>
+            <x:element name="DFT_OVER_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Over_Amt" type="x:string" minOccurs="0"/>
+            <x:element name="DFT_ST_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_St_Amt" type="x:string" minOccurs="0"/>
+            <x:element name="Cbbiz_Assoc_Biz_Date" type="x:string" minOccurs="0"/>
+            <x:element name="Cbbiz_Fee_Code" type="x:string" minOccurs="0"/>
+            <x:element name="CBBIZ_SNDBNK_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="Cbbiz_Sndbnk_Fee" type="x:string" minOccurs="0"/>
+            <x:element name="CBBIZ_RCVBNK_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="Cbbiz_Rcvbnk_Fee" type="x:string" minOccurs="0"/>
+            <x:element name="Cbbiz_Remark" type="x:string" minOccurs="0"/>
+            <x:element name="HDPrtFlag" type="x:string" minOccurs="0"/>
+            <x:element name="RSV1" type="x:string" minOccurs="0"/>
+            <x:element name="RSV2" type="x:string" minOccurs="0"/>
+            <x:element name="RSV3" type="x:string" minOccurs="0"/>
+            <x:element name="RSV4" type="x:string" minOccurs="0"/>
+            <x:element name="RSV5" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3004100001822" type="s:Rsp3004100001822Type"/>
+  <x:complexType name="Rsp3004100001822Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="CNAPS2:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="Cpg_Id" type="x:string" minOccurs="0"/>
+            <x:element name="CYCLE" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="shoufdma" type="x:string" minOccurs="0"/>
+                  <x:element name="shfdmamc" type="x:string" minOccurs="0"/>
+                  <x:element name="shuliang" type="x:string" minOccurs="0"/>
+                  <x:element name="yingshfy" type="x:string" minOccurs="0"/>
+                  <x:element name="shifujne" type="x:string" minOccurs="0"/>
+                  <x:element name="shouqibz" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuzhao" type="x:string" minOccurs="0"/>
+                  <x:element name="zhhaxhao" type="x:string" minOccurs="0"/>
+                  <x:element name="fyjzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="fyrzzhho" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd01" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd02" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd03" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="tanxywbh" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+            <x:element name="Rsp_Rsv1" type="x:string" minOccurs="0"/>
+            <x:element name="Rsp_Rsv2" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3004100001823" type="s:Req3004100001823Type"/>
+  <x:complexType name="Req3004100001823Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="CNAPS2:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="Biz_Type_Code" type="x:string" minOccurs="0"/>
+            <x:element name="Curcd" type="x:string" minOccurs="0"/>
+            <x:element name="Amount" type="x:string" minOccurs="0"/>
+            <x:element name="Biz_Priority" type="x:string" minOccurs="0"/>
+            <x:element name="E2E_Id" type="x:string" minOccurs="0"/>
+            <x:element name="Reversal_Number" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTEBAT" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE_SEQ" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Type" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Actno" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Name" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Addr" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Acc_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Acc_Brname" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Cust_Type" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Subact_Seq" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Brno_Type" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Name" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Addr" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Actno" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Acc_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Acc_Brname" type="x:string" minOccurs="0"/>
+            <x:element name="Biz_Ctgy_Code" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY1" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY1NAME" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY2" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY2NAME" type="x:string" minOccurs="0"/>
+            <x:element name="Cb_Flag" type="x:string" minOccurs="0"/>
+            <x:element name="Remarks" type="x:string" minOccurs="0"/>
+            <x:element name="Memo" type="x:string" minOccurs="0"/>
+            <x:element name="CYCLE_A" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="fykonzbz" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuzhao" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaoxhao" type="x:string" minOccurs="0"/>
+                  <x:element name="shfeibzh" type="x:string" minOccurs="0"/>
+                  <x:element name="shoufdma" type="x:string" minOccurs="0"/>
+                  <x:element name="jiaoyije" type="x:string" minOccurs="0"/>
+                  <x:element name="shuliang" type="x:string" minOccurs="0"/>
+                  <x:element name="yingshfy" type="x:string" minOccurs="0"/>
+                  <x:element name="fyjzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="ywckhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="txqsriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzzriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzhouqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzongje" type="x:string" minOccurs="0"/>
+                  <x:element name="tanxqish" type="x:string" minOccurs="0"/>
+                  <x:element name="fyrzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyodm" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyoms" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd01" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd02" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd03" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="chaohubz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfoyjiz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfexuho" type="x:string" minOccurs="0"/>
+                  <x:element name="joynbizh" type="x:string" minOccurs="0"/>
+                  <x:element name="xnjnxmdm" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+            <x:element name="CYCLE_B" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="BZJKBZ" type="x:string" minOccurs="0"/>
+                  <x:element name="ZIJNLY" type="x:string" minOccurs="0"/>
+                  <x:element name="JGYYJB" type="x:string" minOccurs="0"/>
+                  <x:element name="DIOCJG" type="x:string" minOccurs="0"/>
+                  <x:element name="YEWUDH" type="x:string" minOccurs="0"/>
+                  <x:element name="ZHAOXH" type="x:string" minOccurs="0"/>
+                  <x:element name="XIOZXH" type="x:string" minOccurs="0"/>
+                  <x:element name="ZZCZLX" type="x:string" minOccurs="0"/>
+                  <x:element name="ZYZCZH" type="x:string" minOccurs="0"/>
+                  <x:element name="FUKRXM" type="x:string" minOccurs="0"/>
+                  <x:element name="ZHHUXZ" type="x:string" minOccurs="0"/>
+                  <x:element name="JIEDBZ" type="x:string" minOccurs="0"/>
+                  <x:element name="CHUIBZ" type="x:string" minOccurs="0"/>
+                  <x:element name="JIO1JE" type="x:string" minOccurs="0"/>
+                  <x:element name="ZHYODM" type="x:string" minOccurs="0"/>
+                  <x:element name="YULZ01" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+            <x:element name="GlobalSeq" type="x:string" minOccurs="0"/>
+            <x:element name="OrgSysID" type="x:string" minOccurs="0"/>
+            <x:element name="CLLTN_NOTES_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="CLLTN_NOTES_TYPE" type="x:string" minOccurs="0"/>
+            <x:element name="Note_Number" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_NOTES_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_Amends_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_Amends_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_REJECT_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_REJECT_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_ORI_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_ORI_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_PAY_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_PAY_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_ADD_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_ADD_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="Check_Notes_Date" type="x:string" minOccurs="0"/>
+            <x:element name="Check_App_Name" type="x:string" minOccurs="0"/>
+            <x:element name="Check_Notes_Curcd" type="x:string" minOccurs="0"/>
+            <x:element name="Check_Notes_Amount" type="x:string" minOccurs="0"/>
+            <x:element name="Check_Exchage_Curcd" type="x:string" minOccurs="0"/>
+            <x:element name="Check_Exchage" type="x:string" minOccurs="0"/>
+            <x:element name="Check_Notes_Num" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Date" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Key" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Ctgy" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Payer_Name" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Pay_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Curcd" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Amount" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_App_Actno" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_App_Name" type="x:string" minOccurs="0"/>
+            <x:element name="DFT_OVER_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Over_Amt" type="x:string" minOccurs="0"/>
+            <x:element name="DFT_ST_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_St_Amt" type="x:string" minOccurs="0"/>
+            <x:element name="Cbbiz_Assoc_Biz_Date" type="x:string" minOccurs="0"/>
+            <x:element name="Cbbiz_Fee_Code" type="x:string" minOccurs="0"/>
+            <x:element name="CBBIZ_SNDBNK_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="Cbbiz_Sndbnk_Fee" type="x:string" minOccurs="0"/>
+            <x:element name="CBBIZ_RCVBNK_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="Cbbiz_Rcvbnk_Fee" type="x:string" minOccurs="0"/>
+            <x:element name="Cbbiz_Remark" type="x:string" minOccurs="0"/>
+            <x:element name="HDPrtFlag" type="x:string" minOccurs="0"/>
+            <x:element name="RSV1" type="x:string" minOccurs="0"/>
+            <x:element name="RSV2" type="x:string" minOccurs="0"/>
+            <x:element name="RSV3" type="x:string" minOccurs="0"/>
+            <x:element name="RSV4" type="x:string" minOccurs="0"/>
+            <x:element name="RSV5" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3004100001823" type="s:Rsp3004100001823Type"/>
+  <x:complexType name="Rsp3004100001823Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="CNAPS2:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="Cpg_Id" type="x:string" minOccurs="0"/>
+            <x:element name="CYCLE" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="shoufdma" type="x:string" minOccurs="0"/>
+                  <x:element name="shfdmamc" type="x:string" minOccurs="0"/>
+                  <x:element name="shuliang" type="x:string" minOccurs="0"/>
+                  <x:element name="yingshfy" type="x:string" minOccurs="0"/>
+                  <x:element name="shifujne" type="x:string" minOccurs="0"/>
+                  <x:element name="shouqibz" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuzhao" type="x:string" minOccurs="0"/>
+                  <x:element name="zhhaxhao" type="x:string" minOccurs="0"/>
+                  <x:element name="fyjzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="fyrzzhho" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd01" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd02" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd03" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="tanxywbh" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+            <x:element name="Rsp_Rsv1" type="x:string" minOccurs="0"/>
+            <x:element name="Rsp_Rsv2" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3004100001824" type="s:Req3004100001824Type"/>
+  <x:complexType name="Req3004100001824Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="CNAPS2:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="Biz_Type_Code" type="x:string" minOccurs="0"/>
+            <x:element name="Curcd" type="x:string" minOccurs="0"/>
+            <x:element name="Amount" type="x:string" minOccurs="0"/>
+            <x:element name="Biz_Priority" type="x:string" minOccurs="0"/>
+            <x:element name="E2E_Id" type="x:string" minOccurs="0"/>
+            <x:element name="Reversal_Number" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTEBAT" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE_SEQ" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Type" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Actno" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Name" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Addr" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Acc_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Acc_Brname" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Cust_Type" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Subact_Seq" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Brno_Type" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Name" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Addr" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Actno" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Acc_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Acc_Brname" type="x:string" minOccurs="0"/>
+            <x:element name="Biz_Ctgy_Code" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY1" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY1NAME" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY2" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY2NAME" type="x:string" minOccurs="0"/>
+            <x:element name="Cb_Flag" type="x:string" minOccurs="0"/>
+            <x:element name="Remarks" type="x:string" minOccurs="0"/>
+            <x:element name="Memo" type="x:string" minOccurs="0"/>
+            <x:element name="CYCLE_A" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="fykonzbz" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuzhao" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaoxhao" type="x:string" minOccurs="0"/>
+                  <x:element name="shfeibzh" type="x:string" minOccurs="0"/>
+                  <x:element name="shoufdma" type="x:string" minOccurs="0"/>
+                  <x:element name="jiaoyije" type="x:string" minOccurs="0"/>
+                  <x:element name="shuliang" type="x:string" minOccurs="0"/>
+                  <x:element name="yingshfy" type="x:string" minOccurs="0"/>
+                  <x:element name="fyjzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="ywckhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="txqsriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzzriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzhouqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzongje" type="x:string" minOccurs="0"/>
+                  <x:element name="tanxqish" type="x:string" minOccurs="0"/>
+                  <x:element name="fyrzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyodm" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyoms" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd01" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd02" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd03" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="chaohubz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfoyjiz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfexuho" type="x:string" minOccurs="0"/>
+                  <x:element name="joynbizh" type="x:string" minOccurs="0"/>
+                  <x:element name="xnjnxmdm" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+            <x:element name="CYCLE_B" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="BZJKBZ" type="x:string" minOccurs="0"/>
+                  <x:element name="ZIJNLY" type="x:string" minOccurs="0"/>
+                  <x:element name="JGYYJB" type="x:string" minOccurs="0"/>
+                  <x:element name="DIOCJG" type="x:string" minOccurs="0"/>
+                  <x:element name="YEWUDH" type="x:string" minOccurs="0"/>
+                  <x:element name="ZHAOXH" type="x:string" minOccurs="0"/>
+                  <x:element name="XIOZXH" type="x:string" minOccurs="0"/>
+                  <x:element name="ZZCZLX" type="x:string" minOccurs="0"/>
+                  <x:element name="ZYZCZH" type="x:string" minOccurs="0"/>
+                  <x:element name="FUKRXM" type="x:string" minOccurs="0"/>
+                  <x:element name="ZHHUXZ" type="x:string" minOccurs="0"/>
+                  <x:element name="JIEDBZ" type="x:string" minOccurs="0"/>
+                  <x:element name="CHUIBZ" type="x:string" minOccurs="0"/>
+                  <x:element name="JIO1JE" type="x:string" minOccurs="0"/>
+                  <x:element name="ZHYODM" type="x:string" minOccurs="0"/>
+                  <x:element name="YULZ01" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+            <x:element name="GlobalSeq" type="x:string" minOccurs="0"/>
+            <x:element name="OrgSysID" type="x:string" minOccurs="0"/>
+            <x:element name="CLLTN_NOTES_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="CLLTN_NOTES_TYPE" type="x:string" minOccurs="0"/>
+            <x:element name="Note_Number" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_NOTES_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_Amends_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_Amends_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_REJECT_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_REJECT_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_ORI_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_ORI_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_PAY_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_PAY_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_ADD_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_ADD_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="Check_Notes_Date" type="x:string" minOccurs="0"/>
+            <x:element name="Check_App_Name" type="x:string" minOccurs="0"/>
+            <x:element name="Check_Notes_Curcd" type="x:string" minOccurs="0"/>
+            <x:element name="Check_Notes_Amount" type="x:string" minOccurs="0"/>
+            <x:element name="Check_Exchage_Curcd" type="x:string" minOccurs="0"/>
+            <x:element name="Check_Exchage" type="x:string" minOccurs="0"/>
+            <x:element name="Check_Notes_Num" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Date" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Key" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Ctgy" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Payer_Name" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Pay_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Curcd" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Amount" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_App_Actno" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_App_Name" type="x:string" minOccurs="0"/>
+            <x:element name="DFT_OVER_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Over_Amt" type="x:string" minOccurs="0"/>
+            <x:element name="DFT_ST_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_St_Amt" type="x:string" minOccurs="0"/>
+            <x:element name="Cbbiz_Assoc_Biz_Date" type="x:string" minOccurs="0"/>
+            <x:element name="Cbbiz_Fee_Code" type="x:string" minOccurs="0"/>
+            <x:element name="CBBIZ_SNDBNK_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="Cbbiz_Sndbnk_Fee" type="x:string" minOccurs="0"/>
+            <x:element name="CBBIZ_RCVBNK_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="Cbbiz_Rcvbnk_Fee" type="x:string" minOccurs="0"/>
+            <x:element name="Cbbiz_Remark" type="x:string" minOccurs="0"/>
+            <x:element name="HDPrtFlag" type="x:string" minOccurs="0"/>
+            <x:element name="RSV1" type="x:string" minOccurs="0"/>
+            <x:element name="RSV2" type="x:string" minOccurs="0"/>
+            <x:element name="RSV3" type="x:string" minOccurs="0"/>
+            <x:element name="RSV4" type="x:string" minOccurs="0"/>
+            <x:element name="RSV5" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3004100001824" type="s:Rsp3004100001824Type"/>
+  <x:complexType name="Rsp3004100001824Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="CNAPS2:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="Cpg_Id" type="x:string" minOccurs="0"/>
+            <x:element name="CYCLE" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="shoufdma" type="x:string" minOccurs="0"/>
+                  <x:element name="shfdmamc" type="x:string" minOccurs="0"/>
+                  <x:element name="shuliang" type="x:string" minOccurs="0"/>
+                  <x:element name="yingshfy" type="x:string" minOccurs="0"/>
+                  <x:element name="shifujne" type="x:string" minOccurs="0"/>
+                  <x:element name="shouqibz" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuzhao" type="x:string" minOccurs="0"/>
+                  <x:element name="zhhaxhao" type="x:string" minOccurs="0"/>
+                  <x:element name="fyjzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="fyrzzhho" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd01" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd02" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd03" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="tanxywbh" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+            <x:element name="Rsp_Rsv1" type="x:string" minOccurs="0"/>
+            <x:element name="Rsp_Rsv2" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3004100001825" type="s:Req3004100001825Type"/>
+  <x:complexType name="Req3004100001825Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="CNAPS2:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="BIZ_TYPE_CODE" type="x:string" minOccurs="0"/>
+            <x:element name="CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="BIZ_PRIORITY" type="x:string" minOccurs="0"/>
+            <x:element name="E2E_ID" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTEBAT" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE_SEQ" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Type" type="x:string" minOccurs="0"/>
+            <x:element name="PAYER_ACTNO" type="x:string" minOccurs="0"/>
+            <x:element name="PAYER_NAME" type="x:string" minOccurs="0"/>
+            <x:element name="PAYER_ADDR" type="x:string" minOccurs="0"/>
+            <x:element name="PAYER_ACC_BRNO" type="x:string" minOccurs="0"/>
+            <x:element name="PAYER_ACC_BRNAME" type="x:string" minOccurs="0"/>
+            <x:element name="PAYER_BRNO" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Cust_Type" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Subact_Seq" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Brno_Type" type="x:string" minOccurs="0"/>
+            <x:element name="PAYEE_BRNO" type="x:string" minOccurs="0"/>
+            <x:element name="PAYEE_NAME" type="x:string" minOccurs="0"/>
+            <x:element name="PAYEE_ADDR" type="x:string" minOccurs="0"/>
+            <x:element name="PAYEE_ACTNO" type="x:string" minOccurs="0"/>
+            <x:element name="PAYEE_ACC_BRNO" type="x:string" minOccurs="0"/>
+            <x:element name="PAYEE_ACC_BRNAME" type="x:string" minOccurs="0"/>
+            <x:element name="BIZ_CTGY_CODE" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY1" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY1NAME" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY2" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY2NAME" type="x:string" minOccurs="0"/>
+            <x:element name="REMARKS" type="x:string" minOccurs="0"/>
+            <x:element name="REMARKS2" type="x:string" minOccurs="0"/>
+            <x:element name="CYCLE_A" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="fykonzbz" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuzhao" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaoxhao" type="x:string" minOccurs="0"/>
+                  <x:element name="shfeibzh" type="x:string" minOccurs="0"/>
+                  <x:element name="shoufdma" type="x:string" minOccurs="0"/>
+                  <x:element name="jiaoyije" type="x:string" minOccurs="0"/>
+                  <x:element name="shuliang" type="x:string" minOccurs="0"/>
+                  <x:element name="yingshfy" type="x:string" minOccurs="0"/>
+                  <x:element name="fyjzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="ywckhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="txqsriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzzriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzhouqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzongje" type="x:string" minOccurs="0"/>
+                  <x:element name="tanxqish" type="x:string" minOccurs="0"/>
+                  <x:element name="fyrzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyodm" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyoms" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd01" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd02" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd03" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="chaohubz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfoyjiz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfexuho" type="x:string" minOccurs="0"/>
+                  <x:element name="joynbizh" type="x:string" minOccurs="0"/>
+                  <x:element name="xnjnxmdm" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+            <x:element name="CYCLE_B" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="BZJKBZ" type="x:string" minOccurs="0"/>
+                  <x:element name="ZIJNLY" type="x:string" minOccurs="0"/>
+                  <x:element name="JGYYJB" type="x:string" minOccurs="0"/>
+                  <x:element name="DIOCJG" type="x:string" minOccurs="0"/>
+                  <x:element name="YEWUDH" type="x:string" minOccurs="0"/>
+                  <x:element name="ZHAOXH" type="x:string" minOccurs="0"/>
+                  <x:element name="XIOZXH" type="x:string" minOccurs="0"/>
+                  <x:element name="ZZCZLX" type="x:string" minOccurs="0"/>
+                  <x:element name="ZYZCZH" type="x:string" minOccurs="0"/>
+                  <x:element name="FUKRXM" type="x:string" minOccurs="0"/>
+                  <x:element name="ZHHUXZ" type="x:string" minOccurs="0"/>
+                  <x:element name="JIEDBZ" type="x:string" minOccurs="0"/>
+                  <x:element name="CHUIBZ" type="x:string" minOccurs="0"/>
+                  <x:element name="JIO1JE" type="x:string" minOccurs="0"/>
+                  <x:element name="ZHYODM" type="x:string" minOccurs="0"/>
+                  <x:element name="YULZ01" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+            <x:element name="GlobalSeq" type="x:string" minOccurs="0"/>
+            <x:element name="OrgSysID" type="x:string" minOccurs="0"/>
+            <x:element name="LEND_INT_RATE" type="x:string" minOccurs="0"/>
+            <x:element name="LEND_DLINE" type="x:string" minOccurs="0"/>
+            <x:element name="CBBIZ_ASSOC_BIZ_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="CBBIZ_FEE_CODE" type="x:string" minOccurs="0"/>
+            <x:element name="CBBIZ_SNDBNK_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="CBBIZ_SNDBNK_FEE" type="x:string" minOccurs="0"/>
+            <x:element name="CBBIZ_RCVBNK_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="CBBIZ_RCVBNK_FEE" type="x:string" minOccurs="0"/>
+            <x:element name="CBBIZ_REMARK" type="x:string" minOccurs="0"/>
+            <x:element name="HDPrtFlag" type="x:string" minOccurs="0"/>
+            <x:element name="RSV1" type="x:string" minOccurs="0"/>
+            <x:element name="RSV2" type="x:string" minOccurs="0"/>
+            <x:element name="RSV3" type="x:string" minOccurs="0"/>
+            <x:element name="RSV4" type="x:string" minOccurs="0"/>
+            <x:element name="RSV5" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3004100001825" type="s:Rsp3004100001825Type"/>
+  <x:complexType name="Rsp3004100001825Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="CNAPS2:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="Cpg_Id" type="x:string" minOccurs="0"/>
+            <x:element name="CYCLE" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="shoufdma" type="x:string" minOccurs="0"/>
+                  <x:element name="shfdmamc" type="x:string" minOccurs="0"/>
+                  <x:element name="shuliang" type="x:string" minOccurs="0"/>
+                  <x:element name="yingshfy" type="x:string" minOccurs="0"/>
+                  <x:element name="shifujne" type="x:string" minOccurs="0"/>
+                  <x:element name="shouqibz" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuzhao" type="x:string" minOccurs="0"/>
+                  <x:element name="zhhaxhao" type="x:string" minOccurs="0"/>
+                  <x:element name="fyjzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="fyrzzhho" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd01" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd02" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd03" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="tanxywbh" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+            <x:element name="Rsp_Rsv1" type="x:string" minOccurs="0"/>
+            <x:element name="Rsp_Rsv2" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3004100001826" type="s:Req3004100001826Type"/>
+  <x:complexType name="Req3004100001826Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="CNAPS2:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="Biz_Type_Code" type="x:string" minOccurs="0"/>
+            <x:element name="Curcd" type="x:string" minOccurs="0"/>
+            <x:element name="Amount" type="x:string" minOccurs="0"/>
+            <x:element name="Biz_Priority" type="x:string" minOccurs="0"/>
+            <x:element name="E2E_Id" type="x:string" minOccurs="0"/>
+            <x:element name="Reversal_Number" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTEBAT" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE_SEQ" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Type" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Actno" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Name" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Addr" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Acc_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Acc_Brname" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Cust_Type" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Subact_Seq" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Brno_Type" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Name" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Addr" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Actno" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Acc_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Acc_Brname" type="x:string" minOccurs="0"/>
+            <x:element name="Biz_Ctgy_Code" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY1" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY1NAME" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY2" type="x:string" minOccurs="0"/>
+            <x:element name="AGENCY2NAME" type="x:string" minOccurs="0"/>
+            <x:element name="Cb_Flag" type="x:string" minOccurs="0"/>
+            <x:element name="Remarks" type="x:string" minOccurs="0"/>
+            <x:element name="Memo" type="x:string" minOccurs="0"/>
+            <x:element name="CYCLE_A" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="fykonzbz" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuzhao" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaoxhao" type="x:string" minOccurs="0"/>
+                  <x:element name="shfeibzh" type="x:string" minOccurs="0"/>
+                  <x:element name="shoufdma" type="x:string" minOccurs="0"/>
+                  <x:element name="jiaoyije" type="x:string" minOccurs="0"/>
+                  <x:element name="shuliang" type="x:string" minOccurs="0"/>
+                  <x:element name="yingshfy" type="x:string" minOccurs="0"/>
+                  <x:element name="fyjzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="ywckhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="txqsriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzzriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzhouqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzongje" type="x:string" minOccurs="0"/>
+                  <x:element name="tanxqish" type="x:string" minOccurs="0"/>
+                  <x:element name="fyrzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyodm" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyoms" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd01" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd02" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd03" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="chaohubz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfoyjiz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfexuho" type="x:string" minOccurs="0"/>
+                  <x:element name="joynbizh" type="x:string" minOccurs="0"/>
+                  <x:element name="xnjnxmdm" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+            <x:element name="CYCLE_B" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="BZJKBZ" type="x:string" minOccurs="0"/>
+                  <x:element name="ZIJNLY" type="x:string" minOccurs="0"/>
+                  <x:element name="JGYYJB" type="x:string" minOccurs="0"/>
+                  <x:element name="DIOCJG" type="x:string" minOccurs="0"/>
+                  <x:element name="YEWUDH" type="x:string" minOccurs="0"/>
+                  <x:element name="ZHAOXH" type="x:string" minOccurs="0"/>
+                  <x:element name="XIOZXH" type="x:string" minOccurs="0"/>
+                  <x:element name="ZZCZLX" type="x:string" minOccurs="0"/>
+                  <x:element name="ZYZCZH" type="x:string" minOccurs="0"/>
+                  <x:element name="FUKRXM" type="x:string" minOccurs="0"/>
+                  <x:element name="ZHHUXZ" type="x:string" minOccurs="0"/>
+                  <x:element name="JIEDBZ" type="x:string" minOccurs="0"/>
+                  <x:element name="CHUIBZ" type="x:string" minOccurs="0"/>
+                  <x:element name="JIO1JE" type="x:string" minOccurs="0"/>
+                  <x:element name="ZHYODM" type="x:string" minOccurs="0"/>
+                  <x:element name="YULZ01" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+            <x:element name="GlobalSeq" type="x:string" minOccurs="0"/>
+            <x:element name="OrgSysID" type="x:string" minOccurs="0"/>
+            <x:element name="CLLTN_NOTES_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="CLLTN_NOTES_TYPE" type="x:string" minOccurs="0"/>
+            <x:element name="Note_Number" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_NOTES_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_Amends_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_Amends_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_REJECT_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_REJECT_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_ORI_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_ORI_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_PAY_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_PAY_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_ADD_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="PMT_ADD_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="Check_Notes_Date" type="x:string" minOccurs="0"/>
+            <x:element name="Check_App_Name" type="x:string" minOccurs="0"/>
+            <x:element name="Check_Notes_Curcd" type="x:string" minOccurs="0"/>
+            <x:element name="Check_Notes_Amount" type="x:string" minOccurs="0"/>
+            <x:element name="Check_Exchage_Curcd" type="x:string" minOccurs="0"/>
+            <x:element name="Check_Exchage" type="x:string" minOccurs="0"/>
+            <x:element name="Check_Notes_Num" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Date" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Key" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Ctgy" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Payer_Name" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Pay_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Curcd" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Amount" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_App_Actno" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_App_Name" type="x:string" minOccurs="0"/>
+            <x:element name="DFT_OVER_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_Over_Amt" type="x:string" minOccurs="0"/>
+            <x:element name="DFT_ST_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="Dft_St_Amt" type="x:string" minOccurs="0"/>
+            <x:element name="Cbbiz_Assoc_Biz_Date" type="x:string" minOccurs="0"/>
+            <x:element name="Cbbiz_Fee_Code" type="x:string" minOccurs="0"/>
+            <x:element name="CBBIZ_SNDBNK_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="Cbbiz_Sndbnk_Fee" type="x:string" minOccurs="0"/>
+            <x:element name="CBBIZ_RCVBNK_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="Cbbiz_Rcvbnk_Fee" type="x:string" minOccurs="0"/>
+            <x:element name="Cbbiz_Remark" type="x:string" minOccurs="0"/>
+            <x:element name="HDPrtFlag" type="x:string" minOccurs="0"/>
+            <x:element name="RSV1" type="x:string" minOccurs="0"/>
+            <x:element name="RSV2" type="x:string" minOccurs="0"/>
+            <x:element name="RSV3" type="x:string" minOccurs="0"/>
+            <x:element name="RSV4" type="x:string" minOccurs="0"/>
+            <x:element name="RSV5" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3004100001826" type="s:Rsp3004100001826Type"/>
+  <x:complexType name="Rsp3004100001826Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="CNAPS2:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="Cpg_Id" type="x:string" minOccurs="0"/>
+            <x:element name="CYCLE" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="shoufdma" type="x:string" minOccurs="0"/>
+                  <x:element name="shfdmamc" type="x:string" minOccurs="0"/>
+                  <x:element name="shuliang" type="x:string" minOccurs="0"/>
+                  <x:element name="yingshfy" type="x:string" minOccurs="0"/>
+                  <x:element name="shifujne" type="x:string" minOccurs="0"/>
+                  <x:element name="shouqibz" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuzhao" type="x:string" minOccurs="0"/>
+                  <x:element name="zhhaxhao" type="x:string" minOccurs="0"/>
+                  <x:element name="fyjzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="fyrzzhho" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd01" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd02" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd03" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="tanxywbh" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+            <x:element name="Rsp_Rsv1" type="x:string" minOccurs="0"/>
+            <x:element name="Rsp_Rsv2" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3004100001827" type="s:Req3004100001827Type"/>
+  <x:complexType name="Req3004100001827Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="CNAPS2:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="BIZ_TYPE_CODE" type="x:string" minOccurs="0"/>
+            <x:element name="BIZ_CTGY_CODE" type="x:string" minOccurs="0"/>
+            <x:element name="CBFLAG" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTEBAT" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE_SEQ" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Type" type="x:string" minOccurs="0"/>
+            <x:element name="PAYER_ACTNO" type="x:string" minOccurs="0"/>
+            <x:element name="PAYER_NAME" type="x:string" minOccurs="0"/>
+            <x:element name="PAYER_ACC_BRNO" type="x:string" minOccurs="0"/>
+            <x:element name="PAYER_ACC_NAME" type="x:string" minOccurs="0"/>
+            <x:element name="PAYER_BRNO" type="x:string" minOccurs="0"/>
+            <x:element name="PAYER_ADDR" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Cust_Type" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Subact_Seq" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Brno_Type" type="x:string" minOccurs="0"/>
+            <x:element name="PAYEE_BRNO" type="x:string" minOccurs="0"/>
+            <x:element name="PAYEE_ACTNO" type="x:string" minOccurs="0"/>
+            <x:element name="PAYEE_NAME" type="x:string" minOccurs="0"/>
+            <x:element name="PAYEE_ACC_BRNO" type="x:string" minOccurs="0"/>
+            <x:element name="PAYEE_ACC_NAME" type="x:string" minOccurs="0"/>
+            <x:element name="PAYEE_ADDR" type="x:string" minOccurs="0"/>
+            <x:element name="CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="REMARK" type="x:string" minOccurs="0"/>
+            <x:element name="Reversal_Number" type="x:string" minOccurs="0"/>
+            <x:element name="GlobalSeq" type="x:string" minOccurs="0"/>
+            <x:element name="OrgSysID" type="x:string" minOccurs="0"/>
+            <x:element name="a_UNIT_NUMBER" type="x:string" minOccurs="0"/>
+            <x:element name="a_TERM" type="x:string" minOccurs="0"/>
+            <x:element name="a_PAY_TYPE" type="x:string" minOccurs="0"/>
+            <x:element name="a_PAY_REMARK" type="x:string" minOccurs="0"/>
+            <x:element name="b_NOTE_TYPE" type="x:string" minOccurs="0"/>
+            <x:element name="b_NOTE_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="b_NOTE_NUMBER" type="x:string" minOccurs="0"/>
+            <x:element name="c_NOTE_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="c_NOTE_NUMBER" type="x:string" minOccurs="0"/>
+            <x:element name="c_AMENDS_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="c_AMENDS_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="c_REJECT_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="c_REJECT_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="c_ORI_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="c_ORI_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="c_PAY_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="c_PAY_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="c_ADD_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="c_ADD_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="d_CHECK_NOTES_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="d_CHECK_APP_NAME" type="x:string" minOccurs="0"/>
+            <x:element name="d_CHECK_NOTES_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="d_CHECK_NOTES_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="d_CHECK_EXCHAGE_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="d_CHECK_EXCHAGE" type="x:string" minOccurs="0"/>
+            <x:element name="d_CHECK_NOTES_NUM" type="x:string" minOccurs="0"/>
+            <x:element name="Issue_Date" type="x:string" minOccurs="0"/>
+            <x:element name="Draft_Amount_Curcd" type="x:string" minOccurs="0"/>
+            <x:element name="Draft_Amount" type="x:string" minOccurs="0"/>
+            <x:element name="Issracct" type="x:string" minOccurs="0"/>
+            <x:element name="Issrappnm" type="x:string" minOccurs="0"/>
+            <x:element name="Actlsttlmamt" type="x:string" minOccurs="0"/>
+            <x:element name="Actlsttlmamtcd" type="x:string" minOccurs="0"/>
+            <x:element name="Rmngamt" type="x:string" minOccurs="0"/>
+            <x:element name="Rmngamtcd" type="x:string" minOccurs="0"/>
+            <x:element name="Draft_Type" type="x:string" minOccurs="0"/>
+            <x:element name="BANK_NOTE_TYPE" type="x:string" minOccurs="0"/>
+            <x:element name="ACCOUNT_FLAG" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3004100001827" type="s:Rsp3004100001827Type"/>
+  <x:complexType name="Rsp3004100001827Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="CNAPS2:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="Cpg_Id" type="x:string" minOccurs="0"/>
+            <x:element name="CYCLE" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="shoufdma" type="x:string" minOccurs="0"/>
+                  <x:element name="shfdmamc" type="x:string" minOccurs="0"/>
+                  <x:element name="shuliang" type="x:string" minOccurs="0"/>
+                  <x:element name="yingshfy" type="x:string" minOccurs="0"/>
+                  <x:element name="shifujne" type="x:string" minOccurs="0"/>
+                  <x:element name="shouqibz" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuzhao" type="x:string" minOccurs="0"/>
+                  <x:element name="zhhaxhao" type="x:string" minOccurs="0"/>
+                  <x:element name="fyjzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="fyrzzhho" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd01" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd02" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd03" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="tanxywbh" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3004100001828" type="s:Req3004100001828Type"/>
+  <x:complexType name="Req3004100001828Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="CNAPS2:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="BIZ_TYPE_CODE" type="x:string" minOccurs="0"/>
+            <x:element name="Curcd" type="x:string" minOccurs="0"/>
+            <x:element name="AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTEBAT" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE_SEQ" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Actno" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Name" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_ADDR" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Acc_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Acc_Brname" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Cust_Type" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Subact_Seq" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Brno_Type" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Name" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_ADDR" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Actno" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Acc_Brno" type="x:string" minOccurs="0"/>
+            <x:element name="Payee_Acc_Brname" type="x:string" minOccurs="0"/>
+            <x:element name="BIZ_CTGY_CODE" type="x:string" minOccurs="0"/>
+            <x:element name="Remark" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Type" type="x:string" minOccurs="0"/>
+            <x:element name="GlobalSeq" type="x:string" minOccurs="0"/>
+            <x:element name="OrgSysID" type="x:string" minOccurs="0"/>
+            <x:element name="FlowNb" type="x:string" minOccurs="0"/>
+            <x:element name="FSL_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="FSL_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="Report_Code" type="x:string" minOccurs="0"/>
+            <x:element name="Receive_Code" type="x:string" minOccurs="0"/>
+            <x:element name="REPORT_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="REPORT_NO" type="x:string" minOccurs="0"/>
+            <x:element name="Budget_Level" type="x:string" minOccurs="0"/>
+            <x:element name="Indicator_Code" type="x:string" minOccurs="0"/>
+            <x:element name="Budget_Type" type="x:string" minOccurs="0"/>
+            <x:element name="Detail_NUM" type="x:string" minOccurs="0"/>
+            <x:element name="CYCLE_ALL" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="Dept_Code" type="x:string" minOccurs="0"/>
+                  <x:element name="Subject_Code" type="x:string" minOccurs="0"/>
+                  <x:element name="National_Curcd" type="x:string" minOccurs="0"/>
+                  <x:element name="National_Amount" type="x:string" minOccurs="0"/>
+                  <x:element name="DEBT_BANK_TYPE" type="x:string" minOccurs="0"/>
+                  <x:element name="Capital_Code" type="x:string" minOccurs="0"/>
+                  <x:element name="Capital_Curcd" type="x:string" minOccurs="0"/>
+                  <x:element name="Capital_Amount" type="x:string" minOccurs="0"/>
+                  <x:element name="Accrual_Code" type="x:string" minOccurs="0"/>
+                  <x:element name="Accrual_Curcd" type="x:string" minOccurs="0"/>
+                  <x:element name="Accrual_Amount" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+            <x:element name="ACCOUNT_FLAG" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3004100001828" type="s:Rsp3004100001828Type"/>
+  <x:complexType name="Rsp3004100001828Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="CNAPS2:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="Cpg_Id" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Req3004100001829" type="s:Req3004100001829Type"/>
+  <x:complexType name="Req3004100001829Type">
+    <x:sequence>
+      <x:element name="ReqSysHead" type="d:ReqSysHeadType"/>
+      <x:element name="ReqAppHead" type="s:ReqAppHeadType"/>
+      <x:element name="ReqLocalHead" type="CNAPS2:ReqLocalHeadType"/>
+      <x:element name="ReqAppBody" minOccurs="0">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="BIZ_TYPE_CODE" type="x:string" minOccurs="0"/>
+            <x:element name="BIZ_CTGY_CODE" type="x:string" minOccurs="0"/>
+            <x:element name="CBFLAG" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTEBAT" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE_SEQ" type="x:string" minOccurs="0"/>
+            <x:element name="BNK_NOTE_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Type" type="x:string" minOccurs="0"/>
+            <x:element name="PAYER_ACTNO" type="x:string" minOccurs="0"/>
+            <x:element name="PAYER_NAME" type="x:string" minOccurs="0"/>
+            <x:element name="PAYER_ACC_BRNO" type="x:string" minOccurs="0"/>
+            <x:element name="PAYER_ACC_NAME" type="x:string" minOccurs="0"/>
+            <x:element name="PAYER_BRNO" type="x:string" minOccurs="0"/>
+            <x:element name="PAYER_ADDR" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Cust_Type" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Subact_Seq" type="x:string" minOccurs="0"/>
+            <x:element name="Payer_Brno_Type" type="x:string" minOccurs="0"/>
+            <x:element name="PAYEE_BRNO" type="x:string" minOccurs="0"/>
+            <x:element name="PAYEE_ACTNO" type="x:string" minOccurs="0"/>
+            <x:element name="PAYEE_NAME" type="x:string" minOccurs="0"/>
+            <x:element name="PAYEE_ACC_BRNO" type="x:string" minOccurs="0"/>
+            <x:element name="PAYEE_ACC_NAME" type="x:string" minOccurs="0"/>
+            <x:element name="PAYEE_ADDR" type="x:string" minOccurs="0"/>
+            <x:element name="CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="REMARK" type="x:string" minOccurs="0"/>
+            <x:element name="Reversal_Number" type="x:string" minOccurs="0"/>
+            <x:element name="CYCLE_A" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="fykonzbz" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuzhao" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaoxhao" type="x:string" minOccurs="0"/>
+                  <x:element name="shfeibzh" type="x:string" minOccurs="0"/>
+                  <x:element name="shoufdma" type="x:string" minOccurs="0"/>
+                  <x:element name="jiaoyije" type="x:string" minOccurs="0"/>
+                  <x:element name="shuliang" type="x:string" minOccurs="0"/>
+                  <x:element name="yingshfy" type="x:string" minOccurs="0"/>
+                  <x:element name="fyjzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="ywckhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="txqsriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzzriqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzhouqi" type="x:string" minOccurs="0"/>
+                  <x:element name="txzongje" type="x:string" minOccurs="0"/>
+                  <x:element name="tanxqish" type="x:string" minOccurs="0"/>
+                  <x:element name="fyrzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyodm" type="x:string" minOccurs="0"/>
+                  <x:element name="zhaiyoms" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd01" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd02" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd03" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="chaohubz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfoyjiz" type="x:string" minOccurs="0"/>
+                  <x:element name="shfexuho" type="x:string" minOccurs="0"/>
+                  <x:element name="joynbizh" type="x:string" minOccurs="0"/>
+                  <x:element name="xnjnxmdm" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+            <x:element name="CYCLE_B" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="BZJKBZ" type="x:string" minOccurs="0"/>
+                  <x:element name="ZIJNLY" type="x:string" minOccurs="0"/>
+                  <x:element name="JGYYJB" type="x:string" minOccurs="0"/>
+                  <x:element name="DIOCJG" type="x:string" minOccurs="0"/>
+                  <x:element name="YEWUDH" type="x:string" minOccurs="0"/>
+                  <x:element name="ZHAOXH" type="x:string" minOccurs="0"/>
+                  <x:element name="XIOZXH" type="x:string" minOccurs="0"/>
+                  <x:element name="ZZCZLX" type="x:string" minOccurs="0"/>
+                  <x:element name="ZYZCZH" type="x:string" minOccurs="0"/>
+                  <x:element name="FUKRXM" type="x:string" minOccurs="0"/>
+                  <x:element name="ZHHUXZ" type="x:string" minOccurs="0"/>
+                  <x:element name="JIEDBZ" type="x:string" minOccurs="0"/>
+                  <x:element name="CHUIBZ" type="x:string" minOccurs="0"/>
+                  <x:element name="JIO1JE" type="x:string" minOccurs="0"/>
+                  <x:element name="ZHYODM" type="x:string" minOccurs="0"/>
+                  <x:element name="YULZ01" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+            <x:element name="GlobalSeq" type="x:string" minOccurs="0"/>
+            <x:element name="OrgSysID" type="x:string" minOccurs="0"/>
+            <x:element name="a_UNIT_NUMBER" type="x:string" minOccurs="0"/>
+            <x:element name="a_TERM" type="x:string" minOccurs="0"/>
+            <x:element name="a_PAY_TYPE" type="x:string" minOccurs="0"/>
+            <x:element name="a_PAY_REMARK" type="x:string" minOccurs="0"/>
+            <x:element name="b_NOTE_TYPE" type="x:string" minOccurs="0"/>
+            <x:element name="b_NOTE_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="b_NOTE_NUMBER" type="x:string" minOccurs="0"/>
+            <x:element name="c_NOTE_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="c_NOTE_NUMBER" type="x:string" minOccurs="0"/>
+            <x:element name="c_AMENDS_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="c_AMENDS_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="c_REJECT_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="c_REJECT_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="c_ORI_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="c_ORI_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="c_PAY_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="c_PAY_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="c_ADD_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="c_ADD_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="d_CHECK_NOTES_DATE" type="x:string" minOccurs="0"/>
+            <x:element name="d_CHECK_APP_NAME" type="x:string" minOccurs="0"/>
+            <x:element name="d_CHECK_NOTES_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="d_CHECK_NOTES_AMOUNT" type="x:string" minOccurs="0"/>
+            <x:element name="d_CHECK_EXCHAGE_CURCD" type="x:string" minOccurs="0"/>
+            <x:element name="d_CHECK_EXCHAGE" type="x:string" minOccurs="0"/>
+            <x:element name="d_CHECK_NOTES_NUM" type="x:string" minOccurs="0"/>
+            <x:element name="Issue_Date" type="x:string" minOccurs="0"/>
+            <x:element name="Draft_Amount_Curcd" type="x:string" minOccurs="0"/>
+            <x:element name="Draft_Amount" type="x:string" minOccurs="0"/>
+            <x:element name="Issracct" type="x:string" minOccurs="0"/>
+            <x:element name="Issrappnm" type="x:string" minOccurs="0"/>
+            <x:element name="Actlsttlmamt" type="x:string" minOccurs="0"/>
+            <x:element name="Actlsttlmamtcd" type="x:string" minOccurs="0"/>
+            <x:element name="Rmngamt" type="x:string" minOccurs="0"/>
+            <x:element name="Rmngamtcd" type="x:string" minOccurs="0"/>
+            <x:element name="Draft_Type" type="x:string" minOccurs="0"/>
+            <x:element name="BANK_NOTE_TYPE" type="x:string" minOccurs="0"/>
+            <x:element name="ACCOUNT_FLAG" type="x:string" minOccurs="0"/>
+            <x:element name="RSV1" type="x:string" minOccurs="0"/>
+            <x:element name="RSV2" type="x:string" minOccurs="0"/>
+            <x:element name="RSV3" type="x:string" minOccurs="0"/>
+            <x:element name="RSV4" type="x:string" minOccurs="0"/>
+            <x:element name="RSV5" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+  <x:element name="Rsp3004100001829" type="s:Rsp3004100001829Type"/>
+  <x:complexType name="Rsp3004100001829Type">
+    <x:sequence>
+      <x:element name="RspSysHead" type="d:RspSysHeadType"/>
+      <x:element name="RspAppHead" type="s:RspAppHeadType"/>
+      <x:element name="RspLocalHead" type="CNAPS2:RspLocalHeadType"/>
+      <x:element minOccurs="0" name="RspAppBody">
+        <x:complexType>
+          <x:sequence>
+            <x:element name="Cpg_Id" type="x:string" minOccurs="0"/>
+            <x:element name="CYCLE" maxOccurs="unbounded">
+              <x:complexType>
+                <x:sequence>
+                  <x:element name="shoufdma" type="x:string" minOccurs="0"/>
+                  <x:element name="shfdmamc" type="x:string" minOccurs="0"/>
+                  <x:element name="shuliang" type="x:string" minOccurs="0"/>
+                  <x:element name="yingshfy" type="x:string" minOccurs="0"/>
+                  <x:element name="shifujne" type="x:string" minOccurs="0"/>
+                  <x:element name="shouqibz" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuzhao" type="x:string" minOccurs="0"/>
+                  <x:element name="zhhaxhao" type="x:string" minOccurs="0"/>
+                  <x:element name="fyjzjigo" type="x:string" minOccurs="0"/>
+                  <x:element name="fyrzzhho" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd01" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd02" type="x:string" minOccurs="0"/>
+                  <x:element name="beiyzd03" type="x:string" minOccurs="0"/>
+                  <x:element name="kehuhaoo" type="x:string" minOccurs="0"/>
+                  <x:element name="tanxywbh" type="x:string" minOccurs="0"/>
+                </x:sequence>
+              </x:complexType>
+            </x:element>
+            <x:element name="Rsp_Rsv1" type="x:string" minOccurs="0"/>
+            <x:element name="Rsp_Rsv2" type="x:string" minOccurs="0"/>
+          </x:sequence>
+        </x:complexType>
+      </x:element>
+    </x:sequence>
+  </x:complexType>
+</x:schema>

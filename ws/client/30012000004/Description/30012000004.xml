@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<metadatas>
+  <metadata>
+    <serviceid>30012000004</serviceid>
+    <wsdl>
+      <operation>op01</operation>
+      <operation>op02</operation>
+      <operation>op04</operation>
+      <operation>op06</operation>
+      <operation>op15</operation>
+      <operation>op18</operation>
+      <operation>op19</operation>
+      <operation>op20</operation>
+      <operation>op21</operation>
+      <operation>op22</operation>
+      <operation>op24</operation>
+      <operation>op25</operation>
+      <operation>op26</operation>
+      <operation>op27</operation>
+      <operation>op28</operation>
+      <operation>op29</operation>
+      <operation>op30</operation>
+      <file>30012000004.wsdl</file>
+    </wsdl>
+    <xsd>
+      <common>30012000004.xsd</common>
+    </xsd>
+    <instance>
+      <in/>
+      <out/>
+    </instance>
+  </metadata>
+</metadatas>

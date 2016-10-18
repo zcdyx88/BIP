@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mapping id="M3002101000103_3002100000105">
+    <request>
+        <item src="Req3002101000103.Message/Sys_Head/BRANCH_ID" dest="Req3002100000105.Message/Sys_Head/BRANCH_ID"/>
+        <item src="Req3002101000103.Message/Sys_Head/CONSUMER_ID" dest="Req3002100000105.Message/Sys_Head/CONSUMER_ID"/>
+        <item src="Req3002101000103.Message/Sys_Head/CUSTOMER_ID" dest="Req3002100000105.Message/Sys_Head/CUSTOMER_ID"/>
+        <item src="Req3002101000103.Message/Sys_Head/DEST_BRANCH_NO" dest="Req3002100000105.Message/Sys_Head/DEST_BRANCH_NO"/>
+        <item src="Req3002101000103.Message/Sys_Head/SEQ_NO" dest="Req3002100000105.Message/Sys_Head/SEQ_NO"/>
+        <item src="Req3002101000103.Message/Sys_Head/SERVER_ID" dest="Req3002100000105.Message/Sys_Head/SERVER_ID"/>
+        <item src="Req3002101000103.Message/Sys_Head/SERVICE_CODE" dest="Req3002100000105.Message/Sys_Head/SERVICE_CODE"/>
+        <item src="Req3002101000103.Message/Sys_Head/SOURCE_BRANCH_NO" dest="Req3002100000105.Message/Sys_Head/SOURCE_BRANCH_NO"/>
+        <item src="Req3002101000103.Message/Sys_Head/SOURCE_TYPE" dest="Req3002100000105.Message/Sys_Head/SOURCE_TYPE"/>
+        <item src="Req3002101000103.Message/Sys_Head/TRAN_DATE" dest="Req3002100000105.Message/Sys_Head/TRAN_DATE"/>
+        <item src="Req3002101000103.Message/Sys_Head/TRAN_MODE" dest="Req3002100000105.Message/Sys_Head/TRAN_MODE"/>
+        <item src="Req3002101000103.Message/Sys_Head/TRAN_TIMESTAMP" dest="Req3002100000105.Message/Sys_Head/TRAN_TIMESTAMP"/>
+        <item src="Req3002101000103.Message/Sys_Head/USER_ID" dest="Req3002100000105.Message/Sys_Head/USER_ID"/>
+        <item src="Req3002101000103.Message/Sys_Head/WS_ID" dest="Req3002100000105.Message/Sys_Head/WS_ID"/>
+        <item src="constant.N" dest="Req3002100000105.Message/Body/APP_HEAD/AUTH_FLAG"/>
+        <item src="constant.0" dest="Req3002100000105.Message/Body/APP_HEAD/CURRENT_NUM"/>
+        <item src="constant.RB" dest="Req3002100000105.Message/Body/APP_HEAD/MODULE_ID"/>
+        <item src="constant.0" dest="Req3002100000105.Message/Body/APP_HEAD/PAGE_END"/>
+        <item src="constant.0" dest="Req3002100000105.Message/Body/APP_HEAD/PAGE_START"/>
+        <item src="constant.0" dest="Req3002100000105.Message/Body/APP_HEAD/PGUP_OR_PGDN"/>
+        <item src="Req3002101000103.Message/Body/APP_HEAD/OPER_CODE" dest="Req3002100000105.Message/Body/APP_HEAD/PROGRAM_ID"/>
+        <item src="Req3002101000103.Message/Body/APP_HEAD/PROGRAM_ID" dest="Req3002100000105.Message/Body/APP_HEAD/PROGRAM_ID"/>
+        <item src="constant.-1" dest="Req3002100000105.Message/Body/APP_HEAD/TOTAL_NUM"/>
+        <item src="constant.Z005" dest="Req3002100000105.Message/Body/APP_HEAD/TRAN_TYPE"/>
+        <item src="constant.CHINESE" dest="Req3002100000105.Message/Body/APP_HEAD/USER_LANG"/>
+        <item src="constant.6236600010089217" dest="Req3002100000105.Message/Body/BASE_ACCT_NO"/>
+        <item src="constant.4112000070000002" dest="Req3002100000105.Message/Body/BIZ_TYPE"/>
+        <item src="constant.20191231" dest="Req3002100000105.Message/Body/BU_SETTLEMENT_DATE"/>
+        <item src="constant.CA" dest="Req3002100000105.Message/Body/INPUT_BAL_TYPE"/>
+        <item src="Req3002101000103.Message/Body/PAY_AMT" dest="Req3002100000105.Message/Body/TRAN_AMT"/>
+        <item src="constant.W" dest="Req3002100000105.Message/Body/TRANSFER_MODE"/>
+        <item src="constant.411099010980000055" dest="Req3002100000105.Message/Body/TRAN_ARRAY/Row/TRAN_AMT"/>
+        <item src="constant.-1" dest="Req3002100000105.Message/Body/TRAN_ARRAY/Row/TRAN_TYPE"/>
+    </request>
+    <response/>
+</mapping>

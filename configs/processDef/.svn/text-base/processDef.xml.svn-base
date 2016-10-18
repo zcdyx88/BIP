@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<processes>
+	<!--  对公综合签约账户绑定关系变更[组合级]  -->
+	<process>
+		<id>2002201000106</id>
+		<file>processDef/20022010001/P2002201000106.xml</file>
+	</process>
+	<!--  对私综合签约账户绑定关系变更[组合级]  -->
+	<process>
+		<id>2002201000105</id>
+		<file>processDef/20022010001/P2002201000105.xml</file>
+	</process>
+	<!-- 一般贷款开户 -->
+	<process>
+		<id>3002101000101</id>
+		<file>processDef/30021010001/P3002101000101.xml</file>
+	</process>
+	<!-- 特殊贷款开户 -->
+	<process>
+		<id>3002101000102</id>
+		<file>processDef/30021010001/P3002101000102.xml</file>
+	</process>
+	<!-- 垫款贷款开户 -->
+	<process>
+		<id>3002101000103</id>
+		<file>processDef/30021010001/P3002101000103.xml</file>
+	</process>
+	<!-- 银团贷款开户 -->
+	<process>
+		<id>3002101000104</id>
+		<file>processDef/30021010001/P3002101000104.xml</file>
+	</process>
+	<!-- 银团贷款开户 -->
+	<process>
+		<id>3002101000105</id>
+		<file>processDef/30021010001/P3002101000105.xml</file>
+	</process>
+	<!-- 贷款开户录入撤销 -->	
+	<process>
+		<id>3002201000101</id>
+		<file>processDef/30022010001/P3002201000101.xml</file>
+	</process>
+	<!-- 贷款通用冲正 -->	
+	<process>
+		<id>3002501000101</id>
+		<file>processDef/30025010001/P3002501000101.xml</file>
+	</process>
+	<!-- 贷款通用撤销  -->
+	<process>
+		<id>3002501000102</id>
+		<file>processDef/30025010001/P3002501000102.xml</file>
+	</process>
+	
+	<!-- 对私综合签约 -->
+	<process>
+		<id>2002201000101</id>
+		<file>processDef/20022010001/P2002201000101.xml</file>
+	</process>
+	<!-- 对私综合解约 -->
+	<process>
+		<id>2002201000103</id>
+		<file>processDef/20022010001/P2002201000103.xml</file>
+	</process>
+	<process>
+		<id>3002101000201</id>
+		<file>processDef/30021010002/P3002101000201.xml</file>
+	</process>
+	<!-- 对公综合签约 -->
+	<process>
+		<id>2002201000102</id>
+		<file>processDef/20022010001/P2002201000102.xml</file>
+	</process>
+	<!-- 对公综合解约 -->
+	<process>
+		<id>2002201000104</id>
+		<file>processDef/20022010001/P2002201000104.xml</file>
+	</process>
+	<!--个人网银/手机银行渠道维护[组合级]-->
+	<process>
+		<id>1003201000101</id>
+		<file>processDef/10032010001/P1003201000101.xml</file>
+	</process>
+	<!--反欺诈 -->
+	<process>
+		<id>4001201000101</id>
+		<file>processDef/40012010001/P4001201000101.xml</file>
+	</process>
+	<!--签约品种参数配置  start-->
+	<process>
+		<id>5001200002501</id>
+		<file>processDef/50012000025/P5001200002501.xml</file>
+	</process>
+	<process>
+		<id>5001200002503</id>
+		<file>processDef/50012000025/P5001200002503.xml</file>
+	</process>
+	<process>
+		<id>5001300003102</id>
+		<file>processDef/50013000031/P5001300003102.xml</file>
+	</process>
+	<!--签约品种参数配置  end -->
+	<!-- 公共业务参数信息维护start -->
+	<process>
+		<id>5001201000101</id>
+		<file>processDef/50012010001/P5001201000101.xml</file>
+	</process>
+	<!-- 公共业务参数信息维护end -->
+</processes>

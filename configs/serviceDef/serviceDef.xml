@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services>
+    <service action="provide">
+		<id>3002101000103</id>
+		<type>webservice</type>
+		<retCode>rspSysHead.retCode</retCode>
+		<processId>P3002101000103</processId>
+	</service>
+	<service action="consume">
+		<id>3002100000105</id>
+		<type>webservice</type>
+		<proxy>ProxyESC</proxy>
+		<retCode>rspSysHead.retCode</retCode>
+		<namespace>http://esb.dcitsbiz.com/services/30021000001</namespace>
+	</service>
+	<service action="consume">
+		<id>3002100000106</id>
+		<type>webservice</type>
+		<proxy>ProxyESC1</proxy>
+		<retCode>rspSysHead.retCode</retCode>
+		<namespace>http://esb.dcitsbiz.com/services/30021000001</namespace>
+	</service>
+	<service action="base">
+		<id>ArrayMapperBaseService</id>
+		<implementation>com.dcits.smartbip.runtime.impl.P3002101000104.ArrayMapperBaseService</implementation>
+	</service>
+</services>

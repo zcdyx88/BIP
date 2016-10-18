@@ -1,0 +1,110 @@
+package com.dcits.smartbip.register;
+
+import com.dcits.smartbip.engine.impl.ProtocolRepository;
+import com.dcits.smartbip.engine.impl.ServiceRepository;
+import com.dcits.smartbip.exception.InstanceNotFoundException;
+import com.dcits.smartbip.parser.code.CodeConstants;
+import com.dcits.smartbip.parser.code.JavaCompiler;
+import com.dcits.smartbip.parser.model.ProcessDefinitionConstants;
+import com.dcits.smartbip.protocol.IProtocol;
+import com.dcits.smartbip.runtime.model.IService;
+import com.dcits.smartbip.runtime.model.IServiceProxy;
+import com.dcits.smartbip.runtime.model.impl.BaseBuzzService;
+import com.dcits.smartbip.utils.FileUtils;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+import java.io.File;
+
+public class PublishService implements PublishServiceMBean {
+    private Log log = LogFactory.getLog(getClass());
+
+    @Override
+    public String pubBuzzService(PublishBuzzServiceDataBean bean) {
+        log.info("****************** publish buzz service **************");
+        log.info("id[" + bean.id + "]");
+        log.info("protocolType[" + bean.protocolType + "]");
+        log.info("namespace[" + bean.namespace + "]");
+        log.info("reversalServiceId[" + bean.reversalServiceId + "]");
+        log.info("retCode[" + bean.retCode + "]");
+        log.info("wsdl[" + bean.wsdl + "]");
+        log.info("serviceSchema[" + bean.serviceSchema + "]");
+        log.info("metadataSchema[" + bean.metadataSchema + "]");
+        log.info("****************** publish buzz service **************");
+        //去掉S
+        String serviceId = bean.id;
+        serviceId = serviceId.startsWith("S") ? serviceId.substring(1) : serviceId;
+        BaseBuzzService service = new BaseBuzzService();
+        service.setId(serviceId);
+        service.setType(bean.protocolType);
+        service.setRetCodeField(bean.retCode);
+        //TODO 协议管理页面没有完成,因为BIP直通ESB,暂时使用ProxyESB配置
+        try {
+            IProtocol serviceProxy = ProtocolRepository.getRepository().get("ProxyESB");
+            if (serviceProxy instanceof IServiceProxy) {
+                service.setServiceProxy((IServiceProxy) serviceProxy);
+            }
+        } catch (InstanceNotFoundException e) {
+            log.error("协议["+"ProxyESB"+"]未找到");
+        }
+        ServiceRepository.getRepository().register(serviceId, service);
+        return "OK";
+    }
+
+    @Override
+    public String pubCompositeService(PublishCompositeServiceDataBean bean) {
+        log.info("****************** publish composite service **************");
+        log.info("serviceId[" + bean.serviceId + "]");
+        log.info("serviceName[" + bean.serviceName + "]");
+        log.info("serviceDesc[" + bean.serviceDesc + "]");
+        log.info("namespace[" + bean.namespace + "]");
+        log.info("endpoint[" + bean.endpoint + "]");
+        log.info("serviceSchema[" + bean.serviceSchema + "]");
+        log.info("metadataSchema[" + bean.metadataSchema + "]");
+        log.info("metadataSchema[" + bean.flowSchema + "]");
+        log.info("****************** publish composite service **************");
+        return "OK";
+    }
+
+    @Override
+    public String pubBaseService(PublishBaseServiceDataBean bean) {
+        String serviceId = bean.id;
+        String serviceName = bean.name;
+        String serviceDesc = bean.desc;
+        String serviceClazzContent = bean.code;
+        log.info("****************** 发布基础服务  **************");
+        log.info("serviceId[" + serviceId + "]");
+        log.info("serviceName[" + serviceName + "]");
+        log.info("serviceDesc[" + serviceDesc + "]");
+        log.info("code[" + serviceClazzContent + "]");
+
+        String defaultSrcPath = ProcessDefinitionConstants.DEFAULT_SRC;
+        String filePath = defaultSrcPath + File.separator + serviceId + ".java";
+        try {
+            FileUtils.write(new File(filePath), serviceClazzContent);
+            JavaCompiler.addClassPath(System.getProperty("smartbip.install") + File.separator + "lib", false);
+            JavaCompiler.compile(ProcessDefinitionConstants.DEFAULT_SRC, serviceId);
+            File jarFile = new File(ProcessDefinitionConstants.DEFAULT_SRC + File.separator + serviceId + ".jar");
+            File targetFile = new File(CodeConstants.REPOSITORY_PATH + File.separator + serviceId + ".jar");
+            org.apache.commons.io.FileUtils.copyFile(jarFile, targetFile);
+            Class clazz = JavaCompiler.loadClass(ProcessDefinitionConstants.RUNTIME_PROCESS_PACKAGE + "." + serviceId);
+            IService serviceObject = (IService) clazz.newInstance();
+            ServiceRepository.getRepository().register(serviceObject.getId(), serviceObject);
+
+        } catch (Exception e) {
+            log.error("发布基础服务失败!", e);
+        } finally {
+            log.info("****************** 发布基础服务 **************");
+        }
+        return "OK";
+    }
+
+    @Override
+    public String pubParamMapFile(PublishParamMapFileDataBean bean) {
+        log.info("****************** pub ParamMapFile **************");
+        log.info("serviceId[" + bean.mapFiles.toString() + "]");
+        log.info("serviceId[" + bean.paramFile + "]");
+        log.info("****************** pub ParamMapFile **************");
+        return "OK";
+    }
+}
