@@ -98,7 +98,7 @@ public class RedisReversalServer extends JedisPubSub implements ReversalServer {
         public void run() {
             Jedis jedis = null;
             try {
-                jedis = pool.getResource();
+/*                jedis = pool.getResource();
                 Map<String, String> map = jedis.hgetAll(key);
                 String processFlowId = map.get(JournalConstants.UNIQUE_FLOW_NO);
                 String flowTime = map.get(JournalConstants.FLOW_TIME);
@@ -118,14 +118,14 @@ public class RedisReversalServer extends JedisPubSub implements ReversalServer {
                     log.info(sb.toString());
                 }
                 BipTranLogService service = (BipTranLogService) ApplicationUtils.getInstance().getBean("bipTranLogService");
-                BipTranLog tranLog = new BipTranLog(key, compositeServiceId, serviceId, revServiceId, processFlowId, serviceFlowNo,
-                        flowTime, retCode, retMsg, retStatus, flowStep);
+//                BipTranLog tranLog = new BipTranLog(key, compositeServiceId, serviceId, revServiceId, processFlowId, serviceFlowNo,
+//                        flowTime, retCode, retMsg, retStatus, flowStep);
                 service.save(tranLog);
                 String msg = map.get(JournalConstants.FLOW_MSG);
                 BipTranMsgService bipTranMsgService = (BipTranMsgService) ApplicationUtils.getInstance().getBean("bipTranMsgService");
-                BipTranMsg bipTranMsg = new BipTranMsg(key, msg.getBytes());
+//                BipTranMsg bipTranMsg = new BipTranMsg(key, msg.getBytes());
                 bipTranMsgService.save(bipTranMsg);
-                jedis.del(key);
+                jedis.del(key);*/
             } catch (Exception e) {
                 log.error("流水入库失败", e);
             } finally {
