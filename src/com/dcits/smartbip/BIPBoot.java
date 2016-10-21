@@ -30,6 +30,7 @@ import com.dcits.smartbip.parser.model.ServiceIdentifyConfig;
 import com.dcits.smartbip.parser.model.ServiceIdentifyConstants;
 import com.dcits.smartbip.protocol.ProtocolConfig;
 import com.dcits.smartbip.register.RegisterJMXServer;
+import com.dcits.smartbip.reversal.impl.ReversalServer;
 import com.dcits.smartbip.runtime.limit.LimitCtrlService;
 import com.dcits.smartbip.runtime.property.ProductionsService;
 import com.dcits.smartbip.runtime.property.PropertiesService;
@@ -41,35 +42,7 @@ import com.dcits.smartbip.utils.ApplicationUtils;
 @SpringBootApplication
 public class BIPBoot {
 	private static final Log log = LogFactory.getLog(BIPBoot.class);
-
-	public static void start() {
-		System.setProperty("-Dbip.product.mode", "true");
-		// 加载容器配置信息
-		loadParam();
-		// 加载生成类
-		loadRepsitory();
-		// 加载协议配置
-		loadProtocols();
-		// 加载服务配置
-		loadServices();
-		// 加载映射器配置
-		loadMappers();
-		// 加载流程配置
-		loadProcesses();
-		// 加载properties配置文件
-		loadProperty();
-		// 加载产品代码配置
-		loadProduct();
-		// 启动配置加载监听
-		loadRegister();
-		// 加载限额参数配置
-		loadLimitCtrl();
-		// 启动流水
-//		loadJournal();
-		 //加载XML服务识别配置
-        loadIdentifyServices();
-	}
-
+	
 	public static void main(String[] args) {
 		ApplicationContext applicationContext = SpringApplication.run(
 				BIPBoot.class, args);
@@ -96,9 +69,13 @@ public class BIPBoot {
 		// 启动配置加载监听
 		loadRegister();
 		// 启动流水
-//		loadJournal();	
+		loadJournal();	
 		 //加载XML服务识别配置
         loadIdentifyServices();
+        /*启动冲正线程，该线程需要使用到映射关系定义，协议定义，服务定义等
+         * 如果作为单独的进程启动，加载协议时会报端口重复等错误，所有选择在BIP中一起启动*/
+        loadReversal();
+        
 		if (log.isInfoEnabled()) {
 			log.info("******BIP启动成功******");
 		}
@@ -282,4 +259,16 @@ public class BIPBoot {
             log.info("加载服务识别信息完成!");
         }
     }
+	
+	private static void loadReversal()
+	{
+		if (log.isInfoEnabled()) {
+			log.info("开始启动冲正线程......");
+		}
+		ReversalServer reversalService = ReversalServer.getInstance();
+		reversalService.start();
+		if (log.isInfoEnabled()) {
+			log.info("冲正线程启动结束");
+		}
+	}
 }

@@ -3,7 +3,7 @@ package com.dcits.smartbip.reversal.entity;
 import javax.persistence.*;
 
 /**
- * Created by vincentfxz on 16/8/16.
+ * Created by zhangcheng on 20/10/16.
  */
 @Entity
 @Table(name = "BIP_COMPOSITE_TRANS")

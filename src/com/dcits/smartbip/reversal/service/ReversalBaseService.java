@@ -1,11 +1,11 @@
-package com.dcits.smartbip.journal.service;
+package com.dcits.smartbip.reversal.service;
 
 import org.springframework.data.repository.CrudRepository;
 
 /**
  * Created by vincentfxz on 16/5/6.
  */
-public abstract class BaseService<T> {
+public abstract class ReversalBaseService<T> {
     public Iterable<T> getAll(){
         return getRepository().findAll(); 
     }

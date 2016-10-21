@@ -2,7 +2,7 @@ package com.dcits.smartbip.reversal.impl;
 
 import com.dcits.smartbip.journal.impl.JournalConstants;
 import com.dcits.smartbip.journal.impl.RedisJournalService;
-import com.dcits.smartbip.reversal.ReversalService;
+import com.dcits.smartbip.reversal.IReversalService;
 import com.dcits.smartbip.runtime.model.IContext;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -23,7 +23,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * 1.发送冲正服务和组合服务的调用栈到redis
  * 2.发送冲正服务的上下文信息到redis
  */
-public class RedisReversalService implements ReversalService {
+public class RedisReversalService /*implements ReversalService*/ {
 
     private static final Log log = LogFactory.getLog(RedisReversalService.class);
 
@@ -47,7 +47,6 @@ public class RedisReversalService implements ReversalService {
     /**
      * 启动冲正客户端
      */
-    @Override
     public void start() {
         try {
             ReversalConfig reversalConfig = ReversalConfig.getInstance();
@@ -78,7 +77,6 @@ public class RedisReversalService implements ReversalService {
      * @param context
      * @param msg
      */
-    @Override
     public void invoke(IContext context, String msg) {
         if(reversalEnabled){
             String uniqueFlowNo = "REVERSAL:" + (String) context.getValue(ReversalConstants.UNIQUE_FLOW_NO);

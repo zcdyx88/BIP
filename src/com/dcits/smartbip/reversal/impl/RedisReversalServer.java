@@ -5,7 +5,7 @@ import com.dcits.smartbip.journal.entity.BipTranMsg;
 import com.dcits.smartbip.journal.impl.JournalConstants;
 import com.dcits.smartbip.journal.service.BipTranLogService;
 import com.dcits.smartbip.journal.service.BipTranMsgService;
-import com.dcits.smartbip.reversal.ReversalServer;
+import com.dcits.smartbip.reversal.IReversalServer;
 import com.dcits.smartbip.utils.ApplicationUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -23,7 +23,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * Created by vincentfxz on 16/9/1.
  */
-public class RedisReversalServer extends JedisPubSub implements ReversalServer {
+public class RedisReversalServer extends JedisPubSub /*implements ReversalServer*/ {
     private static final Log log = LogFactory.getLog(RedisReversalServer.class);
     private static RedisReversalServer server;
     private ExecutorService threadpool;
