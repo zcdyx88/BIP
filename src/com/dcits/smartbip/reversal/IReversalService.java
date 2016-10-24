@@ -42,8 +42,10 @@ public interface IReversalService {
      * @param serviceId 冲正交易服务ID
      * @param context  冲正交易需要用到的上下文，为冲正报文的发送提供数据
      * @param mapper  冲正报文所使用的映射关系
+     * @param returnCodeField  判断冲正交易是否成功的响应码域名称，请填写compositeData的路径
+     * @param succReturncode  冲正交易成功时的预期响应码
      */
-    public void insertReversalInfo(String buszzSerialNum,String serviceId,SessionContext context,String mapper);
+    public void insertReversalInfo(String buszzSerialNum,String serviceId,SessionContext context,String mapper,String returnCodeField ,String succReturncode);
     
     
 }

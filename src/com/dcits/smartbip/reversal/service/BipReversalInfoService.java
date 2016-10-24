@@ -22,7 +22,7 @@ public class BipReversalInfoService extends ReversalBaseService<BipReversalInfoE
     private BipReversalInfoDAO bipReversalInfoDAO;
 
     @Override
-    public CrudRepository getRepository() {
+    public BipReversalInfoDAO getRepository() {
         return bipReversalInfoDAO;
     }
 
