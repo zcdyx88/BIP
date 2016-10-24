@@ -2,27 +2,22 @@ package com.dcits.smartbip.parser.impl;
 
 import com.dcits.smartbip.common.model.IConfiguration;
 import com.dcits.smartbip.common.model.IParser;
-import com.dcits.smartbip.engine.impl.ServiceRepository;
 import com.dcits.smartbip.exception.ConfigurationParseException;
 import com.dcits.smartbip.parser.DataDomainConstants;
 import com.dcits.smartbip.parser.code.JavaClazzCodeGenerater;
 import com.dcits.smartbip.parser.code.JavaMethodCodeGenerater;
 import com.dcits.smartbip.parser.model.ProcessDefinition;
 import com.dcits.smartbip.parser.model.ProcessDefinitionConstants;
-import com.dcits.smartbip.runtime.model.IService;
-import com.dcits.smartbip.runtime.model.ICompositeData;
-import com.dcits.smartbip.runtime.model.impl.SessionContext;
-import com.dcits.smartbip.utils.CompositeDataUtils;
 import com.dcits.smartbip.utils.FileUtils;
 import com.dcits.smartbip.utils.StringUtils;
 import com.dcits.smartbip.utils.XMLUtils;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.dom4j.Document;
 import org.dom4j.Element;
 
 import java.io.File;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -239,6 +234,8 @@ public class ProcessDefinitionParser implements IParser<ProcessDefinition, List<
             sb.append(parseBarrierNode(element));
         } else if (ProcessDefinitionConstants.RUNNABLE_TAG_NAME.equalsIgnoreCase(name)) {
             sb.append(parseRunnableNode(element));
+        }else if (ProcessDefinitionConstants.REVERSAL_TAG_NAME.equalsIgnoreCase(name)) {
+            sb.append(parseReversalCall(element));
         }
         return sb.toString();
     }
@@ -537,5 +534,20 @@ public class ProcessDefinitionParser implements IParser<ProcessDefinition, List<
             }
         }
         return reversalCodes;
+    }
+    /**
+     *  记录冲正信息
+     * @param element
+     * @return
+     */
+    public String parseReversalCall(Element element) {
+        StringBuilder sb = new StringBuilder();
+        if (null != element) {
+            String reversalServiceId = XMLUtils.getAttribute(element, "id");
+            String mappingId = XMLUtils.getAttribute(element, "mapping");
+            sb.append("com.dcits.smartbip.reversal.impl.BipReversalServiceImpl br = new com.dcits.smartbip.reversal.impl.BipReversalServiceImpl();\n");
+            sb.append("br.start(\"" + reversalServiceId + "\",\""+processDefinition.getId()+"\",\""+mappingId+"\");");
+        }
+        return sb.toString();
     }
 }

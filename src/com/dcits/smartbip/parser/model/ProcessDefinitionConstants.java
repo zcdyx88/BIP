@@ -52,7 +52,7 @@ public class ProcessDefinitionConstants {
     public static final String CONTEXT_SCOPE = "context";
     public static final String LOCAL_SCOPE = "local";
     public static final String SERVICE_STACK = "serviceStack";
-
+    public static final String REVERSAL_TAG_NAME = "reversal";
     static{
         BASE_PROCESS_DEFINITION_INTERFACES .add(IProcessInstance.class);
         ASYNC_PROCESS_DEFINITION_INTERFACES.add(IAsyncProcessInstance.class);
