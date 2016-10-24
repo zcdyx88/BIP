@@ -1,18 +1,21 @@
 package com.dcits.smartbip.runtime.model.impl;
 
-import com.dcits.smartbip.parser.impl.MapperParser;
-import com.dcits.smartbip.runtime.model.IContext;
-
+import java.io.Externalizable;
+import java.io.IOException;
+import java.io.ObjectInput;
+import java.io.ObjectOutput;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+
+import com.dcits.smartbip.runtime.model.IContext;
 /**
  * Created by vincentfxz on 16/5/13.
  * 会话上下文
  */
-public class SessionContext implements IContext {
+public class SessionContext implements IContext , Externalizable{
 
 	private static final Log log = LogFactory.getLog(SessionContext.class);
     private static ThreadLocal<SessionContext> map = new ThreadLocal<SessionContext>();
@@ -76,4 +79,14 @@ public class SessionContext implements IContext {
         map.remove();
         map.set((SessionContext) sessionContext);
     }
+
+	@Override
+	public void writeExternal(ObjectOutput out) throws IOException {
+		out.writeObject(contextMap);
+	}
+
+	@Override
+	public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+		contextMap = (ConcurrentHashMap<String, Object>)in.readObject();
+	}
 }

@@ -1,19 +1,22 @@
 package com.dcits.smartbip.runtime.model.impl;
 
-import com.dcits.smartbip.runtime.model.ICompositeData;
-
-import java.io.Serializable;
+import java.io.Externalizable;
+import java.io.IOException;
+import java.io.ObjectInput;
+import java.io.ObjectOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
+import com.dcits.smartbip.runtime.model.ICompositeData;
+
 /**
  * Created by vincentfxz on 16/5/25.
  */
-public class SoapCompositeData implements ICompositeData,Serializable {
+public class SoapCompositeData implements ICompositeData, Externalizable {
 
-    private final Map<String, List<ICompositeData>> map;
+    private  Map<String, List<ICompositeData>> map;
     private String value;
     private String xPath;
     private String payLoad;
@@ -86,7 +89,6 @@ public class SoapCompositeData implements ICompositeData,Serializable {
             }
         }
         return sb.toString();
-//    	return null;
     }
 
     public String getId() {
@@ -106,4 +108,22 @@ public class SoapCompositeData implements ICompositeData,Serializable {
     public void setDispatchId(String dispatchId) {
         setPayLoad(dispatchId);
     }
+
+	@Override
+	public void writeExternal(ObjectOutput out) throws IOException {	    
+		out.writeObject(map);
+		out.writeObject(value);
+		out.writeObject(xPath);
+		out.writeObject(payLoad);
+		out.writeObject(id);
+	}
+
+	@Override
+	public void readExternal(ObjectInput in) throws IOException, ClassNotFoundException {
+		map = (TreeMap<String, List<ICompositeData>>)in.readObject();
+		value = (String)in.readObject();
+		xPath = (String)in.readObject();
+		payLoad = (String)in.readObject();
+		id = (String)in.readObject();		
+	}
 }

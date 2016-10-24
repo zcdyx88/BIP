@@ -4,6 +4,7 @@ import com.dcits.smartbip.engine.impl.BaseProcessRepository;
 import com.dcits.smartbip.engine.impl.MapperRepository;
 import com.dcits.smartbip.engine.impl.ServiceRepository;
 import com.dcits.smartbip.exception.InstanceNotFoundException;
+import com.dcits.smartbip.reversal.impl.ReversalService;
 import com.dcits.smartbip.runtime.model.*;
 import com.dcits.smartbip.runtime.model.impl.*;
 import com.dcits.smartbip.utils.CompositeDataUtils;
@@ -77,6 +78,7 @@ public class ProcessDefinitionConstants {
         PROCESS_IMPORTS.add(SoapCompositeData.class);
         PROCESS_IMPORTS.add(ICompositeData.class);
         PROCESS_IMPORTS.add(CompositeDataUtils.class);
+        PROCESS_IMPORTS.add(ReversalService.class);
         ASYNC_PROCESS_IMPORTS.addAll(PROCESS_IMPORTS);
         ASYNC_PROCESS_IMPORTS.add(IAsyncProcessInstance.class);
     }

@@ -8,6 +8,8 @@ import com.dcits.smartbip.parser.code.JavaClazzCodeGenerater;
 import com.dcits.smartbip.parser.code.JavaMethodCodeGenerater;
 import com.dcits.smartbip.parser.model.ProcessDefinition;
 import com.dcits.smartbip.parser.model.ProcessDefinitionConstants;
+import com.dcits.smartbip.runtime.model.IContext;
+import com.dcits.smartbip.runtime.model.impl.SessionContext;
 import com.dcits.smartbip.utils.FileUtils;
 import com.dcits.smartbip.utils.StringUtils;
 import com.dcits.smartbip.utils.XMLUtils;
@@ -545,8 +547,11 @@ public class ProcessDefinitionParser implements IParser<ProcessDefinition, List<
         if (null != element) {
             String reversalServiceId = XMLUtils.getAttribute(element, "id");
             String mappingId = XMLUtils.getAttribute(element, "mapping");
-            sb.append("com.dcits.smartbip.reversal.impl.BipReversalServiceImpl br = new com.dcits.smartbip.reversal.impl.BipReversalServiceImpl();\n");
-            sb.append("br.start(\"" + reversalServiceId + "\",\""+processDefinition.getId()+"\",\""+mappingId+"\");");
+            String returnCodeField = XMLUtils.getAttribute(element, "returnCodeField");
+            String returnCode = XMLUtils.getAttribute(element, "returnCode");
+            sb.append("ReversalService br = new ReversalService();\n");            
+            sb.append("IContext context = SessionContext.getContext();\n");            
+            sb.append("br.insertReversalInfo(\"\",\""+ reversalServiceId +"\",context,\""+mappingId+"\",\""+returnCodeField+"\",\""+returnCode+"\");\n");
         }
         return sb.toString();
     }
