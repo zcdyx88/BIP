@@ -89,5 +89,5 @@ public class BipReversalInfoDetailEntity {
 
 	public void setReversalTime(Date reversalTime) {
 		this.reversalTime = reversalTime;
-	}
+	}	
 }

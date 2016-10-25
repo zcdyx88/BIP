@@ -15,10 +15,10 @@ import org.hibernate.annotations.GenericGenerator;
 public class BipReversalInfoEntity {	
     //流水唯一标识,BIP自动生成
     @Id
-	@GeneratedValue(generator="system-id")
-	@GenericGenerator(name="system-id",strategy="increment")
-    @Column(name = "ID", length = 255)
-    private int id;
+/*	@GeneratedValue(generator="system-id")
+	@GenericGenerator(name="system-id",strategy="increment")*/
+    @Column(name = "ID", length = 100)
+    private String id;
     
     //被冲正的业务服务流水号，作为外键关联BIP_BUSZZ_TRANS
     @Column(name = "ORGBUSZZSERIALNUM", length = 255)
@@ -45,9 +45,9 @@ public class BipReversalInfoEntity {
     @Column(name = "REVERSALSTATUS")
     private int reversalStatus;*/
     
-    //冲正结果(-1：还无结果  0：失败  1：成功 )
-    //@Column(name = "REVERSALRESULT")
-    private int reversalResult = -1;    
+/*    //冲正结果(-1：还无结果  0：失败  1：成功 )
+    @Column(name = "REVERSALRESULT")
+    private int reversalResult = -1;    */
     
     //下一次冲正发起时间
     @Column(name = "NEXTREVERSALTIME")
@@ -90,13 +90,13 @@ public class BipReversalInfoEntity {
 		this.buzzServiceID = buzzServiceID;
 	}
 
-	public int getReversalResult() {
+	/*public int getReversalResult() {
 		return reversalResult;
 	}
 
 	public void setReversalResult(int reversalResult) {
 		this.reversalResult = reversalResult;
-	}
+	}*/
 
 	public Date getNextReversalTime() {
 		return NextReversalTime;
@@ -138,11 +138,11 @@ public class BipReversalInfoEntity {
 		ReversalSuccCode = reversalSuccCode;
 	}
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	
@@ -152,7 +152,22 @@ public class BipReversalInfoEntity {
 		sb.append("原交易流水号=").append(this.buszzSerialNum).append("\n");
 		sb.append("冲正服务ID=").append(this.buzzServiceID).append("\n");
 		sb.append("当前冲正次数=").append(this.count).append("\n");
-		sb.append("冲正结果=").append(this.reversalResult).append("\n");
+//		sb.append("冲正结果=").append(this.reversalResult).append("\n");
 		return sb.toString();
+	}
+	
+	public BipReversalInfoHistoryEntity cloneHistoryEntity()
+	{
+		BipReversalInfoHistoryEntity historyEntity = new BipReversalInfoHistoryEntity();
+		historyEntity.setId(this.id);
+		historyEntity.setBuszzSerialNum(this.buszzSerialNum);
+		historyEntity.setBuzzServiceID(this.buzzServiceID);
+		historyEntity.setBuzzServiceMapper(this.buzzServiceMapper);
+		historyEntity.setCount(this.count);
+		historyEntity.setFlowContext(this.flowContext);
+		historyEntity.setReversalField(this.ReversalField);
+		historyEntity.setReversalSuccCode(this.ReversalSuccCode);
+//		historyEntity.setReversalResult(this.reversalResult);
+		return historyEntity;
 	}
 }

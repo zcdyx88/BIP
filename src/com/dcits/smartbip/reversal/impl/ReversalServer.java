@@ -19,6 +19,7 @@ import com.dcits.smartbip.exception.InvokeException;
 import com.dcits.smartbip.reversal.IReversalServer;
 import com.dcits.smartbip.reversal.entity.BipReversalInfoDetailEntity;
 import com.dcits.smartbip.reversal.entity.BipReversalInfoEntity;
+import com.dcits.smartbip.reversal.entity.BipReversalInfoHistoryEntity;
 import com.dcits.smartbip.reversal.service.BipReversalInfoDetailService;
 import com.dcits.smartbip.reversal.service.BipReversalInfoHistoryService;
 import com.dcits.smartbip.reversal.service.BipReversalInfoService;
@@ -38,6 +39,7 @@ public class ReversalServer implements IReversalServer {
 	private BipReversalInfoService reversalInfoService;
 	private BipReversalInfoDetailService reversalInfoDetailService;
 	private BipReversalInfoHistoryService reversalInfoHistoryService;
+	private final int REVERSALMAXCOUNT = 3;
 
 	static public ReversalServer getInstance()
 	{
@@ -72,7 +74,7 @@ public class ReversalServer implements IReversalServer {
         Timer timer = new Timer();
         timer.schedule(timerTask, 0, 60000);
         
-        ReversalService rs = new ReversalService();
+        /*ReversalService rs = new ReversalService();
         SessionContext.getContext().setValue("TEST1", "VALUE1");
         String id = "3002101000103";
         SoapCompositeData testComposite = new SoapCompositeData();
@@ -81,11 +83,8 @@ public class ReversalServer implements IReversalServer {
         SessionContext.getContext().setValue("Req" + id, testComposite);
         ICompositeData bodyCompositeData = CompositeDataUtils.mkNodeNotExist(testComposite, "body");
         CompositeDataUtils.setValue(bodyCompositeData, "path1", "value1");
-        CompositeDataUtils.setValue(bodyCompositeData, "path2", "value2");
-        
-        
-        rs.insertReversalInfo("12345", "3002100000106", SessionContext.getContext(), "M3002101000103_3002100000106", "Reply_Msg/Body/returncode", "000000");
-
+        CompositeDataUtils.setValue(bodyCompositeData, "path2", "value2");        
+        rs.insertReversalInfo("12345", "3002100000106", SessionContext.getContext(), "M3002101000103_3002100000106", "Reply_Msg/Body/returncode", "000000");*/
 	}
 	
 	public void reversal()
@@ -96,15 +95,33 @@ public class ReversalServer implements IReversalServer {
 		if(Integer.valueOf(nowTime) > Integer.valueOf(config.getConfig(ReversalConstants.REVERSAL_STARTTIME)) 
 				&& Integer.valueOf(nowTime) < Integer.valueOf(config.getConfig(ReversalConstants.REVERSAL_ENDTIME)))
 		{			
-			String maxCount = config.getConfig(ReversalConstants.REVERSAL_MAXCOUNT);
-			List<BipReversalInfoEntity> reversalInfoList = reversalInfoService.getRepository().queryReverInfo(Integer.valueOf(maxCount));
+			String strMaxCount = config.getConfig(ReversalConstants.REVERSAL_MAXCOUNT);
+//			List<BipReversalInfoEntity> reversalInfoList = reversalInfoService.getRepository().queryReverInfo(Integer.valueOf(strMaxCount));
+			List<BipReversalInfoEntity> reversalInfoList = (List<BipReversalInfoEntity>)reversalInfoService.getRepository().findAll();
+			
 			for(BipReversalInfoEntity infoEntity:reversalInfoList)
-			{
-				if(checkReversalOrNot(infoEntity))
+			{				
+				try
 				{
-					infoEntity.setCount(infoEntity.getCount()+1);
-					reversalInfoService.save(infoEntity);
-					sendMessage(infoEntity);
+					int maxCount = strMaxCount==null ? REVERSALMAXCOUNT : Integer.valueOf(config.getConfig(ReversalConstants.REVERSAL_MAXCOUNT));
+					
+					if( maxCount>= infoEntity.getCount() )
+					{
+						if(checkReversalOrNot(infoEntity))
+						{
+							infoEntity.setCount(infoEntity.getCount()+1);
+							reversalInfoService.save(infoEntity);
+							sendMessage(infoEntity);
+						}
+					}
+					else
+					{			
+						reversalFail(infoEntity);					
+					}
+				}
+				catch(Exception e)
+				{
+					log.error("",e);
 				}
 			}			
 		}else
@@ -226,8 +243,10 @@ public class ReversalServer implements IReversalServer {
 	
 	private void reversalSuccess(BipReversalInfoEntity infoEntity)
 	{
-		infoEntity.setReversalResult(ReversalConstants.REVERSAL_RESULT_SUCCESS);
-		reversalInfoService.save(infoEntity);
+		BipReversalInfoHistoryEntity hisEntity = infoEntity.cloneHistoryEntity();
+		hisEntity.setReversalResult(ReversalConstants.REVERSAL_RESULT_SUCCESS);
+		reversalInfoHistoryService.save(hisEntity);
+		reversalInfoService.delete(infoEntity);
 	}	
 	
 	private void reversalFail(BipReversalInfoEntity infoEntity)
@@ -236,8 +255,10 @@ public class ReversalServer implements IReversalServer {
 		{
 
 	    	log.debug("原交易流水号="+infoEntity.getBuszzSerialNum()+",冲正次数已达到最大冲正次数，冲正交易失败！");
-			infoEntity.setReversalResult(ReversalConstants.REVERSAL_RESULT_FAIL);
-			reversalInfoService.save(infoEntity);
+	    	BipReversalInfoHistoryEntity hisEntity = infoEntity.cloneHistoryEntity();			
+			hisEntity.setReversalResult(ReversalConstants.REVERSAL_RESULT_FAIL);
+			reversalInfoHistoryService.save(hisEntity);
+			reversalInfoService.delete(infoEntity);
 		}
 		else{
 			Date now = new Date();

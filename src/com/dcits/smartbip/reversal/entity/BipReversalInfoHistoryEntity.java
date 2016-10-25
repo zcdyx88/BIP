@@ -14,11 +14,11 @@ import org.hibernate.annotations.GenericGenerator;
 @Table(name = "BIP_REVERSAL_INFO_HISTORY")
 public class BipReversalInfoHistoryEntity {	
     //流水唯一标识,BIP自动生成
-   /* @Id
-	@GeneratedValue(generator="system-id")
+    @Id
+	/*@GeneratedValue(generator="system-id")
 	@GenericGenerator(name="system-id",strategy="increment")*/
-    @Column(name = "ID", length = 255)
-    private int id;
+    @Column(name = "ID", length = 100)
+    private String id;
     
     //被冲正的业务服务流水号，作为外键关联BIP_BUSZZ_TRANS
     @Column(name = "ORGBUSZZSERIALNUM", length = 255)
@@ -50,8 +50,8 @@ public class BipReversalInfoHistoryEntity {
     private int reversalResult = -1;    
     
 /*    //下一次冲正发起时间
-    @Column(name = "NEXTREVERSALTIME")*/
-    private Date NextReversalTime = new Date();
+    @Column(name = "NEXTREVERSALTIME")
+    private Date NextReversalTime = new Date();*/
     
     //已发送过的冲正次数
     @Column(name = "COUNT")
@@ -71,8 +71,6 @@ public class BipReversalInfoHistoryEntity {
     public void setFlowContext(byte[] flowContext) {
         this.flowContext = flowContext;
     }
-
-
 
 	public String getBuszzSerialNum() {
 		return buszzSerialNum;
@@ -98,13 +96,13 @@ public class BipReversalInfoHistoryEntity {
 		this.reversalResult = reversalResult;
 	}
 
-	public Date getNextReversalTime() {
+/*	public Date getNextReversalTime() {
 		return NextReversalTime;
 	}
 
 	public void setNextReversalTime(Date nextReversalTime) {
 		NextReversalTime = nextReversalTime;
-	}
+	}*/
 
 	public int getCount() {
 		return count;
@@ -138,11 +136,11 @@ public class BipReversalInfoHistoryEntity {
 		ReversalSuccCode = reversalSuccCode;
 	}
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	

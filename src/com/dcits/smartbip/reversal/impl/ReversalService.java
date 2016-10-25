@@ -3,6 +3,7 @@ package com.dcits.smartbip.reversal.impl;
 import java.io.ByteArrayOutputStream;
 import java.io.ObjectOutputStream;
 
+import com.dcits.smartbip.journal.impl.UniqueInnerFlowNoGenerator;
 import com.dcits.smartbip.reversal.IReversalService;
 import com.dcits.smartbip.reversal.entity.BipReversalInfoEntity;
 import com.dcits.smartbip.reversal.service.BipReversalInfoService;
@@ -39,6 +40,7 @@ public class ReversalService implements IReversalService {
 	public void insertReversalInfo(String buszzSerialNum, String serviceId, IContext context, String mapper,String returnCodeField ,String succReturncode) {
 		BipReversalInfoService infoService = (BipReversalInfoService)ApplicationUtils.getInstance().getBean("bipReversalInfoService");
 		BipReversalInfoEntity infoEntity = new BipReversalInfoEntity();
+		infoEntity.setId(UniqueInnerFlowNoGenerator.getInstance().generate());
 		infoEntity.setBuszzSerialNum(buszzSerialNum);
 		infoEntity.setBuzzServiceID(serviceId);		
 		infoEntity.setBuzzServiceMapper(mapper);
