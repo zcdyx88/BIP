@@ -6,6 +6,7 @@ import java.io.ObjectOutputStream;
 import com.dcits.smartbip.reversal.IReversalService;
 import com.dcits.smartbip.reversal.entity.BipReversalInfoEntity;
 import com.dcits.smartbip.reversal.service.BipReversalInfoService;
+import com.dcits.smartbip.runtime.model.IContext;
 import com.dcits.smartbip.runtime.model.impl.SessionContext;
 import com.dcits.smartbip.utils.ApplicationUtils;
 
@@ -35,7 +36,7 @@ public class ReversalService implements IReversalService {
 	}
 
 	@Override
-	public void insertReversalInfo(String buszzSerialNum, String serviceId, SessionContext context, String mapper,String returnCodeField ,String succReturncode) {
+	public void insertReversalInfo(String buszzSerialNum, String serviceId, IContext context, String mapper,String returnCodeField ,String succReturncode) {
 		BipReversalInfoService infoService = (BipReversalInfoService)ApplicationUtils.getInstance().getBean("bipReversalInfoService");
 		BipReversalInfoEntity infoEntity = new BipReversalInfoEntity();
 		infoEntity.setBuszzSerialNum(buszzSerialNum);

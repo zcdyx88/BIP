@@ -7,7 +7,7 @@
 		<item src="constant.2016" dest="Req3002100000106.Message/Body/BIZ_TYPE"></item>
 		<item src="constant.Z" dest="Req3002100000106.Message/Body/TRAN_AMT"></item>
 		<item src="constant.000000115724" dest="Req3002100000106.Message/Body/INPUT_BAL_TYPE"></item>
-		<item src="constant.00000028041070" dest="Req3002100000106.Message/Body/TRANSFER_MODE"></item>
+		<item src="constant.888888888" dest="Req3002100000106.Message/Body/TRANSFER_MODE"></item>
 	</request>
 	<response>	
 		<item src="Rsp3002100000106.Sys_Head/TRAN_TIMESTAMP" dest="Rsp3002101000103.Reply_Msg/Sys_Head/TRAN_TIMESTAMP"></item>

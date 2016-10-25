@@ -1,5 +1,6 @@
 package com.dcits.smartbip.reversal;
 
+import com.dcits.smartbip.runtime.model.IContext;
 import com.dcits.smartbip.runtime.model.impl.SessionContext;
 
 /**
@@ -45,7 +46,7 @@ public interface IReversalService {
      * @param returnCodeField  判断冲正交易是否成功的响应码域名称，请填写compositeData的路径
      * @param succReturncode  冲正交易成功时的预期响应码
      */
-    public void insertReversalInfo(String buszzSerialNum,String serviceId,SessionContext context,String mapper,String returnCodeField ,String succReturncode);
+    public void insertReversalInfo(String buszzSerialNum,String serviceId,IContext context,String mapper,String returnCodeField ,String succReturncode);
     
     
 }

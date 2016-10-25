@@ -12,13 +12,15 @@ import java.util.TimerTask;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import com.dcits.smartbip.common.model.ReversalAble;
 import com.dcits.smartbip.engine.impl.MapperRepository;
 import com.dcits.smartbip.engine.impl.ServiceRepository;
 import com.dcits.smartbip.exception.InstanceNotFoundException;
 import com.dcits.smartbip.exception.InvokeException;
 import com.dcits.smartbip.reversal.IReversalServer;
+import com.dcits.smartbip.reversal.entity.BipReversalInfoDetailEntity;
 import com.dcits.smartbip.reversal.entity.BipReversalInfoEntity;
+import com.dcits.smartbip.reversal.service.BipReversalInfoDetailService;
+import com.dcits.smartbip.reversal.service.BipReversalInfoHistoryService;
 import com.dcits.smartbip.reversal.service.BipReversalInfoService;
 import com.dcits.smartbip.runtime.model.ICompositeData;
 import com.dcits.smartbip.runtime.model.IMapper;
@@ -34,6 +36,8 @@ public class ReversalServer implements IReversalServer {
 	//冲正策略因为只支持一种，暂时放在数据库中
 	private ReversalConfig config;
 	private BipReversalInfoService reversalInfoService;
+	private BipReversalInfoDetailService reversalInfoDetailService;
+	private BipReversalInfoHistoryService reversalInfoHistoryService;
 
 	static public ReversalServer getInstance()
 	{
@@ -46,9 +50,13 @@ public class ReversalServer implements IReversalServer {
 	
 	private ReversalServer()
 	{
-		reversalInfoService = (BipReversalInfoService) ApplicationUtils.getInstance()
+	      config = ReversalConfig.getInstance();		
+	      reversalInfoService = (BipReversalInfoService) ApplicationUtils.getInstance()
 					.getBean("bipReversalInfoService");
-	      config = ReversalConfig.getInstance();
+	      reversalInfoDetailService = (BipReversalInfoDetailService) ApplicationUtils.getInstance()
+					.getBean("bipReversalInfoDetailService");
+	      reversalInfoHistoryService = (BipReversalInfoHistoryService) ApplicationUtils.getInstance()
+					.getBean("bipReversalInfoHistoryService");
 	}
 	
 	@Override
@@ -62,12 +70,27 @@ public class ReversalServer implements IReversalServer {
 			}			
 		};
         Timer timer = new Timer();
-        timer.schedule(timerTask, 0, 60000);	
+        timer.schedule(timerTask, 0, 60000);
+        
+        ReversalService rs = new ReversalService();
+        SessionContext.getContext().setValue("TEST1", "VALUE1");
+        String id = "3002101000103";
+        SoapCompositeData testComposite = new SoapCompositeData();
+        testComposite.setId(id);
+        testComposite.setxPath("/" + id);
+        SessionContext.getContext().setValue("Req" + id, testComposite);
+        ICompositeData bodyCompositeData = CompositeDataUtils.mkNodeNotExist(testComposite, "body");
+        CompositeDataUtils.setValue(bodyCompositeData, "path1", "value1");
+        CompositeDataUtils.setValue(bodyCompositeData, "path2", "value2");
+        
+        
+        rs.insertReversalInfo("12345", "3002100000106", SessionContext.getContext(), "M3002101000103_3002100000106", "Reply_Msg/Body/returncode", "000000");
 
 	}
 	
 	public void reversal()
-	{		
+	{
+
 		SimpleDateFormat dateFormate = new SimpleDateFormat("hhmmss"); 
 		String nowTime = dateFormate.format(new Date());
 		if(Integer.valueOf(nowTime) > Integer.valueOf(config.getConfig(ReversalConstants.REVERSAL_STARTTIME)) 
@@ -102,7 +125,7 @@ public class ReversalServer implements IReversalServer {
 	{		
 		Date now = new Date();
 		Date nextReversalDate = infoEntity.getNextReversalTime();
-		if(now.after(nextReversalDate))
+		if(nextReversalDate == null || now.after(nextReversalDate))
 		{
 			return true;
 		}
@@ -115,61 +138,90 @@ public class ReversalServer implements IReversalServer {
 	{
 		byte[] buffer = infoEntity.getFlowContext();
 		ObjectInputStream in;
-		try {
-			in = new ObjectInputStream(new ByteArrayInputStream(buffer));
-			SessionContext sessionContext = (SessionContext)in.readObject();
-			SessionContext.getContext().setContext(sessionContext);			
-			String serviceId = infoEntity.getBuzzServiceID();			
-			IService service = ServiceRepository.getRepository().get(serviceId);
-			String id = "Req" + serviceId;
-	       ICompositeData reqObj = (SoapCompositeData) SessionContext.getContext().getValue(id);
-	       if (null == reqObj) {
-	           //生成请求对象
-	           reqObj = new SoapCompositeData();
-	           reqObj.setId(id);
-	           reqObj.setxPath("/" + id);
-	           //请求对象放入上下文
-	           SessionContext.getContext().setValue("Req" + serviceId, reqObj);
-	       }
-	       //获取映射对象
-	       //进行请求的数据映射
-	       IMapper mapper = MapperRepository.getRepository().get(infoEntity.getBuzzServiceMapper());
-	       if (null != mapper) {
-	           mapper.mapReq();
-	       }
-	       //调用服务获得返回
-	       if (log.isInfoEnabled()) {
-	           log.info("开始调用服务[" + serviceId + "],输入为[" + reqObj + "]");
-	       }		       
-	       Object rspObj = service.execute(reqObj);	       
-       
-	       String returnCodeField = infoEntity.getReversalField();
-	       String returnCode = CompositeDataUtils.getByPath((ICompositeData)rspObj, returnCodeField).get(0).getValue();
-	       String expectReturnCode = infoEntity.getReversalSuccCode();
-	       if(returnCode.equalsIgnoreCase(expectReturnCode))
-	       {
-	    	   reversalSuccess(infoEntity);
-	       }
-	       else{
-	    	   if(log.isDebugEnabled())
-	    	   {
-	    		   log.debug("冲正交易"+serviceId+"本次响应码returnCode=" + returnCode + ",被拒绝！");
-	    	   }
-	    	   reversalFail(infoEntity);
-	       }		       
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InvokeException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InstanceNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}	
+		boolean succFlag = false;
+		String returnCode = null;
+		try
+		{
+			try {
+				in = new ObjectInputStream(new ByteArrayInputStream(buffer));
+				SessionContext sessionContext = (SessionContext)in.readObject();
+				SessionContext.getContext().setContext(sessionContext);			
+				String serviceId = infoEntity.getBuzzServiceID();			
+				IService service = ServiceRepository.getRepository().get(serviceId);
+				String id = "Req" + serviceId;
+		       ICompositeData reqObj = (SoapCompositeData) SessionContext.getContext().getValue(id);
+		       if (null == reqObj) {
+		           //生成请求对象
+		           reqObj = new SoapCompositeData();
+		           reqObj.setId(id);
+		           reqObj.setxPath("/" + id);
+		           //请求对象放入上下文
+		           SessionContext.getContext().setValue("Req" + serviceId, reqObj);
+		       }
+		       //获取映射对象
+		       //进行请求的数据映射
+		       IMapper mapper = MapperRepository.getRepository().get(infoEntity.getBuzzServiceMapper());
+		       if (null != mapper) {
+		           mapper.mapReq();
+		       }
+		       //调用服务获得返回
+		       if (log.isInfoEnabled()) {
+		           log.info("开始调用服务[" + serviceId + "],输入为[" + reqObj + "]");
+		       }		       
+		       Object rspObj = service.execute(reqObj);	       
+	       
+		       String returnCodeField = infoEntity.getReversalField();
+		       returnCode = CompositeDataUtils.getValue((ICompositeData)rspObj, returnCodeField);
+		       String expectReturnCode = infoEntity.getReversalSuccCode();
+		       
+		       if(returnCode.equalsIgnoreCase(expectReturnCode))
+		       {
+		    	   succFlag = true;
+		       }	      
+			} catch (IOException e) {
+				log.error("",e);
+			} catch (ClassNotFoundException e) {
+				log.error("",e);
+			} catch (InvokeException e) {
+				log.error("",e);
+			} catch (InstanceNotFoundException e) {
+				log.error("",e);
+			}catch(Exception e)
+			{
+				log.error("",e);
+			}
+		
+			try{
+				BipReversalInfoDetailEntity infoDetail = new BipReversalInfoDetailEntity();
+				infoDetail.setCount(infoEntity.getCount());	
+				infoDetail.setReturnCode(returnCode);
+				infoDetail.setReveralInfoId(String.valueOf(infoEntity.getId()));
+				infoDetail.setReversalTime(new Date());
+				reversalInfoDetailService.save(infoDetail);
+			}
+			catch(Exception e)
+			{
+				log.error("记录冲正明细时报错",e);
+			}
+		}
+		finally
+		{			
+			if(succFlag)
+		       {
+		    	   reversalSuccess(infoEntity);
+		       }
+		       else{
+		    	   if(log.isDebugEnabled())
+		    	   {
+		    		   StringBuilder sb = new StringBuilder();
+		    		   sb.append("原交易流水号=").append(infoEntity.getBuszzSerialNum());
+		    		   sb.append("，冲正交易").append(infoEntity.getBuzzServiceID());
+		    		   sb.append("，第").append(infoEntity.getCount()).append("次冲正失败，拒绝码=").append(returnCode);
+		    		   log.debug(sb.toString());
+		    	   }
+		    	   reversalFail(infoEntity);
+		       }		
+		}
 	}	
 	
 	private void reversalSuccess(BipReversalInfoEntity infoEntity)
@@ -189,7 +241,7 @@ public class ReversalServer implements IReversalServer {
 		}
 		else{
 			Date now = new Date();
-			long nextTime = now.getTime();
+			long nextTime = now.getTime()+Long.valueOf(config.getConfig(ReversalConstants.REVERSAL_INTERVAL))*1000;
 			Date nextDate = new Date(nextTime);
 			infoEntity.setNextReversalTime(nextDate);
 			reversalInfoService.save(infoEntity);

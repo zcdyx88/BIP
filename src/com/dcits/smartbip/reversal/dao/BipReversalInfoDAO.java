@@ -14,7 +14,7 @@ import com.dcits.smartbip.reversal.entity.BipReversalPolicyEntity;
  */
 public interface BipReversalInfoDAO extends CrudRepository<BipReversalInfoEntity, String> {
 	
-	@Query("select * from BIP_REVERSAL_INFO s where s.COUNT < ?1 and s.REVERSALRESULT = -1")
+	@Query("select s from BipReversalInfoEntity s where s.count < ?1 and s.reversalResult = -1")
 	List<BipReversalInfoEntity> queryReverInfo(int maxCount);
 	
 	

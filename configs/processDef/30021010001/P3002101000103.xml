@@ -4,6 +4,6 @@
 	<processDefinition id="P3002101000103" isAsync="true" mapping="M3002101000103">
 	    <service id="3002100000105" type="buzzService" mapping="M3002101000103_3002100000105"/>
 	    <!-- <service id="3002100000106" type="buzzService" mapping="M3002101000103_3002100000106"/> -->
-	    <reversal id="3002100000106" type="baseService" mapping="M3002101000103_3002100000106"/>
+	    <reversal id="3002100000106" type="baseService" mapping="M3002101000103_3002100000106" returncodefield="body/returncode" returncode="000000"/>
 	</processDefinition>
 </root>

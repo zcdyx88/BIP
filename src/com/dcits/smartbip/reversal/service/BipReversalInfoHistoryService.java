@@ -7,20 +7,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.dcits.smartbip.reversal.dao.BipReversalInfoDAO;
+import com.dcits.smartbip.reversal.dao.BipReversalInfoHistoryDAO;
 import com.dcits.smartbip.reversal.entity.BipReversalInfoEntity;
+import com.dcits.smartbip.reversal.entity.BipReversalInfoHistoryEntity;
 
 /**
  * Created by vincentfxz on 16/5/6.
  */
 @Service
 @Transactional
-public class BipReversalInfoService extends ReversalBaseService<BipReversalInfoEntity> {
+public class BipReversalInfoHistoryService extends ReversalBaseService<BipReversalInfoHistoryEntity> {
     @Autowired
-    private BipReversalInfoDAO bipReversalInfoDAO;
+    private BipReversalInfoHistoryDAO bipReversalInfoHistoryDAO;
 
     @Override
-    public BipReversalInfoDAO getRepository() {
-        return bipReversalInfoDAO;
+    public BipReversalInfoHistoryDAO getRepository() {
+        return bipReversalInfoHistoryDAO;
     }
 
 }

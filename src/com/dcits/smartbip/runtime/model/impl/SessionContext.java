@@ -32,7 +32,7 @@ public class SessionContext implements IContext , Externalizable{
         return instance;
     }
 
-    private SessionContext (){
+    public SessionContext (){
         contextMap = new ConcurrentHashMap<String, Object>();
     }
 

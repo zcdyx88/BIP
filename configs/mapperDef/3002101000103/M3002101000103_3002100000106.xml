@@ -25,6 +25,7 @@
         <item src="Rsp3002100000106.Reply_Msg/Body/OFF_ADDRESS" dest="Rsp3002101000103.Reply_Msg/Body/OFF_ADDRESS"/>
         <item src="Rsp3002100000106.Reply_Msg/Body/PAY_AMT" dest="Rsp3002101000103.Reply_Msg/Body/PAY_AMT"/>
         <item src="Rsp3002100000106.Reply_Msg/Body/PAY_BZ" dest="Rsp3002101000103.Reply_Msg/Body/PAY_BZ"/>
+         <item src="Rsp3002100000106.Reply_Msg/Body/returncode" dest="Rsp3002101000103.Reply_Msg/Body/returncode"/>
         <item src="Rsp3002100000106.Reply_Msg/Body/PAY_DATE" dest="Rsp3002101000103.Reply_Msg/Body/PAY_DATE"/>
         <item src="Rsp3002100000106.Reply_Msg/Body/PAY_PROJ" dest="Rsp3002101000103.Reply_Msg/Body/PAY_PROJ"/>
         <item src="Rsp3002100000106.Reply_Msg/Body/USER_CODE" dest="Rsp3002101000103.Reply_Msg/Body/USER_CODE"/>
@@ -37,6 +38,8 @@
         <item src="constant.000000115724" dest="Req3002100000106.Message/Body/INPUT_BAL_TYPE"/>
         <item src="constant.201912310020112" dest="Req3002100000106.Message/Body/PASSWORD"/>
         <item src="constant.Z" dest="Req3002100000106.Message/Body/TRAN_AMT"/>
-        <item src="constant.00000028041070" dest="Req3002100000106.Message/Body/TRANSFER_MODE"/>
+        <item src="constant.99999999999" dest="Req3002100000106.Message/Body/TRANSFER_MODE"/>
+        <item src="Req3002101000103.body/path1" dest="Req3002100000106.Message/Body/path1"/>
+        <item src="Req3002101000103.body/path2" dest="Req3002100000106.Message/Body/path2"/>
     </request>
 </mapping>

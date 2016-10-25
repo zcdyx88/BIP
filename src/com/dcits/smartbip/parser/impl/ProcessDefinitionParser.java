@@ -547,8 +547,8 @@ public class ProcessDefinitionParser implements IParser<ProcessDefinition, List<
         if (null != element) {
             String reversalServiceId = XMLUtils.getAttribute(element, "id");
             String mappingId = XMLUtils.getAttribute(element, "mapping");
-            String returnCodeField = XMLUtils.getAttribute(element, "returnCodeField");
-            String returnCode = XMLUtils.getAttribute(element, "returnCode");
+            String returnCodeField = XMLUtils.getAttribute(element, "returncodefield");
+            String returnCode = XMLUtils.getAttribute(element, "returncode");
             sb.append("ReversalService br = new ReversalService();\n");            
             sb.append("IContext context = SessionContext.getContext();\n");            
             sb.append("br.insertReversalInfo(\"\",\""+ reversalServiceId +"\",context,\""+mappingId+"\",\""+returnCodeField+"\",\""+returnCode+"\");\n");

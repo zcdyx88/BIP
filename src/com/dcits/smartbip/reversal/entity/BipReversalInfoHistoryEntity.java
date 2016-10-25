@@ -11,12 +11,12 @@ import org.hibernate.annotations.GenericGenerator;
  * Created by zhangcheng on 20/10/16.
  */
 @Entity
-@Table(name = "BIP_REVERSAL_INFO")
-public class BipReversalInfoEntity {	
+@Table(name = "BIP_REVERSAL_INFO_HISTORY")
+public class BipReversalInfoHistoryEntity {	
     //流水唯一标识,BIP自动生成
-    @Id
+   /* @Id
 	@GeneratedValue(generator="system-id")
-	@GenericGenerator(name="system-id",strategy="increment")
+	@GenericGenerator(name="system-id",strategy="increment")*/
     @Column(name = "ID", length = 255)
     private int id;
     
@@ -46,11 +46,11 @@ public class BipReversalInfoEntity {
     private int reversalStatus;*/
     
     //冲正结果(-1：还无结果  0：失败  1：成功 )
-    //@Column(name = "REVERSALRESULT")
+    @Column(name = "REVERSALRESULT")
     private int reversalResult = -1;    
     
-    //下一次冲正发起时间
-    @Column(name = "NEXTREVERSALTIME")
+/*    //下一次冲正发起时间
+    @Column(name = "NEXTREVERSALTIME")*/
     private Date NextReversalTime = new Date();
     
     //已发送过的冲正次数
